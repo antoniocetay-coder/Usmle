@@ -4,6 +4,15 @@ import time
 from flashcard_engine import orquestrar_flashcards, gerar_mais_flashcards, gerar_flashcard_sob_demanda
 from database import get_flashcards_by_tags, registrar_confusao, salvar_flashcard_db
 from session_state import salvar_resultado_pendente, proximo_item_fila
+from confusion_engine import ConfusionGraph, ConfusionTracker
+
+
+def _get_confusion_tracker():
+    if "confusion_tracker" not in st.session_state:
+        cg = ConfusionGraph()
+        cg.load_from_db()
+        st.session_state["confusion_tracker"] = ConfusionTracker(cg)
+    return st.session_state["confusion_tracker"]
 
 
 def render_question(item_atual, api_key):
@@ -60,6 +69,14 @@ def _submit_answer(q_db, q, escolha, confianca):
         tag_errada = dist_tags.get(letra)
         if tag_correta and tag_errada:
             registrar_confusao(tag_correta, tag_errada)
+            tracker = _get_confusion_tracker()
+            tracker.record_event(
+                correct_tag=tag_correta,
+                chosen_tag=tag_errada,
+                confidence_label=confianca,
+                question_id=q_db["id"],
+            )
+            tracker.graph.save_to_db()
 
     st.rerun()
 

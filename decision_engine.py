@@ -2,6 +2,7 @@ from knowledge_graph import KnowledgeGraph
 from student_graph import StudentGraph
 from centrality import CentralityAnalyzer
 from candidate_generator import CandidateGenerator
+from confusion_engine import ConfusionTracker
 
 
 class DecisionEngine:
@@ -9,11 +10,29 @@ class DecisionEngine:
     def __init__(self, knowledge_graph: KnowledgeGraph,
                  student_graph: StudentGraph,
                  centrality_analyzer: CentralityAnalyzer,
-                 candidate_generator: CandidateGenerator):
+                 candidate_generator: CandidateGenerator,
+                 confusion_tracker: ConfusionTracker = None):
         self._kg = knowledge_graph
         self._sg = student_graph
         self._centrality = centrality_analyzer
         self._cg = candidate_generator
+        self._ct = confusion_tracker
+
+    # ── Confusion Integration ──────────────────────────────────────────
+    def _confusion_urgency(self, concept_id: str) -> float:
+        """
+        How much confusion exists around this concept?
+        Returns 0-1 score: high means the student frequently confuses this concept.
+        """
+        if self._ct is None:
+            return 0.0
+        confusions = self._ct.get_student_confusions(concept_id, n=3)
+        if not confusions:
+            return 0.0
+        max_w = max(c["weight"] for c in confusions)
+        total_ev = sum(c["evidence_count"] for c in confusions)
+        urgency = max_w * 0.7 + min(1.0, total_ev / 10) * 0.3
+        return round(urgency, 4)
 
     # ── Parte A — Focus Hub Selection ──────────────────────────────────
     def _student_density(self, concept_id: str) -> float:
@@ -57,8 +76,9 @@ class DecisionEngine:
             region_weakness = 0.0
 
         student_density = self._student_density(concept_id)
+        confusion_urgency = self._confusion_urgency(concept_id)
 
-        score = (degree + betweenness + norm_desc + norm_depth + region_weakness + student_density * 2) / 6.0
+        score = (degree + betweenness + norm_desc + norm_depth + region_weakness + student_density * 2 + confusion_urgency * 1.5) / 7.0
         return round(score, 6)
 
     def select_focus_hub(self) -> dict:
@@ -126,7 +146,8 @@ class DecisionEngine:
         if state is None:
             return -1.0
         boost = 0.5 if state.review_due else 0.0
-        return -state.mastery + state.uncertainty + boost
+        confusion = self._confusion_urgency(concept_id) * 0.4
+        return -state.mastery + state.uncertainty + boost + confusion
 
     def select_study_concept(self, hub_id: str) -> dict | None:
         cluster = self.hub_cluster(hub_id)
@@ -167,12 +188,15 @@ class DecisionEngine:
         betweenness = self._centrality.betweenness(hub_id)
         desc_count = self._kg.descendants_count(hub_id)
         depth = self._kg.max_descendant_depth(hub_id)
+        confusion_urgency = self._confusion_urgency(hub_id)
         if betweenness > 0:
             why_hub.append("high betweenness")
         if desc_count > 0:
             why_hub.append(f"{desc_count} descendants")
         if depth > 0:
             why_hub.append(f"depth {depth} in knowledge graph")
+        if confusion_urgency > 0.3:
+            why_hub.append(f"confusion urgency {confusion_urgency:.2f}")
         if not why_hub:
             why_hub.append("structural concept")
 
@@ -192,6 +216,10 @@ class DecisionEngine:
                     why_concept.append("high uncertainty")
                 if state.review_due:
                     why_concept.append("review due")
+            study_confusions = self._ct.get_student_confusions(concept_id, n=2) if self._ct else []
+            if study_confusions:
+                for c in study_confusions:
+                    why_concept.append(f"confused with {c['concept']} (w={c['weight']:.2f})")
             if not why_concept:
                 why_concept.append("eligible for study")
             result["study_concept"] = concept_id
