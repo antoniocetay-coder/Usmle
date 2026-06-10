@@ -117,7 +117,7 @@ CRITICAL RULES:
 2. You MUST strictly adhere to the COGNITIVE DEPTH REQUIRED:
    - If "1st Order": Ask "What is the most likely diagnosis?".
    - If "2nd Order": Give away the diagnosis subtly in the vignette. Ask about the underlying mechanism, pathophysiology, or best next step.
-   - If "3rd Order": Give away the diagnosis. Ask about the mechanism of action of the drug used to treat the main complication, or the embryological origin of the affected tissue.
+   - If "3rd Order": Give away the diagnosis. Ask about the complication, multi-system integration, or advanced management decision.
 
 {confounder_instruction}
 
@@ -203,7 +203,7 @@ def gerar_lote_questoes(sistema, difficulty, cognitive_order, api_key, tags_alvo
         return []
 
 def gerar_questao(sistema, difficulty, api_key, tags_alvo=None):
-    res = gerar_lote_questoes(sistema, difficulty, "2nd Order (Pathophysiology/Next Step in Management)", api_key, tags_alvo, 1)
+    res = gerar_lote_questoes(sistema, difficulty, "2nd Order (Pathophysiology / Next Step)", api_key, tags_alvo, 1)
     return res[0] if res else None
 
 def explicar_duvida_tutor(contexto_material, duvida_aluno, api_key):

@@ -2,9 +2,8 @@ from database import get_conn
 
 def get_tag_stats():
     conn = get_conn()
-    # Adicionamos a coluna mastery_prob na busca
     rows = conn.execute("""
-        SELECT tag, correct, total, mastery_prob
+        SELECT tag, correct, total, mastery_prob, max_difficulty, max_cognitive_order
         FROM tag_stats
     """).fetchall()
 
@@ -12,7 +11,9 @@ def get_tag_stats():
         r["tag"]: {
             "correct": r["correct"],
             "total": r["total"],
-            "mastery_prob": r["mastery_prob"]
+            "mastery_prob": r["mastery_prob"],
+            "max_difficulty": r["max_difficulty"] or "Easy",
+            "max_cognitive_order": r["max_cognitive_order"] or "1st Order (Direct Recall / Diagnosis)",
         }
         for r in rows
     }

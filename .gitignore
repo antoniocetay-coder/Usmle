@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+venv/
+*.db
+*.db-shm
+*.db-wal
+backups/
+.env
+.streamlit/secrets.toml
+centrality_report.csv
+simulation_60days.csv

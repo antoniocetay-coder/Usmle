@@ -1,263 +1,90 @@
-import os
-import random
-import json
-import sqlite3
-from datetime import datetime, timezone
+import time
+import streamlit as st
+from database import get_cards_hoje, get_pending_questions, get_flashcards_full_by_tags, get_pending_questions_by_tags, get_eos_due, get_missed_tags_due
+from recommender import recommend
 
-from config import SISTEMAS_DISPONIVEIS
-from database import (
-    get_conn, get_tags_em_cooldown, get_pending_questions, 
-    get_cards_hoje, salvar_questao, registrar_cooldown_tags,
-    get_system_stats
-)
-from analytics import get_tag_stats
-from mastery import classify_tag
-from ai_engine import TAXONOMIA_COMPLETA
 
-# ==============================================================================
-# 0. INTERCEPTADOR DE PRÉ-REQUISITOS (Knowledge Graph)
-# ==============================================================================
-def _carregar_prerequisites():
-    path = os.path.join(os.path.dirname(__file__), "prerequisites.json")
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except FileNotFoundError:
-        return {}
+def _get_srs_items():
+    cards = get_cards_hoje()
+    questions = get_pending_questions()
+    eos = get_eos_due()
+    srs_ids = set()
+    items = []
+    for c in cards:
+        items.append({"type": "flashcard", "item": c, "source": "srs"})
+        srs_ids.add(("flashcard", c["id"]))
+    for q in questions:
+        items.append({"type": "question", "item": q, "source": "srs"})
+        srs_ids.add(("question", q["id"]))
+    for eo in eos:
+        items.append({"type": "eo", "item": eo, "source": "srs"})
+    missed = get_missed_tags_due()
+    for m in missed:
+        items.append({"type": "missed_tag", "item": {"tag": m["object_id"]}, "source": "srs"})
+    return items, srs_ids
 
-PREREQUISITES = _carregar_prerequisites()
 
-def interceptar_com_prerequisitos(tags_alvo, stats):
-    """
-    Se o aluno não domina a base (BKT < 65%), o interceptador 
-    CORTA a tag avançada e a SUBSTITUI pelo pré-requisito!
-    """
-    tags_finais = []
-    for tag in tags_alvo:
-        prereqs = PREREQUISITES.get(tag, [])
-        foi_substituida = False
-        
-        for prereq in prereqs:
-            s = stats.get(prereq, {"correct": 0, "total": 0, "mastery_prob": 0.15})
-            prob = s.get("mastery_prob")
-            if prob is None: prob = 0.15
-            
-            # Se o BKT do pré-requisito for menor que 65% (Não está Consolidado/Mastered)
-            if prob < 0.65:
-                if prereq not in tags_finais:
-                    tags_finais.append(prereq)
-                foi_substituida = True
-                break # Substitui apenas pelo primeiro pré-requisito fraco que achar
-                
-        # Se ele domina todos os pré-requisitos, mantém a tag avançada original
-        if not foi_substituida and tag not in tags_finais:
-            tags_finais.append(tag)
-            
-    return tags_finais
+def _get_pipeline_items(concepts, modo, srs_ids):
+    if not concepts:
+        return []
+    items = []
+    cards = get_flashcards_full_by_tags(concepts)
+    for c in cards:
+        key = ("flashcard", c["id"])
+        if key not in srs_ids:
+            items.append({"type": "flashcard", "item": c, "source": "pipeline"})
+    qs = get_pending_questions_by_tags(concepts)
+    for q in qs:
+        key = ("question", q["id"])
+        if key not in srs_ids:
+            items.append({"type": "question", "item": q, "source": "pipeline"})
+    return items
 
-# ==============================================================================
-# 1. SELEÇÃO ESTRATÉGICA DE TAGS (Com BKT e Grafo)
-# ==============================================================================
-def selecionar_tags_estrategicas(sistemas_semana, qtd_tags=6):
-    conn = get_conn()
-    
-    # 1. Pega as tags como já fazia antes
-    if not sistemas_semana:
-        sistemas_semana = SISTEMAS_DISPONIVEIS
 
-    todas_tags = set()
-    for sistema in sistemas_semana:
-        disciplinas = TAXONOMIA_COMPLETA.get(sistema, {})
-        for tags_lista in disciplinas.values():
-            if isinstance(tags_lista, list):
-                todas_tags.update(tags_lista)
-
-    tags_bloqueadas = get_tags_em_cooldown(horas=48)
-    tags_disponiveis = [t for t in todas_tags if t not in tags_bloqueadas]
-
-    if not tags_disponiveis:
-        tags_disponiveis = list(todas_tags)
-
-    stats = get_tag_stats()
-    categorias = {"LEARNING": [], "NEW": [], "CONSOLIDATED": []}
-
-    for tag in tags_disponiveis:
-        s = stats.get(tag, {"correct": 0, "total": 0})
-        nivel = classify_tag(s["correct"], s["total"]).name
-
-        if nivel == "LEARNING":
-            categorias["LEARNING"].append(tag)
-        elif nivel in ["DRONE", "NEW"]:
-            categorias["NEW"].append(tag)
-        else:
-            categorias["CONSOLIDATED"].append(tag)
-
-    def sortear_e_remover(lista, qtd):
-        sorteio = random.sample(lista, min(qtd, len(lista)))
-        for item in sorteio:
-            lista.remove(item)
-        return sorteio
-
-    # 2. Sorteia as tags raízes (Onde o aluno é fraco)
-    escolhidas_raiz = []
-    escolhidas_raiz.extend(sortear_e_remover(categorias["LEARNING"], 3))
-    
-    # =====================================================================
-    # 🌟 A MÁGICA DA ONTOLOGIA ACONTECE AQUI 🌟
-    # Para cada tag que o aluno é fraco, buscamos no Grafo o que CAUSA ela
-    # ou os SINTOMAS (MANIFESTS_AS) para forçar raciocínio de 2ª ordem.
-    # =====================================================================
-    tags_segunda_ordem = set()
-    for tag_fraca in escolhidas_raiz:
-        try:
-            rows = conn.execute("""
-                SELECT source, target, relation FROM ontology_edges 
-                WHERE source = ? OR target = ?
-                ORDER BY RANDOM() LIMIT 2
-            """, (tag_fraca, tag_fraca)).fetchall()
-            
-            for r in rows:
-                if r['source'] != tag_fraca and r['source'] not in tags_bloqueadas:
-                    tags_segunda_ordem.add(r['source'])
-                if r['target'] != tag_fraca and r['target'] not in tags_bloqueadas:
-                    tags_segunda_ordem.add(r['target'])
-        except sqlite3.OperationalError:
-            pass # Caso a tabela ontology_edges ainda não exista
-
-    escolhidas = escolhidas_raiz + list(tags_segunda_ordem)
-
-    # Completa o resto do lote com NEW e CONSOLIDATED
-    faltam = qtd_tags - len(escolhidas)
-    if faltam > 0:
-        escolhidas.extend(sortear_e_remover(categorias["NEW"], min(2, faltam)))
-        
-    faltam = qtd_tags - len(escolhidas)
-    if faltam > 0:
-        pool_reserva = categorias["LEARNING"] + categorias["NEW"] + categorias["CONSOLIDATED"]
-        escolhidas.extend(sortear_e_remover(pool_reserva, faltam))
-
-    return escolhidas[:qtd_tags]
-# ==============================================================================
-# 2. ORQUESTRAÇÃO DE FILA
-# ==============================================================================
-def montar_fila_estudo(modo_escolhido):
-    cards_hoje = get_cards_hoje()
-    questoes_pendentes = get_pending_questions()
-
-    fila = []
+def montar_fila_estudo(modo_escolhido, qtd=10):
+    srs_items, srs_ids = _get_srs_items()
+    now = time.time()
+    if ("recommend_cache" not in st.session_state
+        or now - st.session_state.get("recommend_cache_ts", 0) > 60):
+        st.session_state["recommend_cache"] = recommend()
+        st.session_state["recommend_cache_ts"] = now
+    rec = st.session_state["recommend_cache"]
+    rec_concepts = rec.get("eligible", [])
 
     if modo_escolhido == "Review":
-        for c in cards_hoje:
-            fila.append({"type": "flashcard", "item": c})
+        pipeline_items = _get_pipeline_items(rec_concepts, "review", srs_ids)
+        srs_review = [i for i in srs_items if i["type"] == "flashcard"]
+        fila = srs_review + pipeline_items[:max(0, qtd - len(srs_review))]
 
     elif modo_escolhido == "QBank":
-        for q in questoes_pendentes:
-            fila.append({"type": "question", "item": q})
+        pipeline_items = _get_pipeline_items(rec_concepts, "qbank", srs_ids)
+        srs_qbank = [i for i in srs_items if i["type"] == "question"]
+        fila = srs_qbank + pipeline_items[:max(0, qtd - len(srs_qbank))]
 
     elif modo_escolhido == "Interleaved":
-        idx_c = 0
-        idx_q = 0
-        while idx_c < len(cards_hoje) or idx_q < len(questoes_pendentes):
+        pipeline_items = _get_pipeline_items(rec_concepts, "interleaved", srs_ids)
+        fila = []
+        srs_cards = [i for i in srs_items if i["type"] == "flashcard"]
+        srs_questions = [i for i in srs_items if i["type"] == "question"]
+        p_cards = [i for i in pipeline_items if i["type"] == "flashcard"]
+        p_questions = [i for i in pipeline_items if i["type"] == "question"]
+
+        ic = iq = ipc = ipq = 0
+        while len(fila) < qtd and (ic < len(srs_cards) or iq < len(srs_questions) or ipc < len(p_cards) or ipq < len(p_questions)):
             for _ in range(3):
-                if idx_c < len(cards_hoje):
-                    fila.append({"type": "flashcard", "item": cards_hoje[idx_c]})
-                    idx_c += 1
+                if ic < len(srs_cards):
+                    fila.append(srs_cards[ic]); ic += 1
+                elif ipc < len(p_cards):
+                    fila.append(p_cards[ipc]); ipc += 1
             for _ in range(2):
-                if idx_q < len(questoes_pendentes):
-                    fila.append({"type": "question", "item": questoes_pendentes[idx_q]})
-                    idx_q += 1
+                if iq < len(srs_questions):
+                    fila.append(srs_questions[iq]); iq += 1
+                elif ipq < len(p_questions):
+                    fila.append(p_questions[ipq]); ipq += 1
+            if len(fila) >= qtd:
+                break
 
-    return fila
+    else:
+        fila = srs_items
 
-# ==============================================================================
-# 3. GERAÇÃO EM BATCH (OTIMIZADO)
-# ==============================================================================
-# No final do scheduler.py, substitua a função gerar_lote_background:
-
-def gerar_lote_background(sistemas_semana, dificuldade, api_key, qtd_questoes=3):
-    sucessos = 0
-    if not sistemas_semana:
-        sistemas_semana = SISTEMAS_DISPONIVEIS
-        
-    MAX_POR_CALL = 5
-    chunks = []
-    restante = qtd_questoes
-    
-    while restante > 0:
-        if restante >= MAX_POR_CALL:
-            chunks.append(MAX_POR_CALL)
-            restante -= MAX_POR_CALL
-        else:
-            chunks.append(restante)
-            restante = 0
-
-    from ai_engine import gerar_lote_questoes
-
-    for chunk_size in chunks:
-        sistema = random.choice(sistemas_semana)
-        tags_alvo = selecionar_tags_estrategicas([sistema], qtd_tags=chunk_size)
-        
-        # ==========================================
-        # NOVIDADE: CALCULA O COGNITIVE LEVEL
-        # ==========================================
-        stats = get_tag_stats()
-        bkt_sum = 0
-        for t in tags_alvo:
-            s = stats.get(t, {})
-            prob = s.get("mastery_prob", 0.15) if s.get("mastery_prob") is not None else 0.15
-            bkt_sum += prob
-            
-        media_bkt = bkt_sum / len(tags_alvo) if tags_alvo else 0.15
-        
-        if media_bkt < 0.50:
-            cognitive_order = "1st Order (Diagnosis/Presentation)"
-        elif media_bkt < 0.80:
-            cognitive_order = "2nd Order (Pathophysiology/Next Step in Management)"
-        else:
-            cognitive_order = "3rd Order (Pharmacology Mechanism/Embryology/Genetic Defect)"
-            
-        # Faz a chamada enviando o Nível Cognitivo!
-        questoes_geradas = gerar_lote_questoes(sistema, dificuldade, cognitive_order, api_key, tags_alvo, chunk_size)
-        
-        for q in questoes_geradas:
-            salvar_questao(sistema, dificuldade, q, acertou=False, tags=q["content_tags"], status="pending")
-            registrar_cooldown_tags(q["content_tags"])
-            sucessos += 1
-            
-    return sucessos
-
-# ==============================================================================
-# 4. PLANNER PEDAGÓGICO
-# ==============================================================================
-def gerar_planos_estudo():
-    rows = get_system_stats()
-    if not rows:
-        return [
-            {"titulo": "Combo 1", "sistemas": random.sample(SISTEMAS_DISPONIVEIS, 2)},
-            {"titulo": "Combo 2", "sistemas": random.sample(SISTEMAS_DISPONIVEIS, 2)},
-            {"titulo": "Combo 3", "sistemas": random.sample(SISTEMAS_DISPONIVEIS, 2)}
-        ]
-
-    stats = {r["sistema"]: (r["acertos"] / r["total"]) for r in rows if r["total"] > 0}
-    unseen = [s for s in SISTEMAS_DISPONIVEIS if s not in stats]
-    critical = sorted([s for s in stats if stats[s] < 0.50], key=lambda x: stats[x])
-    developing = sorted([s for s in stats if 0.50 <= stats[s] < 0.75], key=lambda x: stats[x])
-    mastered = sorted([s for s in stats if stats[s] >= 0.75], key=lambda x: stats[x])
-    
-    planos = []
-
-    sistemas_c1 = critical[:2] if len(critical) >= 2 else (critical + developing)[:2]
-    if not sistemas_c1: sistemas_c1 = random.sample(SISTEMAS_DISPONIVEIS, 2)
-    planos.append({"titulo": "🚨 Foco Crítico", "sistemas": sistemas_c1})
-
-    sistemas_c2 = []
-    if developing: sistemas_c2.append(developing[-1])
-    if unseen: sistemas_c2.append(unseen[0])
-    if len(sistemas_c2) < 2: sistemas_c2 = random.sample(SISTEMAS_DISPONIVEIS, 2)
-    planos.append({"titulo": "🏗️ Construção", "sistemas": sistemas_c2})
-
-    sistemas_c3 = unseen[:2] if len(unseen) >= 2 else (unseen + mastered)[:2]
-    if len(sistemas_c3) < 2: sistemas_c3 = random.sample(SISTEMAS_DISPONIVEIS, 2)
-    planos.append({"titulo": "🧭 Expansão", "sistemas": sistemas_c3})
-
-    return planos
+    return fila[:qtd]
