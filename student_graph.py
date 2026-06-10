@@ -49,6 +49,11 @@ class StudentGraph:
                 s.mastery = data.get("mastery_prob") or 0.15
                 s.attempts = data.get("total") or 0
                 s.correct = data.get("correct") or 0
+        from database import get_missed_tags_due
+        for row in get_missed_tags_due():
+            tag = row["object_id"]
+            if tag in self._states:
+                self._states[tag].review_due = True
 
     def update_concept(self, concept_id: str, mastery: Optional[float] = None,
                        uncertainty: Optional[float] = None,

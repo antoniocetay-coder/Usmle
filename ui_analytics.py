@@ -1,9 +1,9 @@
 import streamlit as st
-import pandas as pd
-import plotly.express as px
+import plotly.graph_objects as go
 from database import get_system_stats, get_metacognition_stats, get_time_stats, get_fsrs_forecast, get_global_confusions, get_conn, get_validation_status, get_tags_proven
 from mastery import classify_tag_bkt, real_knowledge, get_next_level, is_eligible_for_proof, P_L0
 from session_state import now_utc
+from datetime import datetime
 
 
 def render_analytics():
@@ -20,15 +20,17 @@ def render_analytics():
     else:
         st.subheader("🕸️ Radar de Domínio por Sistema")
 
-        df_sys = pd.DataFrame(sys_stats)
-        df_sys["accuracy"] = (df_sys["acertos"] / df_sys["total"]) * 100
+        sistemas = [r["sistema"] for r in sys_stats]
+        accuracies = [(r["acertos"] / r["total"]) * 100 for r in sys_stats]
 
-        fig_radar = px.line_polar(
-            df_sys, r='accuracy', theta='sistema', line_close=True,
-            range_r=[0, 100], markers=True,
-            color_discrete_sequence=['#00CC96']
-        )
-        fig_radar.update_traces(fill='toself')
+        fig_radar = go.Figure(go.Scatterpolar(
+            r=accuracies,
+            theta=sistemas,
+            fill='toself',
+            line_color='#00CC96',
+            mode='lines+markers',
+        ))
+        fig_radar.update_layout(polar=dict(radialaxis=dict(range=[0, 100])))
         st.plotly_chart(fig_radar, use_container_width=True)
 
         st.markdown("---")
@@ -38,15 +40,19 @@ def render_analytics():
         with col_meta:
             st.subheader("🧠 Metacognição (Confiança vs Acerto)")
             if meta_stats:
-                df_meta = pd.DataFrame(meta_stats)
-                df_meta["Resultado"] = df_meta["answered_correctly"].apply(lambda x: "Acertou" if x == 1 else "Errou")
+                levels = sorted(set(r["confidence_level"] for r in meta_stats))
+                acertou = {l: 0 for l in levels}
+                errou = {l: 0 for l in levels}
+                for r in meta_stats:
+                    if r["answered_correctly"] == 1:
+                        acertou[r["confidence_level"]] += r["qtd"]
+                    else:
+                        errou[r["confidence_level"]] += r["qtd"]
 
-                fig_meta = px.bar(
-                    df_meta, x="confidence_level", y="qtd", color="Resultado",
-                    barmode="group",
-                    color_discrete_map={"Acertou": "#28a745", "Errou": "#dc3545"},
-                    labels={"confidence_level": "Nível de Confiança", "qtd": "Qtd Questões"}
-                )
+                fig_meta = go.Figure()
+                fig_meta.add_trace(go.Bar(name="Acertou", x=levels, y=[acertou[l] for l in levels], marker_color="#28a745"))
+                fig_meta.add_trace(go.Bar(name="Errou", x=levels, y=[errou[l] for l in levels], marker_color="#dc3545"))
+                fig_meta.update_layout(barmode="group", xaxis_title="Nível de Confiança", yaxis_title="Qtd Questões")
                 st.plotly_chart(fig_meta, use_container_width=True)
             else:
                 st.caption("Sem dados de confiança registrados ainda.")
@@ -54,15 +60,26 @@ def render_analytics():
         with col_time:
             st.subheader("⏱️ Arrasto Cognitivo (Tempo Médio)")
             if time_stats:
-                df_time = pd.DataFrame(time_stats)
-                df_time["Resultado"] = df_time["answered_correctly"].apply(lambda x: "Acertou" if x == 1 else "Errou")
+                sistemas_t = list(dict.fromkeys(r["sistema"] for r in time_stats))
+                t_acertou = {s: 0 for s in sistemas_t}
+                t_errou = {s: 0 for s in sistemas_t}
+                t_acertou_cnt = {s: 0 for s in sistemas_t}
+                t_errou_cnt = {s: 0 for s in sistemas_t}
+                for r in time_stats:
+                    s = r["sistema"]
+                    if r["answered_correctly"] == 1:
+                        t_acertou[s] += r["avg_time"]
+                        t_acertou_cnt[s] += 1
+                    else:
+                        t_errou[s] += r["avg_time"]
+                        t_errou_cnt[s] += 1
+                acertou_avg = [round(t_acertou[s] / t_acertou_cnt[s], 1) if t_acertou_cnt[s] > 0 else 0 for s in sistemas_t]
+                errou_avg = [round(t_errou[s] / t_errou_cnt[s], 1) if t_errou_cnt[s] > 0 else 0 for s in sistemas_t]
 
-                fig_time = px.bar(
-                    df_time, x="avg_time", y="sistema", color="Resultado",
-                    orientation='h', barmode='group',
-                    color_discrete_map={"Acertou": "#28a745", "Errou": "#dc3545"},
-                    labels={"avg_time": "Tempo Médio (s)", "sistema": "Sistema"}
-                )
+                fig_time = go.Figure()
+                fig_time.add_trace(go.Bar(name="Acertou", y=sistemas_t, x=acertou_avg, orientation='h', marker_color="#28a745"))
+                fig_time.add_trace(go.Bar(name="Errou", y=sistemas_t, x=errou_avg, orientation='h', marker_color="#dc3545"))
+                fig_time.update_layout(barmode="group", xaxis_title="Tempo Médio (s)", yaxis_title="Sistema")
                 fig_time.add_vline(x=90, line_width=2, line_dash="dash", line_color="red",
                                    annotation_text="USMLE Limit (90s)")
                 st.plotly_chart(fig_time, use_container_width=True)
@@ -76,17 +93,24 @@ def render_analytics():
         with col_fsrs:
             st.subheader("📅 Forecast de Revisões (FSRS)")
             if fsrs_data:
-                df_fsrs = pd.DataFrame(fsrs_data)
-                df_fsrs["due"] = pd.to_datetime(df_fsrs["due"])
-                df_fsrs = df_fsrs[df_fsrs["due"].dt.date >= now_utc().date()]
+                hoje = now_utc().date()
+                fsrs_filtrado = []
+                for r in fsrs_data:
+                    try:
+                        d = datetime.fromisoformat(r["due"]).date() if r["due"] else None
+                    except (ValueError, TypeError):
+                        d = None
+                    if d and d >= hoje:
+                        fsrs_filtrado.append({"due": d, "due_str": d.strftime('%d/%m'), "qtd": r["qtd"]})
 
-                if not df_fsrs.empty:
-                    df_fsrs["due_str"] = df_fsrs["due"].dt.strftime('%d/%m')
-                    fig_fsrs = px.bar(
-                        df_fsrs, x="due_str", y="qtd",
-                        labels={"due_str": "Data", "qtd": "Flashcards Agendados"},
-                        color_discrete_sequence=['#636EFA']
-                    )
+                if fsrs_filtrado:
+                    fsrs_filtrado.sort(key=lambda x: x["due"])
+                    fig_fsrs = go.Figure(go.Bar(
+                        x=[r["due_str"] for r in fsrs_filtrado],
+                        y=[r["qtd"] for r in fsrs_filtrado],
+                        marker_color="#636EFA",
+                    ))
+                    fig_fsrs.update_layout(xaxis_title="Data", yaxis_title="Flashcards Agendados")
                     st.plotly_chart(fig_fsrs, use_container_width=True)
                 else:
                     st.caption("Nenhum card agendado para o futuro.")
@@ -96,18 +120,62 @@ def render_analytics():
         with col_conf:
             st.subheader("🪤 Top Armadilhas (Red Herrings)")
             if confusions:
-                df_conf = pd.DataFrame(confusions)
                 st.dataframe(
-                    df_conf.rename(columns={
-                        "tag_correct": "O que era (Verdadeiro)",
-                        "tag_confused": "O que você achou (Falso)",
-                        "count": "Vezes que caiu"
-                    }),
+                    [{
+                        "O que era (Verdadeiro)": r["tag_correct"],
+                        "O que você achou (Falso)": r["tag_confused"],
+                        "Vezes que caiu": r["count"],
+                    } for r in confusions],
                     use_container_width=True,
                     hide_index=True
                 )
             else:
                 st.success("Você ainda não caiu em nenhum distrator de forma repetida!")
+
+        st.markdown("---")
+        with st.expander("🧩 Mapa de Confusão Cognitiva (Aluno vs Global)", expanded=False):
+            try:
+                from knowledge_graph import KnowledgeGraph
+                from confusion_engine import ConfusionGraph, StudentConfusionGraph
+
+                kg = KnowledgeGraph()
+                cg = ConfusionGraph(kg)
+                cg.load_from_db()
+                cg.load_from_legacy_confusion_pairs()
+
+                sg = StudentConfusionGraph(kg)
+                sg.load_from_db()
+
+                dash = sg.confusion_dashboard()
+
+                col1, col2, col3, col4 = st.columns(4)
+                col1.metric("Total de Pares", dash["total_edges"])
+                col2.metric("Confusões Ativas", dash["active_confusions"])
+                col3.metric("Resolvidas", dash["resolved_confusions"])
+                col4.metric("Mastery Médio", f"{dash['average_confusion_mastery']:.0%}")
+
+                if dash["top_unresolved"]:
+                    st.subheader("🔴 Principais Confusões por Resolver")
+                    st.dataframe([{
+                        "Conceito A": c["concept_a"],
+                        "Conceito B": c["concept_b"],
+                        "Peso": f"{c['weight']:.0%}",
+                        "Evidências": c["evidence_count"],
+                        "Mastery": f"{c['confusion_mastery']:.0%}",
+                        "Acertos Seguidos": c["correct_streak"],
+                    } for c in dash["top_unresolved"]], use_container_width=True, hide_index=True)
+
+                global_top = cg.global_top_confusions(n=20)
+                if global_top:
+                    st.subheader("🌐 Top Confusões Globais (População)")
+                    st.dataframe([{
+                        "Conceito A": e["concept_a"],
+                        "Conceito B": e["concept_b"],
+                        "Peso": f"{e['weight']:.0%}",
+                        "Evidências": e["evidence_count"],
+                    } for e in global_top], use_container_width=True, hide_index=True)
+            except Exception:
+                st.caption("Mapa de confusão indisponível — resolva algumas questões primeiro.")
 
         st.markdown("---")
         with st.expander("Ver Domínio BKT Completo por Micro-Tags"):
@@ -166,5 +234,5 @@ def render_analytics():
                     })
 
             if rows:
-                df_tags = pd.DataFrame(rows).sort_values("Real Knowledge")
-                st.dataframe(df_tags, use_container_width=True, hide_index=True)
+                rows.sort(key=lambda x: x["Real Knowledge"])
+                st.dataframe(rows, use_container_width=True, hide_index=True)

@@ -1,23 +1,28 @@
 import sqlite3
 import json
 import uuid
-import streamlit as st
+import os
 from enum import Enum
 from datetime import datetime, timezone, timedelta
 from config import *
+import config as _cfg
+
 
 class ItemType(Enum):
     FLASHCARD = "flashcard"
     QUESTION  = "question"
-    EO        = "eo"
 
-@st.cache_resource
+_conn_cache: dict[str, sqlite3.Connection] = {}
+
 def get_conn():
-    conn = sqlite3.connect(DB_PATH, check_same_thread=False)
-    conn.row_factory = sqlite3.Row
-    conn.execute("PRAGMA journal_mode=WAL;")
-    conn.execute("PRAGMA synchronous=NORMAL;")
-    return conn
+    db_path = os.environ.get("USMLE_TEST_DB") or _cfg.DB_PATH
+    if db_path not in _conn_cache:
+        conn = sqlite3.connect(db_path, check_same_thread=False)
+        conn.row_factory = sqlite3.Row
+        conn.execute("PRAGMA journal_mode=WAL;")
+        conn.execute("PRAGMA synchronous=NORMAL;")
+        _conn_cache[db_path] = conn
+    return _conn_cache[db_path]
 
 def init_db():
     conn = get_conn()
@@ -78,6 +83,31 @@ def init_db():
         )
     """)
 
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS confusion_edges (
+            concept_a TEXT NOT NULL,
+            concept_b TEXT NOT NULL,
+            weight REAL DEFAULT 0.0,
+            evidence_count INTEGER DEFAULT 0,
+            source TEXT DEFAULT 'response',
+            first_seen TEXT NOT NULL,
+            last_seen TEXT NOT NULL,
+            PRIMARY KEY (concept_a, concept_b)
+        )
+    """)
+
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS confusion_events (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            concept_a TEXT NOT NULL,
+            concept_b TEXT NOT NULL,
+            weight REAL,
+            confidence_label TEXT,
+            question_id TEXT,
+            created_at TEXT NOT NULL
+        )
+    """)
+
     conn.execute("CREATE INDEX IF NOT EXISTS idx_srs_state_obj ON srs_state(object_id, object_type)")
     conn.execute("CREATE INDEX IF NOT EXISTS idx_srs_state_due ON srs_state(due)")
     conn.execute("CREATE INDEX IF NOT EXISTS idx_item_tags_tag ON item_tags(tag)")
@@ -85,6 +115,28 @@ def init_db():
     conn.execute("CREATE INDEX IF NOT EXISTS idx_confusion_pairs ON confusion_pairs(tag_correct)")
     conn.execute("CREATE INDEX IF NOT EXISTS idx_eo_sistema ON educational_objectives(sistema)")
     conn.execute("CREATE INDEX IF NOT EXISTS idx_eo_source ON educational_objectives(source_question_id)")
+
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_ce_weight ON confusion_edges(weight DESC)")
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_ce_source ON confusion_edges(source)")
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_ce_last_seen ON confusion_edges(last_seen DESC)")
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_ce_events_created ON confusion_events(created_at DESC)")
+
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS student_confusions (
+            student_id TEXT NOT NULL DEFAULT 'default',
+            concept_a TEXT NOT NULL,
+            concept_b TEXT NOT NULL,
+            weight REAL DEFAULT 0.0,
+            evidence_count INTEGER DEFAULT 0,
+            correct_streak INTEGER DEFAULT 0,
+            resolved_score REAL DEFAULT 0.0,
+            first_seen TEXT NOT NULL,
+            last_seen TEXT NOT NULL,
+            PRIMARY KEY (student_id, concept_a, concept_b)
+        )
+    """)
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_sc_student ON student_confusions(student_id)")
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_sc_weight ON student_confusions(weight DESC)")
 
     conn.execute("""
         CREATE TABLE IF NOT EXISTS tag_validation (
@@ -348,10 +400,23 @@ def registrar_cooldown_tags(tags):
 def get_top_confounders(tag_correct, limit=3):
     conn = get_conn()
     rows = conn.execute("""
-        SELECT tag_confused 
-        FROM confusion_pairs 
-        WHERE tag_correct = ? 
-        ORDER BY count DESC 
+        SELECT CASE
+            WHEN concept_a = ? THEN concept_b
+            ELSE concept_a
+        END AS confounder
+        FROM confusion_edges
+        WHERE (concept_a = ? OR concept_b = ?)
+          AND weight >= 0.05
+        ORDER BY weight DESC
+        LIMIT ?
+    """, (tag_correct, tag_correct, tag_correct, limit)).fetchall()
+    if rows:
+        return [r["confounder"] for r in rows]
+    rows = conn.execute("""
+        SELECT tag_confused
+        FROM confusion_pairs
+        WHERE tag_correct = ?
+        ORDER BY count DESC
         LIMIT ?
     """, (tag_correct, limit)).fetchall()
     return [r["tag_confused"] for r in rows]
