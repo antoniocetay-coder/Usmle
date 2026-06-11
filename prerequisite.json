@@ -1,0 +1,6325 @@
+{
+  "STEMI": [
+    "Coronary Circulation",
+    "Left Anterior Descending Artery",
+    "Right Coronary Artery",
+    "Cardiac Action Potential",
+    "Coagulative Necrosis"
+  ],
+  "NSTEMI": [
+    "Coronary Circulation",
+    "Stable Angina",
+    "Frank-Starling Law"
+  ],
+  "Acute Coronary Syndrome": [
+    "Coronary Circulation",
+    "Virchow Triad",
+    "Thrombus Formation",
+    "Myocardial Infarction"
+  ],
+  "Ventricular Free Wall Rupture": [
+    "Myocardial Infarction",
+    "Cardiac Layers",
+    "Pericardium"
+  ],
+  "Papillary Muscle Rupture": [
+    "Myocardial Infarction",
+    "Mitral Regurgitation"
+  ],
+  "Dressler Syndrome": [
+    "Myocardial Infarction",
+    "Type III Hypersensitivity",
+    "Pericarditis"
+  ],
+  "Cardiac Tamponade": [
+    "Pericardium",
+    "Pericarditis",
+    "Beck Triad",
+    "Pulsus Paradoxus"
+  ],
+  "Cor Pulmonale": [
+    "Pulmonary Hypertension (Primary)",
+    "Right Heart Failure",
+    "Pulmonary Vascular Resistance"
+  ],
+  "Systolic Heart Failure": [
+    "Cardiac Output",
+    "Frank-Starling Law",
+    "Afterload",
+    "Preload"
+  ],
+  "Diastolic Heart Failure": [
+    "Cardiac Output",
+    "Preload",
+    "Hypertrophic Cardiomyopathy"
+  ],
+  "Eisenmenger Syndrome": [
+    "Ventricular Septal Defect",
+    "Atrial Septal Defect",
+    "Patent Ductus Arteriosus",
+    "Pulmonary Hypertension (Primary)"
+  ],
+  "Aortic Dissection": [
+    "Aorta",
+    "Primary Hypertension",
+    "Marfan Syndrome",
+    "Fibrillin"
+  ],
+  "Infective Endocarditis": [
+    "Virchow Triad",
+    "Staphylococcus aureus",
+    "Viridans Streptococci",
+    "Duke Criteria"
+  ],
+  "Rheumatic Heart Disease": [
+    "Streptococcus pyogenes (Group A)",
+    "Type II Hypersensitivity",
+    "Molecular Mimicry",
+    "Jones Criteria"
+  ],
+  "Torsades de Pointes": [
+    "Long QT Syndrome",
+    "Ventricular Tachycardia",
+    "Class IA Antiarrhythmics"
+  ],
+  "WPW Syndrome": [
+    "Cardiac Action Potential",
+    "AV Node",
+    "Atrial Fibrillation"
+  ],
+  "Hypertensive Emergency": [
+    "Primary Hypertension",
+    "Malignant Hypertension",
+    "Baroreceptor Reflex"
+  ],
+  "Nephrotic Syndrome": [
+    "Glomerular Filtration Barrier",
+    "Podocytes",
+    "Oncotic Pressure",
+    "Starling Forces"
+  ],
+  "Nephritic Syndrome": [
+    "Glomerular Filtration Barrier",
+    "Type III Hypersensitivity",
+    "Complement System"
+  ],
+  "Post-Streptococcal GN": [
+    "Streptococcus pyogenes (Group A)",
+    "Type III Hypersensitivity",
+    "Nephritic Syndrome"
+  ],
+  "IgA Nephropathy": [
+    "IgA",
+    "Nephritic Syndrome",
+    "Complement System"
+  ],
+  "Goodpasture Syndrome": [
+    "Anti-GBM Disease",
+    "Type II Hypersensitivity",
+    "Basement Membrane"
+  ],
+  "Minimal Change Disease": [
+    "Nephrotic Syndrome",
+    "Podocytes",
+    "T Regulatory Cells"
+  ],
+  "Acute Tubular Necrosis": [
+    "Proximal Convoluted Tubule",
+    "Loop of Henle",
+    "Intrinsic AKI",
+    "Hypovolemic Shock"
+  ],
+  "Chronic Kidney Disease": [
+    "GFR",
+    "Renal Clearance",
+    "Secondary Hyperparathyroidism",
+    "Erythropoietin"
+  ],
+  "Renal Tubular Acidosis Type I": [
+    "Collecting Duct",
+    "Metabolic Acidosis",
+    "Anion Gap"
+  ],
+  "Renal Tubular Acidosis Type II": [
+    "Proximal Convoluted Tubule",
+    "Metabolic Acidosis",
+    "Fanconi Syndrome"
+  ],
+  "Fanconi Syndrome": [
+    "Proximal Convoluted Tubule",
+    "Glucose Reabsorption",
+    "Amino Acid Reabsorption"
+  ],
+  "Renal Osteodystrophy": [
+    "Chronic Kidney Disease",
+    "Secondary Hyperparathyroidism",
+    "Vitamin D Metabolism"
+  ],
+  "ADPKD": [
+    "Kidney Gross Structure",
+    "Renal Cortex",
+    "Autosomal Dominant Inheritance"
+  ],
+  "Hepatorenal Syndrome": [
+    "Portal Hypertension",
+    "Prerenal AKI",
+    "RAAS",
+    "Aldosterone"
+  ],
+  "Diabetic Ketoacidosis": [
+    "Type 1 Diabetes Mellitus",
+    "Metabolic Acidosis",
+    "Anion Gap",
+    "Glucagon",
+    "Insulin"
+  ],
+  "Hyperosmolar Hyperglycemic State": [
+    "Type 2 Diabetes Mellitus",
+    "ADH (Vasopressin)",
+    "Sodium Regulation"
+  ],
+  "Diabetic Nephropathy": [
+    "Type 1 Diabetes Mellitus",
+    "Type 2 Diabetes Mellitus",
+    "Glomerular Filtration Barrier",
+    "Nephrotic Syndrome"
+  ],
+  "Diabetic Retinopathy": [
+    "Type 1 Diabetes Mellitus",
+    "Type 2 Diabetes Mellitus",
+    "Retinal Detachment"
+  ],
+  "Cushing Syndrome": [
+    "Cortisol Synthesis",
+    "ACTH",
+    "CRH",
+    "HPA Axis in Depression"
+  ],
+  "Addison Disease": [
+    "Cortisol Synthesis",
+    "Aldosterone Synthesis",
+    "ACTH",
+    "Primary Hypertension"
+  ],
+  "Conn Syndrome": [
+    "Aldosterone Synthesis",
+    "RAAS",
+    "Primary Hypertension",
+    "Potassium Regulation"
+  ],
+  "Congenital Adrenal Hyperplasia": [
+    "Cortisol Synthesis",
+    "Aldosterone Synthesis",
+    "ACTH",
+    "21-Hydroxylase Deficiency"
+  ],
+  "Pheochromocytoma": [
+    "Catecholamines",
+    "Epinephrine",
+    "Norepinephrine",
+    "Secondary Hypertension"
+  ],
+  "Graves Disease": [
+    "TSH",
+    "T3",
+    "T4",
+    "Type II Hypersensitivity",
+    "Autoimmunity Mechanisms"
+  ],
+  "Hashimoto Thyroiditis": [
+    "TSH",
+    "T3",
+    "T4",
+    "Type IV Hypersensitivity",
+    "Autoimmunity Mechanisms"
+  ],
+  "Thyroid Storm": [
+    "Graves Disease",
+    "T3",
+    "T4",
+    "Catecholamines"
+  ],
+  "Primary Hyperparathyroidism": [
+    "Parathyroid Hormone",
+    "Calcium Regulation",
+    "Vitamin D Metabolism",
+    "Calcium Oxalate Stones"
+  ],
+  "Secondary Hyperparathyroidism": [
+    "Chronic Kidney Disease",
+    "Parathyroid Hormone",
+    "Vitamin D Metabolism",
+    "Calcium Regulation"
+  ],
+  "Zollinger-Ellison Syndrome": [
+    "Gastrin",
+    "Gastric Acid Secretion",
+    "Peptic Ulcer Disease",
+    "MEN1"
+  ],
+  "MEN1": [
+    "Prolactinoma",
+    "Primary Hyperparathyroidism",
+    "Zollinger-Ellison Syndrome"
+  ],
+  "MEN2A": [
+    "Medullary Thyroid Cancer",
+    "Pheochromocytoma",
+    "Primary Hyperparathyroidism"
+  ],
+  "Carcinoid Syndrome": [
+    "Carcinoid Tumor",
+    "Serotonin",
+    "Tricuspid Regurgitation"
+  ],
+  "COPD": [
+    "Obstructive Pattern",
+    "FEV1/FVC Ratio",
+    "Emphysema",
+    "Chronic Bronchitis"
+  ],
+  "Emphysema": [
+    "Alveoli",
+    "Type II Pneumocytes",
+    "Lung Compliance",
+    "Alpha-1 Antitrypsin Deficiency"
+  ],
+  "Asthma": [
+    "Airway Resistance",
+    "Type I Hypersensitivity",
+    "IgE",
+    "Leukotrienes",
+    "IL-4",
+    "IL-5"
+  ],
+  "Pulmonary Embolism": [
+    "Virchow Triad",
+    "Deep Vein Thrombosis",
+    "Factor V Leiden",
+    "V/Q Mismatch"
+  ],
+  "ARDS": [
+    "Type I Respiratory Failure",
+    "V/Q Mismatch",
+    "DAD",
+    "Surfactant"
+  ],
+  "IPF": [
+    "Restrictive Pattern",
+    "TGF-beta in Fibrosis",
+    "Fibrosis",
+    "Type II Pneumocytes"
+  ],
+  "Sarcoidosis": [
+    "Granulomatous Inflammation",
+    "Type IV Hypersensitivity",
+    "Restrictive Pattern",
+    "Epithelioid Cells"
+  ],
+  "Hypersensitivity Pneumonitis": [
+    "Type III Hypersensitivity",
+    "Type IV Hypersensitivity",
+    "Restrictive Pattern"
+  ],
+  "Pulmonary Hypertension (Primary)": [
+    "Pulmonary Vascular Resistance",
+    "Hypoxic Pulmonary Vasoconstriction",
+    "Right Heart Failure"
+  ],
+  "Small Cell Lung Cancer": [
+    "Paraneoplastic Syndromes",
+    "SIADH",
+    "Cushing Syndrome",
+    "Lambert-Eaton Syndrome"
+  ],
+  "Pancoast Tumor": [
+    "Horner Syndrome",
+    "Brachial Plexus",
+    "Squamous Cell Lung Cancer"
+  ],
+  "Cirrhosis": [
+    "Hepatic Lobule",
+    "Portal Circulation",
+    "Fibrosis",
+    "TGF-beta in Fibrosis",
+    "Alcoholic Hepatitis"
+  ],
+  "Portal Hypertension": [
+    "Cirrhosis",
+    "Portal Circulation",
+    "Esophageal Varices",
+    "Ascites"
+  ],
+  "Hepatic Encephalopathy": [
+    "Cirrhosis",
+    "Portal Hypertension",
+    "Urea Cycle"
+  ],
+  "Spontaneous Bacterial Peritonitis": [
+    "Ascites",
+    "Cirrhosis",
+    "Escherichia coli",
+    "Klebsiella pneumoniae"
+  ],
+  "Hepatocellular Carcinoma": [
+    "Cirrhosis",
+    "Hepatitis B",
+    "Hepatitis C",
+    "Hemochromatosis"
+  ],
+  "Acute Pancreatitis": [
+    "Pancreatic Enzymes",
+    "Lipase",
+    "Amylase",
+    "Trypsinogen",
+    "Cholelithiasis"
+  ],
+  "Chronic Pancreatitis": [
+    "Acute Pancreatitis",
+    "Pancreatic Enzymes",
+    "Fat Absorption"
+  ],
+  "Peptic Ulcer Disease": [
+    "Gastric Acid Secretion",
+    "Helicobacter pylori",
+    "Prostaglandins",
+    "NSAID-Induced Ulcer"
+  ],
+  "Barrett Esophagus": [
+    "GERD",
+    "Metaplasia",
+    "Esophageal Adenocarcinoma"
+  ],
+  "Crohn Disease": [
+    "Transmural Inflammation",
+    "Granulomatous Inflammation",
+    "Type IV Hypersensitivity",
+    "Skip Lesions (Crohn)"
+  ],
+  "Ulcerative Colitis": [
+    "Chronic Inflammation",
+    "Pseudopolyps",
+    "Toxic Megacolon",
+    "Colorectal Cancer"
+  ],
+  "Primary Biliary Cholangitis": [
+    "Bile Salts",
+    "Bile Acid Enterohepatic Circulation",
+    "Type IV Hypersensitivity",
+    "Autoimmunity Mechanisms"
+  ],
+  "Cholangitis": [
+    "Choledocholithiasis",
+    "Biliary System",
+    "Common Bile Duct",
+    "Reynolds Pentad"
+  ],
+  "DIC": [
+    "Extrinsic Coagulation Pathway",
+    "Intrinsic Coagulation Pathway",
+    "Fibrinolysis",
+    "Septic Shock"
+  ],
+  "TTP": [
+    "Platelet Activation",
+    "vWF",
+    "Microangiopathic Hemolytic Anemia"
+  ],
+  "HUS": [
+    "EHEC (O157:H7)",
+    "Microangiopathic Hemolytic Anemia",
+    "Intrinsic AKI"
+  ],
+  "Antiphospholipid Syndrome": [
+    "Type III Hypersensitivity",
+    "Autoimmunity Mechanisms",
+    "Virchow Triad",
+    "SLE"
+  ],
+  "Sickle Cell Disease": [
+    "Hemoglobin S",
+    "Hemoglobin Structure",
+    "Autosomal Recessive Inheritance",
+    "Coagulative Necrosis"
+  ],
+  "G6PD Deficiency": [
+    "HMP Shunt",
+    "G6PD",
+    "X-Linked Recessive",
+    "AIHA"
+  ],
+  "Hereditary Spherocytosis": [
+    "RBC Metabolism",
+    "Autosomal Dominant Inheritance",
+    "AIHA"
+  ],
+  "Pernicious Anemia": [
+    "Intrinsic Factor",
+    "Vitamin B12 (Cobalamin)",
+    "Parietal Cells",
+    "Type II Hypersensitivity"
+  ],
+  "Hemophilia A": [
+    "Factor VIII",
+    "Intrinsic Coagulation Pathway",
+    "X-Linked Recessive"
+  ],
+  "Hemophilia B": [
+    "Factor IX",
+    "Intrinsic Coagulation Pathway",
+    "X-Linked Recessive"
+  ],
+  "CML": [
+    "t(9;22) BCR-ABL",
+    "Ras Oncogene",
+    "Leukopoiesis"
+  ],
+  "AML": [
+    "t(15;17) PML-RARA",
+    "Oncogenes",
+    "Leukopoiesis"
+  ],
+  "Multiple Myeloma": [
+    "IL-6",
+    "Amyloidosis",
+    "Calcium Regulation",
+    "B Cell Activation"
+  ],
+  "Hodgkin Lymphoma": [
+    "Reed-Sternberg Cells",
+    "EBV (HHV-4)",
+    "B Cell Development",
+    "IL-5"
+  ],
+  "Burkitt Lymphoma": [
+    "t(8;14) Burkitt",
+    "EBV (HHV-4)",
+    "Myc Oncogene",
+    "B Cell Development"
+  ],
+  "ITP": [
+    "Platelet Activation",
+    "Type II Hypersensitivity",
+    "Autoimmunity Mechanisms"
+  ],
+  "SLE": [
+    "Autoimmunity Mechanisms",
+    "Type III Hypersensitivity",
+    "Anti-dsDNA",
+    "Anti-Smith",
+    "Complement System"
+  ],
+  "Rheumatoid Arthritis": [
+    "Type IV Hypersensitivity",
+    "Autoimmunity Mechanisms",
+    "IL-1",
+    "IL-6",
+    "TNF-alpha"
+  ],
+  "Ankylosing Spondylitis": [
+    "HLA-B27",
+    "Type IV Hypersensitivity",
+    "TNF-alpha"
+  ],
+  "Gout": [
+    "Uric Acid Crystals",
+    "Purine Synthesis",
+    "HGPRT Deficiency",
+    "Lesch-Nyhan Syndrome"
+  ],
+  "Systemic Sclerosis": [
+    "Autoimmunity Mechanisms",
+    "TGF-beta in Fibrosis",
+    "Fibrosis",
+    "Anti-Scl-70"
+  ],
+  "Dermatomyositis": [
+    "Type IV Hypersensitivity",
+    "Autoimmunity Mechanisms",
+    "Anti-Jo-1",
+    "Paraneoplastic Syndromes"
+  ],
+  "Polymyositis": [
+    "Type IV Hypersensitivity",
+    "Autoimmunity Mechanisms",
+    "Anti-Jo-1"
+  ],
+  "Osteoporosis": [
+    "Bone Remodeling",
+    "RANK/RANKL/OPG Pathway",
+    "Calcium Regulation",
+    "PTH Actions",
+    "Estrogen"
+  ],
+  "Paget Disease of Bone": [
+    "Bone Remodeling",
+    "Osteoclasts",
+    "Osteoblasts",
+    "Alkaline Phosphatase (Paget)"
+  ],
+  "Osteosarcoma": [
+    "Bone Remodeling",
+    "Rb Protein",
+    "p53",
+    "Tumor Suppressors"
+  ],
+  "Ischemic Stroke": [
+    "Circle of Willis",
+    "Virchow Triad",
+    "Atrial Fibrillation",
+    "Dorsal Column",
+    "Spinothalamic Tract"
+  ],
+  "Subarachnoid Hemorrhage": [
+    "Berry Aneurysm",
+    "Circle of Willis",
+    "Primary Hypertension"
+  ],
+  "Subdural Hematoma": [
+    "Meninges",
+    "Virchow Triad",
+    "Alcohol Use Disorder"
+  ],
+  "Epidural Hematoma": [
+    "Meninges",
+    "Herniation Syndromes"
+  ],
+  "Multiple Sclerosis": [
+    "Blood-Brain Barrier",
+    "Oligodendroglioma",
+    "Type IV Hypersensitivity",
+    "Autoimmunity Mechanisms"
+  ],
+  "Alzheimer Disease": [
+    "Hippocampus",
+    "Acetylcholine (CNS)",
+    "Amyloid"
+  ],
+  "Parkinson Disease": [
+    "Basal Ganglia",
+    "Dopamine",
+    "Nigrostriatal Pathway"
+  ],
+  "Huntington Disease": [
+    "Basal Ganglia",
+    "Glutamate",
+    "Autosomal Dominant Inheritance",
+    "Anticipation"
+  ],
+  "Myasthenia Gravis": [
+    "Neuromuscular Junction",
+    "Nicotinic Receptors",
+    "Type II Hypersensitivity",
+    "Acetylcholine (CNS)"
+  ],
+  "Guillain-Barre Syndrome": [
+    "Type IV Hypersensitivity",
+    "Molecular Mimicry",
+    "Molecular Mimicry"
+  ],
+  "Bacterial Meningitis": [
+    "Meninges",
+    "Blood-Brain Barrier",
+    "Streptococcus pneumoniae",
+    "Neisseria meningitidis"
+  ],
+  "Increased ICP": [
+    "CSF Circulation",
+    "Hydrocephalus",
+    "Herniation Syndromes",
+    "Papilledema"
+  ],
+  "Wernicke Encephalopathy": [
+    "Vitamin B1 (Thiamine)",
+    "Alcohol Use Disorder",
+    "TCA Cycle"
+  ],
+  "Tabes Dorsalis": [
+    "Treponema pallidum",
+    "Dorsal Column",
+    "Spinothalamic Tract"
+  ],
+  "Brown-Sequard Syndrome": [
+    "Dorsal Column",
+    "Spinothalamic Tract",
+    "Corticospinal Tract"
+  ],
+  "Outer Ear": [],
+  "Middle Ear": [
+    "Outer Ear"
+  ],
+  "Inner Ear": [
+    "Middle Ear"
+  ],
+  "Nasal Cavity": [
+    "Ossicles"
+  ],
+  "Parotid Gland Tumors": [
+    "Head and Neck Cancer"
+  ],
+  "EBV Association": [
+    "Nasopharyngeal Carcinoma"
+  ],
+  "Paranasal Sinuses": [
+    "Nasal Cavity"
+  ],
+  "Maxillary Sinus": [
+    "Paranasal Sinuses"
+  ],
+  "Ossicles": [
+    "Middle Ear"
+  ],
+  "Vestibular System": [
+    "Inner Ear"
+  ],
+  "Otitis Externa": [
+    "Outer Ear"
+  ],
+  "Malignant Otitis Externa": [
+    "Outer Ear",
+    "Otitis Externa"
+  ],
+  "Cholesteatoma": [
+    "Middle Ear"
+  ],
+  "Conductive Hearing Loss": [
+    "Ossicles",
+    "Middle Ear"
+  ],
+  "Sensorineural Hearing Loss": [
+    "Inner Ear"
+  ],
+  "Noise-Induced Hearing Loss": [
+    "Inner Ear",
+    "Sensorineural Hearing Loss"
+  ],
+  "Labyrinthitis": [
+    "Inner Ear",
+    "Vestibular System"
+  ],
+  "Benign Positional Vertigo": [
+    "Vestibular System"
+  ],
+  "Peripheral vs Central Vertigo": [
+    "Vestibular System"
+  ],
+  "Allergic Rhinitis": [
+    "Nasal Cavity"
+  ],
+  "Nasopharyngeal Carcinoma": [
+    "EBV Association",
+    "Nasal Cavity"
+  ],
+  "Warthin Tumor": [
+    "Parotid Gland Tumors"
+  ],
+  "Enzyme Kinetics": [],
+  "Michaelis-Menten Kinetics": [
+    "Enzyme Kinetics"
+  ],
+  "Competitive Inhibition": [
+    "Michaelis-Menten Kinetics"
+  ],
+  "Noncompetitive Inhibition": [
+    "Competitive Inhibition"
+  ],
+  "Uncompetitive Inhibition": [
+    "Noncompetitive Inhibition"
+  ],
+  "Allosteric Regulation": [
+    "Uncompetitive Inhibition"
+  ],
+  "Glycolysis": [
+    "Allosteric Regulation"
+  ],
+  "Gluconeogenesis": [
+    "Glycolysis"
+  ],
+  "Glycogen Synthesis": [
+    "Gluconeogenesis"
+  ],
+  "Glycogenolysis": [
+    "Glycogen Synthesis"
+  ],
+  "Glycogen Storage Diseases": [
+    "Glycogenolysis"
+  ],
+  "Pompe Disease": [
+    "Glycogen Storage Diseases"
+  ],
+  "McArdle Disease": [
+    "Pompe Disease"
+  ],
+  "Von Gierke Disease": [
+    "McArdle Disease"
+  ],
+  "Oxidative Phosphorylation": [
+    "TCA Cycle"
+  ],
+  "Electron Transport Chain": [
+    "Oxidative Phosphorylation"
+  ],
+  "ATP Synthase": [
+    "Electron Transport Chain"
+  ],
+  "Pyruvate Dehydrogenase Complex": [
+    "ATP Synthase"
+  ],
+  "Citrate Synthase": [
+    "Pyruvate Dehydrogenase Complex"
+  ],
+  "Fatty Acid Synthesis": [
+    "Citrate Synthase"
+  ],
+  "Beta-Oxidation": [
+    "Fatty Acid Synthesis"
+  ],
+  "Ketone Body Metabolism": [
+    "Beta-Oxidation"
+  ],
+  "Fatty Acid Oxidation Defects": [
+    "Ketone Body Metabolism"
+  ],
+  "MCAD Deficiency": [
+    "Fatty Acid Oxidation Defects"
+  ],
+  "Amino Acid Metabolism": [
+    "MCAD Deficiency"
+  ],
+  "Phenylketonuria": [
+    "Urea Cycle"
+  ],
+  "Alkaptonuria": [
+    "Phenylketonuria"
+  ],
+  "Homocystinuria": [
+    "Alkaptonuria"
+  ],
+  "Maple Syrup Urine Disease": [
+    "Homocystinuria"
+  ],
+  "Albinism": [
+    "Maple Syrup Urine Disease"
+  ],
+  "Tyrosinemia": [
+    "Albinism"
+  ],
+  "Pyrimidine Synthesis": [
+    "Purine Synthesis"
+  ],
+  "Purine Salvage Pathway": [
+    "Pyrimidine Synthesis"
+  ],
+  "Adenosine Deaminase Deficiency": [
+    "Purine Salvage Pathway"
+  ],
+  "Orotic Aciduria": [
+    "Lesch-Nyhan Syndrome"
+  ],
+  "Vitamin A": [
+    "Orotic Aciduria"
+  ],
+  "Vitamin B2 (Riboflavin)": [
+    "Vitamin B1 (Thiamine)"
+  ],
+  "Vitamin B3 (Niacin)": [
+    "Vitamin B2 (Riboflavin)"
+  ],
+  "Vitamin B5 (Pantothenate)": [
+    "Vitamin B3 (Niacin)"
+  ],
+  "Vitamin B6 (Pyridoxine)": [
+    "Vitamin B5 (Pantothenate)"
+  ],
+  "Vitamin B7 (Biotin)": [
+    "Vitamin B6 (Pyridoxine)"
+  ],
+  "Vitamin B9 (Folate)": [
+    "Vitamin B7 (Biotin)"
+  ],
+  "Vitamin C": [
+    "Vitamin B12 (Cobalamin)"
+  ],
+  "Vitamin D": [
+    "Vitamin C"
+  ],
+  "Vitamin E": [
+    "Vitamin D"
+  ],
+  "Vitamin K": [
+    "Vitamin E"
+  ],
+  "Zinc Deficiency": [
+    "Vitamin K"
+  ],
+  "Zinc Toxicity": [
+    "Zinc Deficiency"
+  ],
+  "DNA Replication": [
+    "Zinc Toxicity"
+  ],
+  "Topoisomerases": [
+    "DNA Replication"
+  ],
+  "DNA Polymerase": [
+    "Topoisomerases"
+  ],
+  "Telomerase": [
+    "DNA Polymerase"
+  ],
+  "Nucleotide Excision Repair": [
+    "Telomerase"
+  ],
+  "Base Excision Repair": [
+    "Nucleotide Excision Repair"
+  ],
+  "Mismatch Repair": [
+    "Base Excision Repair"
+  ],
+  "Homologous Recombination": [
+    "Mismatch Repair"
+  ],
+  "Non-Homologous End Joining": [
+    "Homologous Recombination"
+  ],
+  "Transcription": [
+    "Non-Homologous End Joining"
+  ],
+  "RNA Polymerase": [
+    "Transcription"
+  ],
+  "mRNA Processing": [
+    "RNA Polymerase"
+  ],
+  "Splicing": [
+    "mRNA Processing"
+  ],
+  "tRNA Structure": [
+    "Splicing"
+  ],
+  "rRNA": [
+    "tRNA Structure"
+  ],
+  "snRNA": [
+    "rRNA"
+  ],
+  "Translation": [
+    "snRNA"
+  ],
+  "Ribosomes": [
+    "Translation"
+  ],
+  "Post-Translational Modification": [
+    "Ribosomes"
+  ],
+  "Ubiquitin-Proteasome System": [
+    "Post-Translational Modification"
+  ],
+  "Signal Peptides": [
+    "Ubiquitin-Proteasome System"
+  ],
+  "BRCA1": [
+    "Rb Protein"
+  ],
+  "BRCA2": [
+    "BRCA1"
+  ],
+  "BCL-2": [
+    "Myc Oncogene"
+  ],
+  "HER2": [
+    "BCL-2"
+  ],
+  "Lysosomal Storage Diseases": [
+    "HER2"
+  ],
+  "Gaucher Disease": [
+    "Lysosomal Storage Diseases"
+  ],
+  "Tay-Sachs Disease": [
+    "Gaucher Disease"
+  ],
+  "Niemann-Pick Disease": [
+    "Tay-Sachs Disease"
+  ],
+  "Fabry Disease": [
+    "Niemann-Pick Disease"
+  ],
+  "Krabbe Disease": [
+    "Fabry Disease"
+  ],
+  "Metachromatic Leukodystrophy": [
+    "Krabbe Disease"
+  ],
+  "Hurler Syndrome": [
+    "Metachromatic Leukodystrophy"
+  ],
+  "Hunter Syndrome": [
+    "Hurler Syndrome"
+  ],
+  "Peroxisomal Disorders": [
+    "Hunter Syndrome"
+  ],
+  "Zellweger Syndrome": [
+    "Peroxisomal Disorders"
+  ],
+  "Adrenoleukodystrophy": [
+    "Zellweger Syndrome"
+  ],
+  "Collagen Synthesis": [
+    "Adrenoleukodystrophy"
+  ],
+  "Ehlers-Danlos Syndrome": [
+    "Collagen Synthesis"
+  ],
+  "Osteogenesis Imperfecta": [
+    "Ehlers-Danlos Syndrome"
+  ],
+  "Elastin": [
+    "Fibrillin"
+  ],
+  "Cell Cycle": [
+    "Elastin"
+  ],
+  "Cyclins": [
+    "Cell Cycle"
+  ],
+  "CDKs": [
+    "Cyclins"
+  ],
+  "Cell Cycle Checkpoints": [
+    "CDKs"
+  ],
+  "Apoptosis Pathways": [
+    "Cell Cycle Checkpoints"
+  ],
+  "Caspases": [
+    "Apoptosis Pathways"
+  ],
+  "BCL-2 Family": [
+    "Caspases"
+  ],
+  "X-Linked Dominant": [
+    "X-Linked Recessive"
+  ],
+  "Mitochondrial Inheritance": [
+    "X-Linked Dominant"
+  ],
+  "Incomplete Penetrance": [
+    "Mitochondrial Inheritance"
+  ],
+  "Variable Expressivity": [
+    "Incomplete Penetrance"
+  ],
+  "Imprinting": [
+    "Anticipation"
+  ],
+  "Prader-Willi Syndrome": [
+    "Imprinting"
+  ],
+  "Angelman Syndrome": [
+    "Prader-Willi Syndrome"
+  ],
+  "Uniparental Disomy": [
+    "Angelman Syndrome"
+  ],
+  "Trisomy 21 (Down Syndrome)": [
+    "Uniparental Disomy"
+  ],
+  "Trisomy 18 (Edwards)": [
+    "Trisomy 21 (Down Syndrome)"
+  ],
+  "Trisomy 13 (Patau)": [
+    "Trisomy 18 (Edwards)"
+  ],
+  "Turner Syndrome (45,X)": [
+    "Trisomy 13 (Patau)"
+  ],
+  "Klinefelter Syndrome (47,XXY)": [
+    "Turner Syndrome (45,X)"
+  ],
+  "47,XYY Syndrome": [
+    "Klinefelter Syndrome (47,XXY)"
+  ],
+  "Triple X Syndrome": [
+    "47,XYY Syndrome"
+  ],
+  "Cri-du-Chat Syndrome": [
+    "Triple X Syndrome"
+  ],
+  "Williams Syndrome": [
+    "Cri-du-Chat Syndrome"
+  ],
+  "DiGeorge Syndrome": [
+    "Williams Syndrome"
+  ],
+  "Deletion 22q11": [
+    "DiGeorge Syndrome"
+  ],
+  "Hardy-Weinberg Equilibrium": [
+    "Deletion 22q11"
+  ],
+  "Carrier Frequency": [
+    "Hardy-Weinberg Equilibrium"
+  ],
+  "PCR": [
+    "Carrier Frequency"
+  ],
+  "FISH": [
+    "PCR"
+  ],
+  "Karyotype": [
+    "FISH"
+  ],
+  "Southern Blot": [
+    "Karyotype"
+  ],
+  "Northern Blot": [
+    "Southern Blot"
+  ],
+  "Western Blot": [
+    "Northern Blot"
+  ],
+  "Microarray": [
+    "Western Blot"
+  ],
+  "Gene Sequencing": [
+    "Microarray"
+  ],
+  "CRISPR": [
+    "Gene Sequencing"
+  ],
+  "Fragile X Syndrome": [
+    "CRISPR"
+  ],
+  "Huntington Disease Genetics": [
+    "Fragile X Syndrome"
+  ],
+  "Myotonic Dystrophy": [
+    "Huntington Disease Genetics"
+  ],
+  "Friedreich Ataxia": [
+    "Myotonic Dystrophy"
+  ],
+  "Innate Immunity": [],
+  "Toll-Like Receptors": [
+    "Innate Immunity"
+  ],
+  "Pattern Recognition": [
+    "Toll-Like Receptors"
+  ],
+  "Classical Pathway": [
+    "Complement System"
+  ],
+  "Alternative Pathway": [
+    "Classical Pathway"
+  ],
+  "Lectin Pathway": [
+    "Alternative Pathway"
+  ],
+  "C3 Convertase": [
+    "Lectin Pathway"
+  ],
+  "Membrane Attack Complex": [
+    "C3 Convertase"
+  ],
+  "C3b Opsonization": [
+    "Membrane Attack Complex"
+  ],
+  "NK Cells": [
+    "C3b Opsonization"
+  ],
+  "Macrophage Activation": [
+    "NK Cells"
+  ],
+  "Neutrophil Function": [
+    "Macrophage Activation"
+  ],
+  "T Cell Development": [
+    "Neutrophil Function"
+  ],
+  "Thymic Selection": [
+    "T Cell Development"
+  ],
+  "Positive Selection": [
+    "Thymic Selection"
+  ],
+  "Negative Selection": [
+    "Positive Selection"
+  ],
+  "CD4 T Helper Cells": [
+    "Negative Selection"
+  ],
+  "CD8 Cytotoxic T Cells": [
+    "CD4 T Helper Cells"
+  ],
+  "Th1 Response": [
+    "CD8 Cytotoxic T Cells"
+  ],
+  "Th2 Response": [
+    "Th1 Response"
+  ],
+  "Th17 Response": [
+    "Th2 Response"
+  ],
+  "Germinal Center": [
+    "B Cell Activation"
+  ],
+  "IgM": [
+    "Germinal Center"
+  ],
+  "IgG": [
+    "IgM"
+  ],
+  "IgD": [
+    "IgE"
+  ],
+  "Class Switching": [
+    "IgD"
+  ],
+  "Somatic Hypermutation": [
+    "Class Switching"
+  ],
+  "Affinity Maturation": [
+    "Somatic Hypermutation"
+  ],
+  "MHC Class I": [
+    "Affinity Maturation"
+  ],
+  "MHC Class II": [
+    "MHC Class I"
+  ],
+  "Antigen Presentation": [
+    "MHC Class II"
+  ],
+  "HLA Associations": [
+    "Antigen Presentation"
+  ],
+  "IL-2": [
+    "IL-1"
+  ],
+  "IL-8": [
+    "IL-6"
+  ],
+  "IL-10": [
+    "IL-8"
+  ],
+  "IL-12": [
+    "IL-10"
+  ],
+  "IL-13": [
+    "IL-12"
+  ],
+  "IFN-gamma": [
+    "TNF-alpha"
+  ],
+  "TGF-beta": [
+    "IFN-gamma"
+  ],
+  "Anaphylaxis": [
+    "Type IV Hypersensitivity"
+  ],
+  "Serum Sickness": [
+    "Anaphylaxis"
+  ],
+  "Contact Dermatitis": [
+    "Serum Sickness"
+  ],
+  "Bruton Agammaglobulinemia": [
+    "Contact Dermatitis"
+  ],
+  "CVID": [
+    "Bruton Agammaglobulinemia"
+  ],
+  "Selective IgA Deficiency": [
+    "CVID"
+  ],
+  "SCID": [
+    "DiGeorge Syndrome"
+  ],
+  "Wiskott-Aldrich Syndrome": [
+    "SCID"
+  ],
+  "Chediak-Higashi Syndrome": [
+    "Wiskott-Aldrich Syndrome"
+  ],
+  "Chronic Granulomatous Disease": [
+    "Chediak-Higashi Syndrome"
+  ],
+  "LAD (Leukocyte Adhesion Deficiency)": [
+    "Chronic Granulomatous Disease"
+  ],
+  "Job Syndrome": [
+    "LAD (Leukocyte Adhesion Deficiency)"
+  ],
+  "C1 Esterase Inhibitor Deficiency": [
+    "Job Syndrome"
+  ],
+  "C5-C9 Deficiency": [
+    "C1 Esterase Inhibitor Deficiency"
+  ],
+  "Superantigens": [
+    "Molecular Mimicry"
+  ],
+  "Graft-versus-Host Disease": [
+    "Superantigens"
+  ],
+  "Hyperacute Rejection": [
+    "Graft-versus-Host Disease"
+  ],
+  "Acute Rejection": [
+    "Hyperacute Rejection"
+  ],
+  "Chronic Rejection": [
+    "Acute Rejection"
+  ],
+  "HLA Matching": [
+    "Chronic Rejection"
+  ],
+  "Live Attenuated Vaccines": [
+    "HLA Matching"
+  ],
+  "Inactivated Vaccines": [
+    "Live Attenuated Vaccines"
+  ],
+  "Passive Immunization": [
+    "Inactivated Vaccines"
+  ],
+  "Active Immunization": [
+    "Passive Immunization"
+  ],
+  "Tumor Immunology": [
+    "Active Immunization"
+  ],
+  "Immune Evasion": [
+    "Tumor Immunology"
+  ],
+  "PD-1/PD-L1": [
+    "Immune Evasion"
+  ],
+  "Reversible Cell Injury": [],
+  "Irreversible Cell Injury": [
+    "Reversible Cell Injury"
+  ],
+  "Liquefactive Necrosis": [
+    "Coagulative Necrosis"
+  ],
+  "Caseous Necrosis": [
+    "Liquefactive Necrosis"
+  ],
+  "Fat Necrosis": [
+    "Caseous Necrosis"
+  ],
+  "Fibrinoid Necrosis": [
+    "Fat Necrosis"
+  ],
+  "Gangrenous Necrosis": [
+    "Fibrinoid Necrosis"
+  ],
+  "Apoptosis": [
+    "Gangrenous Necrosis"
+  ],
+  "Intrinsic Apoptosis Pathway": [
+    "Apoptosis"
+  ],
+  "Extrinsic Apoptosis Pathway": [
+    "Intrinsic Apoptosis Pathway"
+  ],
+  "Hypertrophy": [
+    "Extrinsic Apoptosis Pathway"
+  ],
+  "Hyperplasia": [
+    "Hypertrophy"
+  ],
+  "Atrophy": [
+    "Hyperplasia"
+  ],
+  "Dysplasia": [
+    "Metaplasia"
+  ],
+  "Fatty Change (Steatosis)": [
+    "Dysplasia"
+  ],
+  "Lipofuscin": [
+    "Fatty Change (Steatosis)"
+  ],
+  "Hemosiderin": [
+    "Lipofuscin"
+  ],
+  "Melanin Accumulation": [
+    "Hemosiderin"
+  ],
+  "Calcification (Dystrophic)": [
+    "Amyloid"
+  ],
+  "Calcification (Metastatic)": [
+    "Calcification (Dystrophic)"
+  ],
+  "Acute Inflammation": [
+    "Calcification (Metastatic)"
+  ],
+  "Vascular Changes in Inflammation": [
+    "Acute Inflammation"
+  ],
+  "Cellular Exudate": [
+    "Vascular Changes in Inflammation"
+  ],
+  "Inflammatory Mediators": [
+    "Neutrophil Function"
+  ],
+  "Histamine": [
+    "Leukotrienes"
+  ],
+  "Bradykinin": [
+    "Histamine"
+  ],
+  "Granuloma Formation": [
+    "Granulomatous Inflammation"
+  ],
+  "Multinucleated Giant Cells": [
+    "Epithelioid Cells"
+  ],
+  "Wound Healing Primary": [
+    "Multinucleated Giant Cells"
+  ],
+  "Wound Healing Secondary": [
+    "Wound Healing Primary"
+  ],
+  "Keloid": [
+    "TGF-beta in Fibrosis"
+  ],
+  "Edema": [
+    "Keloid"
+  ],
+  "Transudate": [
+    "Edema"
+  ],
+  "Exudate": [
+    "Transudate"
+  ],
+  "Hyperemia": [
+    "Exudate"
+  ],
+  "Congestion": [
+    "Hyperemia"
+  ],
+  "Hemorrhage": [
+    "Congestion"
+  ],
+  "Arterial Thrombus": [
+    "Virchow Triad"
+  ],
+  "Venous Thrombus": [
+    "Arterial Thrombus"
+  ],
+  "Embolism": [
+    "Venous Thrombus"
+  ],
+  "Air Embolism": [
+    "Pulmonary Embolism"
+  ],
+  "Fat Embolism": [
+    "Air Embolism"
+  ],
+  "Amniotic Fluid Embolism": [
+    "Fat Embolism"
+  ],
+  "Infarction": [
+    "Amniotic Fluid Embolism"
+  ],
+  "Red Infarct": [
+    "Infarction"
+  ],
+  "Pale Infarct": [
+    "Red Infarct"
+  ],
+  "Cardiogenic Shock": [
+    "Hypovolemic Shock"
+  ],
+  "Distributive Shock": [
+    "Cardiogenic Shock"
+  ],
+  "Obstructive Shock": [
+    "Distributive Shock"
+  ],
+  "Carcinogenesis": [
+    "Septic Shock"
+  ],
+  "Initiation": [
+    "Carcinogenesis"
+  ],
+  "Promotion": [
+    "Initiation"
+  ],
+  "Progression": [
+    "Promotion"
+  ],
+  "Benign vs Malignant Tumors": [
+    "Progression"
+  ],
+  "Invasion": [
+    "Benign vs Malignant Tumors"
+  ],
+  "Metastasis": [
+    "Invasion"
+  ],
+  "Hematogenous Spread": [
+    "Metastasis"
+  ],
+  "Lymphatic Spread": [
+    "Hematogenous Spread"
+  ],
+  "Carcinogen Types": [
+    "Paraneoplastic Syndromes"
+  ],
+  "Chemical Carcinogens": [
+    "Carcinogen Types"
+  ],
+  "Radiation Carcinogenesis": [
+    "Chemical Carcinogens"
+  ],
+  "Pharmacokinetics": [],
+  "Absorption": [
+    "Pharmacokinetics"
+  ],
+  "First-Pass Effect": [
+    "Absorption"
+  ],
+  "Bioavailability": [
+    "First-Pass Effect"
+  ],
+  "Volume of Distribution": [
+    "Bioavailability"
+  ],
+  "Protein Binding": [
+    "Volume of Distribution"
+  ],
+  "CYP450 System": [
+    "Protein Binding"
+  ],
+  "CYP3A4": [
+    "CYP450 System"
+  ],
+  "CYP2D6": [
+    "CYP3A4"
+  ],
+  "Enzyme Induction": [
+    "CYP2D6"
+  ],
+  "Enzyme Inhibition": [
+    "Enzyme Induction"
+  ],
+  "Phase I Reactions": [
+    "Enzyme Inhibition"
+  ],
+  "Phase II Reactions": [
+    "Phase I Reactions"
+  ],
+  "Glucuronidation": [
+    "Phase II Reactions"
+  ],
+  "Renal Drug Excretion": [
+    "Glucuronidation"
+  ],
+  "Biliary Excretion": [
+    "Renal Drug Excretion"
+  ],
+  "Half-Life": [
+    "Biliary Excretion"
+  ],
+  "Zero-Order Kinetics": [
+    "Half-Life"
+  ],
+  "First-Order Kinetics": [
+    "Zero-Order Kinetics"
+  ],
+  "Loading Dose": [
+    "First-Order Kinetics"
+  ],
+  "Maintenance Dose": [
+    "Loading Dose"
+  ],
+  "Steady State": [
+    "Maintenance Dose"
+  ],
+  "Receptor Agonist": [
+    "Steady State"
+  ],
+  "Partial Agonist": [
+    "Receptor Agonist"
+  ],
+  "Antagonist": [
+    "Partial Agonist"
+  ],
+  "Inverse Agonist": [
+    "Antagonist"
+  ],
+  "Competitive Antagonism": [
+    "Inverse Agonist"
+  ],
+  "Noncompetitive Antagonism": [
+    "Competitive Antagonism"
+  ],
+  "Therapeutic Index": [
+    "Noncompetitive Antagonism"
+  ],
+  "Efficacy": [
+    "Therapeutic Index"
+  ],
+  "Potency": [
+    "Efficacy"
+  ],
+  "Dose-Response Curve": [
+    "Potency"
+  ],
+  "ED50": [
+    "Dose-Response Curve"
+  ],
+  "LD50": [
+    "ED50"
+  ],
+  "Alpha-1 Receptors": [
+    "LD50"
+  ],
+  "Alpha-2 Receptors": [
+    "Alpha-1 Receptors"
+  ],
+  "Beta-1 Receptors": [
+    "Alpha-2 Receptors"
+  ],
+  "Beta-2 Receptors": [
+    "Beta-1 Receptors"
+  ],
+  "Muscarinic Receptors": [
+    "Beta-2 Receptors"
+  ],
+  "Sympathomimetics": [
+    "Nicotinic Receptors"
+  ],
+  "Parasympathomimetics": [
+    "Sympathomimetics"
+  ],
+  "Anticholinergics": [
+    "Parasympathomimetics"
+  ],
+  "Atropine": [
+    "Anticholinergics"
+  ],
+  "Drug Toxicity": [
+    "Atropine"
+  ],
+  "Adverse Drug Reactions": [
+    "Drug Toxicity"
+  ],
+  "Idiosyncratic Reactions": [
+    "Adverse Drug Reactions"
+  ],
+  "Drug Interactions": [
+    "Idiosyncratic Reactions"
+  ],
+  "P-glycoprotein": [
+    "Drug Interactions"
+  ],
+  "Gametogenesis": [],
+  "Spermatogenesis": [
+    "Gametogenesis"
+  ],
+  "Oogenesis": [
+    "Spermatogenesis"
+  ],
+  "Fertilization": [
+    "Oogenesis"
+  ],
+  "Implantation": [
+    "Fertilization"
+  ],
+  "Blastocyst Formation": [
+    "Implantation"
+  ],
+  "Bilaminar Disc": [
+    "Blastocyst Formation"
+  ],
+  "Trilaminar Disc": [
+    "Bilaminar Disc"
+  ],
+  "Gastrulation": [
+    "Trilaminar Disc"
+  ],
+  "Ectoderm Derivatives": [
+    "Gastrulation"
+  ],
+  "Mesoderm Derivatives": [
+    "Ectoderm Derivatives"
+  ],
+  "Endoderm Derivatives": [
+    "Mesoderm Derivatives"
+  ],
+  "Neural Tube Defects": [
+    "Endoderm Derivatives"
+  ],
+  "Spina Bifida": [
+    "Neural Tube Defects"
+  ],
+  "Anencephaly": [
+    "Spina Bifida"
+  ],
+  "Holoprosencephaly": [
+    "Anencephaly"
+  ],
+  "Neurulation": [
+    "Holoprosencephaly"
+  ],
+  "Heart Looping": [
+    "Neurulation"
+  ],
+  "Atrial Septal Defect Embryology": [
+    "Heart Looping"
+  ],
+  "Ventricular Septal Defect Embryology": [
+    "Atrial Septal Defect Embryology"
+  ],
+  "Truncus Arteriosus": [
+    "Ventricular Septal Defect Embryology"
+  ],
+  "Tetralogy of Fallot Embryology": [
+    "Truncus Arteriosus"
+  ],
+  "Midgut Rotation": [
+    "Tetralogy of Fallot Embryology"
+  ],
+  "Omphalocele": [
+    "Midgut Rotation"
+  ],
+  "Gastroschisis": [
+    "Omphalocele"
+  ],
+  "Meckel Diverticulum": [
+    "Gastroschisis"
+  ],
+  "Pronephros": [
+    "Meckel Diverticulum"
+  ],
+  "Mesonephros": [
+    "Pronephros"
+  ],
+  "Metanephros": [
+    "Mesonephros"
+  ],
+  "Ureteric Bud": [
+    "Metanephros"
+  ],
+  "Horseshoe Kidney Embryology": [
+    "Ureteric Bud"
+  ],
+  "Respiratory Development": [
+    "Horseshoe Kidney Embryology"
+  ],
+  "Surfactant Production": [
+    "Respiratory Development"
+  ],
+  "Genital Development": [
+    "Surfactant Production"
+  ],
+  "Mullerian Ducts": [
+    "Genital Development"
+  ],
+  "Wolffian Ducts": [
+    "Mullerian Ducts"
+  ],
+  "Androgen Insensitivity Syndrome": [
+    "Wolffian Ducts"
+  ],
+  "5-Alpha Reductase Deficiency": [
+    "Androgen Insensitivity Syndrome"
+  ],
+  "Placenta Development": [
+    "5-Alpha Reductase Deficiency"
+  ],
+  "Fetal Circulation": [
+    "Placenta Development"
+  ],
+  "Ductus Arteriosus": [
+    "Fetal Circulation"
+  ],
+  "Ductus Venosus": [
+    "Ductus Arteriosus"
+  ],
+  "Foramen Ovale": [
+    "Ductus Venosus"
+  ],
+  "Teratogens": [
+    "Foramen Ovale"
+  ],
+  "Thalidomide": [
+    "Teratogens"
+  ],
+  "Isotretinoin": [
+    "Thalidomide"
+  ],
+  "Valproate": [
+    "Isotretinoin"
+  ],
+  "Warfarin Teratogenicity": [
+    "Valproate"
+  ],
+  "Alcohol (Fetal Alcohol Syndrome)": [
+    "Warfarin Teratogenicity"
+  ],
+  "Rubella Teratogenicity": [
+    "Alcohol (Fetal Alcohol Syndrome)"
+  ],
+  "CMV Teratogenicity": [
+    "Rubella Teratogenicity"
+  ],
+  "Toxoplasma Teratogenicity": [
+    "CMV Teratogenicity"
+  ],
+  "Randomized Controlled Trial": [],
+  "Cohort Study": [
+    "Randomized Controlled Trial"
+  ],
+  "Case-Control Study": [
+    "Cohort Study"
+  ],
+  "Cross-Sectional Study": [
+    "Case-Control Study"
+  ],
+  "Case Series": [
+    "Cross-Sectional Study"
+  ],
+  "Meta-Analysis": [
+    "Case Series"
+  ],
+  "Selection Bias": [
+    "Meta-Analysis"
+  ],
+  "Recall Bias": [
+    "Selection Bias"
+  ],
+  "Observer Bias": [
+    "Recall Bias"
+  ],
+  "Confounding": [
+    "Observer Bias"
+  ],
+  "Hawthorne Effect": [
+    "Confounding"
+  ],
+  "Lead-Time Bias": [
+    "Hawthorne Effect"
+  ],
+  "Length Bias": [
+    "Lead-Time Bias"
+  ],
+  "Sensitivity": [
+    "Length Bias"
+  ],
+  "Specificity": [
+    "Sensitivity"
+  ],
+  "PPV": [
+    "Specificity"
+  ],
+  "NPV": [
+    "PPV"
+  ],
+  "Likelihood Ratio Positive": [
+    "NPV"
+  ],
+  "Likelihood Ratio Negative": [
+    "Likelihood Ratio Positive"
+  ],
+  "ROC Curve": [
+    "Likelihood Ratio Negative"
+  ],
+  "AUC": [
+    "ROC Curve"
+  ],
+  "Cutoff Value": [
+    "AUC"
+  ],
+  "Incidence": [
+    "Cutoff Value"
+  ],
+  "Prevalence": [
+    "Incidence"
+  ],
+  "Attack Rate": [
+    "Prevalence"
+  ],
+  "Relative Risk": [
+    "Attack Rate"
+  ],
+  "Odds Ratio": [
+    "Relative Risk"
+  ],
+  "Attributable Risk": [
+    "Odds Ratio"
+  ],
+  "Number Needed to Treat": [
+    "Attributable Risk"
+  ],
+  "Number Needed to Harm": [
+    "Number Needed to Treat"
+  ],
+  "Absolute Risk Reduction": [
+    "Number Needed to Harm"
+  ],
+  "Relative Risk Reduction": [
+    "Absolute Risk Reduction"
+  ],
+  "T-Test": [
+    "Relative Risk Reduction"
+  ],
+  "Chi-Square Test": [
+    "T-Test"
+  ],
+  "ANOVA": [
+    "Chi-Square Test"
+  ],
+  "Type I Error (Alpha)": [
+    "ANOVA"
+  ],
+  "Type II Error (Beta)": [
+    "Type I Error (Alpha)"
+  ],
+  "Statistical Power": [
+    "Type II Error (Beta)"
+  ],
+  "P-Value": [
+    "Statistical Power"
+  ],
+  "Confidence Interval": [
+    "P-Value"
+  ],
+  "Normal Distribution": [
+    "Confidence Interval"
+  ],
+  "Median": [
+    "Normal Distribution"
+  ],
+  "Mean": [
+    "Median"
+  ],
+  "Mode": [
+    "Mean"
+  ],
+  "Standard Deviation": [
+    "Mode"
+  ],
+  "Standard Error": [
+    "Standard Deviation"
+  ],
+  "Screening Principles": [
+    "Standard Error"
+  ],
+  "Wilson Criteria": [
+    "Screening Principles"
+  ],
+  "Primary Prevention": [
+    "Wilson Criteria"
+  ],
+  "Secondary Prevention": [
+    "Primary Prevention"
+  ],
+  "Tertiary Prevention": [
+    "Secondary Prevention"
+  ],
+  "Outbreak Investigation": [
+    "Tertiary Prevention"
+  ],
+  "Epidemic Curve": [
+    "Outbreak Investigation"
+  ],
+  "Autonomy": [],
+  "Beneficence": [
+    "Autonomy"
+  ],
+  "Nonmaleficence": [
+    "Beneficence"
+  ],
+  "Justice": [
+    "Nonmaleficence"
+  ],
+  "Informed Consent": [
+    "Justice"
+  ],
+  "Decision-Making Capacity": [
+    "Informed Consent"
+  ],
+  "Confidentiality": [
+    "Decision-Making Capacity"
+  ],
+  "HIPAA": [
+    "Confidentiality"
+  ],
+  "Duty to Warn": [
+    "HIPAA"
+  ],
+  "Tarasoff Principle": [
+    "Duty to Warn"
+  ],
+  "Advance Directives": [
+    "Tarasoff Principle"
+  ],
+  "Living Will": [
+    "Advance Directives"
+  ],
+  "Healthcare Proxy": [
+    "Living Will"
+  ],
+  "Surrogate Decision-Making": [
+    "Healthcare Proxy"
+  ],
+  "Substituted Judgment": [
+    "Surrogate Decision-Making"
+  ],
+  "DNR Orders": [
+    "Substituted Judgment"
+  ],
+  "Withdrawal of Care": [
+    "DNR Orders"
+  ],
+  "Futility": [
+    "Withdrawal of Care"
+  ],
+  "Palliative Care Ethics": [
+    "Futility"
+  ],
+  "Minor Consent": [
+    "Palliative Care Ethics"
+  ],
+  "Emancipated Minors": [
+    "Minor Consent"
+  ],
+  "Mature Minor Doctrine": [
+    "Emancipated Minors"
+  ],
+  "Physician-Patient Relationship": [
+    "Mature Minor Doctrine"
+  ],
+  "Resource Allocation": [
+    "Physician-Patient Relationship"
+  ],
+  "Triage": [
+    "Resource Allocation"
+  ],
+  "Research Ethics": [
+    "Triage"
+  ],
+  "Belmont Report": [
+    "Research Ethics"
+  ],
+  "Institutional Review Board": [
+    "Belmont Report"
+  ],
+  "Informed Consent in Research": [
+    "Institutional Review Board"
+  ],
+  "Placebo Use in Research": [
+    "Informed Consent in Research"
+  ],
+  "Clinical Equipoise": [
+    "Placebo Use in Research"
+  ],
+  "MRSA": [
+    "Staphylococcus aureus"
+  ],
+  "Staphylococcus epidermidis": [
+    "MRSA"
+  ],
+  "Staphylococcus saprophyticus": [
+    "Staphylococcus epidermidis"
+  ],
+  "Streptococcus agalactiae (Group B)": [
+    "Streptococcus pyogenes (Group A)"
+  ],
+  "Enterococcus faecalis": [
+    "Viridans Streptococci"
+  ],
+  "Enterococcus faecium": [
+    "Enterococcus faecalis"
+  ],
+  "Bacillus anthracis": [
+    "Enterococcus faecium"
+  ],
+  "Bacillus cereus": [
+    "Bacillus anthracis"
+  ],
+  "Clostridium perfringens": [
+    "Bacillus cereus"
+  ],
+  "Clostridium tetani": [
+    "Clostridium perfringens"
+  ],
+  "Clostridium botulinum": [
+    "Clostridium tetani"
+  ],
+  "Clostridium difficile": [
+    "Clostridium botulinum"
+  ],
+  "Listeria monocytogenes": [
+    "Clostridium difficile"
+  ],
+  "Corynebacterium diphtheriae": [
+    "Listeria monocytogenes"
+  ],
+  "Neisseria gonorrhoeae": [
+    "Corynebacterium diphtheriae"
+  ],
+  "ETEC": [
+    "Escherichia coli"
+  ],
+  "EPEC": [
+    "ETEC"
+  ],
+  "EIEC": [
+    "EHEC (O157:H7)"
+  ],
+  "Salmonella typhi": [
+    "EIEC"
+  ],
+  "Salmonella non-typhi": [
+    "Salmonella typhi"
+  ],
+  "Shigella dysenteriae": [
+    "Salmonella non-typhi"
+  ],
+  "Pseudomonas aeruginosa": [
+    "Klebsiella pneumoniae"
+  ],
+  "Haemophilus influenzae": [
+    "Pseudomonas aeruginosa"
+  ],
+  "Bordetella pertussis": [
+    "Haemophilus influenzae"
+  ],
+  "Legionella pneumophila": [
+    "Bordetella pertussis"
+  ],
+  "Brucella species": [
+    "Legionella pneumophila"
+  ],
+  "Francisella tularensis": [
+    "Brucella species"
+  ],
+  "Yersinia pestis": [
+    "Francisella tularensis"
+  ],
+  "Mycoplasma pneumoniae": [
+    "Yersinia pestis"
+  ],
+  "Chlamydia trachomatis": [
+    "Mycoplasma pneumoniae"
+  ],
+  "Chlamydophila pneumoniae": [
+    "Chlamydia trachomatis"
+  ],
+  "Rickettsia rickettsii": [
+    "Chlamydophila pneumoniae"
+  ],
+  "Rickettsia prowazekii": [
+    "Rickettsia rickettsii"
+  ],
+  "Coxiella burnetii": [
+    "Rickettsia prowazekii"
+  ],
+  "Borrelia burgdorferi": [
+    "Treponema pallidum"
+  ],
+  "Leptospira interrogans": [
+    "Borrelia burgdorferi"
+  ],
+  "Mycobacterium tuberculosis": [
+    "Leptospira interrogans"
+  ],
+  "Mycobacterium leprae": [
+    "Mycobacterium tuberculosis"
+  ],
+  "Non-Tuberculous Mycobacteria": [
+    "Mycobacterium leprae"
+  ],
+  "MAC Complex": [
+    "Non-Tuberculous Mycobacteria"
+  ],
+  "Bacteroides fragilis": [
+    "MAC Complex"
+  ],
+  "Actinomyces israelii": [
+    "Bacteroides fragilis"
+  ],
+  "Fusobacterium": [
+    "Actinomyces israelii"
+  ],
+  "Staph aureus Toxins": [
+    "Fusobacterium"
+  ],
+  "TSST-1": [
+    "Staph aureus Toxins"
+  ],
+  "Exfoliatin Toxin": [
+    "TSST-1"
+  ],
+  "Cholera Toxin (V. cholerae)": [
+    "Exfoliatin Toxin"
+  ],
+  "Vibrio cholerae": [
+    "Cholera Toxin (V. cholerae)"
+  ],
+  "Beta-Lactam Resistance": [
+    "Helicobacter pylori"
+  ],
+  "Penicillinase": [
+    "Beta-Lactam Resistance"
+  ],
+  "ESBL": [
+    "Penicillinase"
+  ],
+  "Vancomycin Resistance": [
+    "ESBL"
+  ],
+  "Aminoglycoside Resistance": [
+    "Vancomycin Resistance"
+  ],
+  "Quinolone Resistance": [
+    "Aminoglycoside Resistance"
+  ],
+  "Efflux Pumps": [
+    "Quinolone Resistance"
+  ],
+  "Penicillin G": [
+    "Efflux Pumps"
+  ],
+  "Amoxicillin": [
+    "Penicillin G"
+  ],
+  "Ampicillin": [
+    "Amoxicillin"
+  ],
+  "Piperacillin-Tazobactam": [
+    "Ampicillin"
+  ],
+  "Nafcillin": [
+    "Piperacillin-Tazobactam"
+  ],
+  "Oxacillin": [
+    "Nafcillin"
+  ],
+  "Cephalexin": [
+    "Oxacillin"
+  ],
+  "Cefazolin": [
+    "Cephalexin"
+  ],
+  "Ceftriaxone": [
+    "Cefazolin"
+  ],
+  "Cefepime": [
+    "Ceftriaxone"
+  ],
+  "Imipenem": [
+    "Cefepime"
+  ],
+  "Meropenem": [
+    "Imipenem"
+  ],
+  "Aztreonam": [
+    "Meropenem"
+  ],
+  "Vancomycin": [
+    "Aztreonam"
+  ],
+  "Daptomycin": [
+    "Vancomycin"
+  ],
+  "Linezolid": [
+    "Daptomycin"
+  ],
+  "Gentamicin": [
+    "Linezolid"
+  ],
+  "Tobramycin": [
+    "Gentamicin"
+  ],
+  "Amikacin": [
+    "Tobramycin"
+  ],
+  "Tetracycline": [
+    "Amikacin"
+  ],
+  "Doxycycline": [
+    "Tetracycline"
+  ],
+  "Minocycline": [
+    "Doxycycline"
+  ],
+  "Azithromycin": [
+    "Minocycline"
+  ],
+  "Clarithromycin": [
+    "Azithromycin"
+  ],
+  "Erythromycin": [
+    "Clarithromycin"
+  ],
+  "Ciprofloxacin": [
+    "Erythromycin"
+  ],
+  "Levofloxacin": [
+    "Ciprofloxacin"
+  ],
+  "Moxifloxacin": [
+    "Levofloxacin"
+  ],
+  "Trimethoprim-Sulfamethoxazole": [
+    "Moxifloxacin"
+  ],
+  "Metronidazole": [
+    "Trimethoprim-Sulfamethoxazole"
+  ],
+  "Chloramphenicol": [
+    "Metronidazole"
+  ],
+  "Clindamycin": [
+    "Chloramphenicol"
+  ],
+  "Rifampin": [
+    "Clindamycin"
+  ],
+  "Isoniazid": [
+    "Rifampin"
+  ],
+  "Pyrazinamide": [
+    "Isoniazid"
+  ],
+  "Ethambutol": [
+    "Pyrazinamide"
+  ],
+  "Gram Stain": [
+    "Ethambutol"
+  ],
+  "Acid-Fast Stain": [
+    "Gram Stain"
+  ],
+  "India Ink Stain": [
+    "Acid-Fast Stain"
+  ],
+  "Silver Stain": [
+    "India Ink Stain"
+  ],
+  "Giemsa Stain": [
+    "Silver Stain"
+  ],
+  "Culture Media": [
+    "Giemsa Stain"
+  ],
+  "HSV-1": [],
+  "HSV-2": [
+    "HSV-1"
+  ],
+  "VZV (HHV-3)": [
+    "HSV-2"
+  ],
+  "CMV (HHV-5)": [
+    "EBV (HHV-4)"
+  ],
+  "HHV-6 (Roseola)": [
+    "CMV (HHV-5)"
+  ],
+  "HHV-8 (Kaposi Sarcoma)": [
+    "HHV-6 (Roseola)"
+  ],
+  "Adenovirus": [
+    "HHV-8 (Kaposi Sarcoma)"
+  ],
+  "HPV": [
+    "Adenovirus"
+  ],
+  "Parvovirus B19": [
+    "HPV"
+  ],
+  "Poxvirus": [
+    "Parvovirus B19"
+  ],
+  "Influenza A": [
+    "Poxvirus"
+  ],
+  "Influenza B": [
+    "Influenza A"
+  ],
+  "Orthomyxovirus": [
+    "Influenza B"
+  ],
+  "HIV-1": [
+    "Orthomyxovirus"
+  ],
+  "HIV-2": [
+    "HIV-1"
+  ],
+  "HIV Replication Cycle": [
+    "HIV-2"
+  ],
+  "Hepatitis C Virus": [
+    "HIV Replication Cycle"
+  ],
+  "Picornavirus": [
+    "Hepatitis C Virus"
+  ],
+  "Poliovirus": [
+    "Picornavirus"
+  ],
+  "Coxsackievirus A": [
+    "Poliovirus"
+  ],
+  "Coxsackievirus B": [
+    "Coxsackievirus A"
+  ],
+  "Rhinovirus": [
+    "Coxsackievirus B"
+  ],
+  "HAV": [
+    "Rhinovirus"
+  ],
+  "Echovirus": [
+    "HAV"
+  ],
+  "Rotavirus": [
+    "Echovirus"
+  ],
+  "Norovirus": [
+    "Rotavirus"
+  ],
+  "Reovirus": [
+    "Norovirus"
+  ],
+  "Paramyxovirus": [
+    "Reovirus"
+  ],
+  "Measles Virus": [
+    "Paramyxovirus"
+  ],
+  "Mumps Virus": [
+    "Measles Virus"
+  ],
+  "RSV": [
+    "Mumps Virus"
+  ],
+  "Rubella Virus": [
+    "RSV"
+  ],
+  "Rabies Virus": [
+    "Rubella Virus"
+  ],
+  "Dengue Virus": [
+    "Rabies Virus"
+  ],
+  "Zika Virus": [
+    "Dengue Virus"
+  ],
+  "West Nile Virus": [
+    "Zika Virus"
+  ],
+  "Yellow Fever Virus": [
+    "West Nile Virus"
+  ],
+  "Ebola Virus": [
+    "Yellow Fever Virus"
+  ],
+  "Hepatitis A": [
+    "Ebola Virus"
+  ],
+  "Hepatitis D": [
+    "Hepatitis C"
+  ],
+  "Hepatitis E": [
+    "Hepatitis D"
+  ],
+  "HBsAg": [
+    "Hepatitis E"
+  ],
+  "HBcAb": [
+    "HBsAg"
+  ],
+  "HBsAb": [
+    "HBcAb"
+  ],
+  "HBeAg": [
+    "HBsAb"
+  ],
+  "HIV CD4 Count": [
+    "HBeAg"
+  ],
+  "AIDS-Defining Illnesses": [
+    "HIV CD4 Count"
+  ],
+  "HAART": [
+    "AIDS-Defining Illnesses"
+  ],
+  "NRTI": [
+    "HAART"
+  ],
+  "NNRTI": [
+    "NRTI"
+  ],
+  "Protease Inhibitors": [
+    "NNRTI"
+  ],
+  "Integrase Inhibitors": [
+    "Protease Inhibitors"
+  ],
+  "CCR5 Antagonists": [
+    "Integrase Inhibitors"
+  ],
+  "Fusion Inhibitors": [
+    "CCR5 Antagonists"
+  ],
+  "Zidovudine (AZT)": [
+    "Fusion Inhibitors"
+  ],
+  "Tenofovir": [
+    "Zidovudine (AZT)"
+  ],
+  "Emtricitabine": [
+    "Tenofovir"
+  ],
+  "Efavirenz": [
+    "Emtricitabine"
+  ],
+  "Nevirapine": [
+    "Efavirenz"
+  ],
+  "Ritonavir": [
+    "Nevirapine"
+  ],
+  "Atazanavir": [
+    "Ritonavir"
+  ],
+  "Raltegravir": [
+    "Atazanavir"
+  ],
+  "Maraviroc": [
+    "Raltegravir"
+  ],
+  "Prions": [
+    "Maraviroc"
+  ],
+  "Creutzfeldt-Jakob Disease": [
+    "Prions"
+  ],
+  "Kuru": [
+    "Creutzfeldt-Jakob Disease"
+  ],
+  "Viral Replication (DNA Viruses)": [
+    "Kuru"
+  ],
+  "Viral Replication (RNA Viruses)": [
+    "Viral Replication (DNA Viruses)"
+  ],
+  "Acyclovir": [
+    "Viral Replication (RNA Viruses)"
+  ],
+  "Valacyclovir": [
+    "Acyclovir"
+  ],
+  "Ganciclovir": [
+    "Valacyclovir"
+  ],
+  "Foscarnet": [
+    "Ganciclovir"
+  ],
+  "Oseltamivir": [
+    "Foscarnet"
+  ],
+  "Zanamivir": [
+    "Oseltamivir"
+  ],
+  "Amantadine": [
+    "Zanamivir"
+  ],
+  "Ribavirin": [
+    "Amantadine"
+  ],
+  "Sofosbuvir": [
+    "Ribavirin"
+  ],
+  "Tinea Capitis": [],
+  "Tinea Corporis": [
+    "Tinea Capitis"
+  ],
+  "Tinea Pedis": [
+    "Tinea Corporis"
+  ],
+  "Tinea Versicolor": [
+    "Tinea Pedis"
+  ],
+  "Candida albicans": [
+    "Tinea Versicolor"
+  ],
+  "Oral Candidiasis": [
+    "Candida albicans"
+  ],
+  "Esophageal Candidiasis": [
+    "Oral Candidiasis"
+  ],
+  "Vulvovaginal Candidiasis": [
+    "Esophageal Candidiasis"
+  ],
+  "Candida Bloodstream Infection": [
+    "Vulvovaginal Candidiasis"
+  ],
+  "Histoplasma capsulatum": [
+    "Candida Bloodstream Infection"
+  ],
+  "Coccidioides immitis": [
+    "Histoplasma capsulatum"
+  ],
+  "Blastomyces dermatitidis": [
+    "Coccidioides immitis"
+  ],
+  "Paracoccidioides brasiliensis": [
+    "Blastomyces dermatitidis"
+  ],
+  "Aspergillus fumigatus": [
+    "Paracoccidioides brasiliensis"
+  ],
+  "Aspergilloma": [
+    "Aspergillus fumigatus"
+  ],
+  "Invasive Aspergillosis": [
+    "Aspergilloma"
+  ],
+  "Cryptococcus neoformans": [
+    "Invasive Aspergillosis"
+  ],
+  "Cryptococcal Meningitis": [
+    "Cryptococcus neoformans"
+  ],
+  "Pneumocystis jirovecii": [
+    "Cryptococcal Meningitis"
+  ],
+  "PCP Pneumonia": [
+    "Pneumocystis jirovecii"
+  ],
+  "Mucor species": [
+    "PCP Pneumonia"
+  ],
+  "Rhizopus species": [
+    "Mucor species"
+  ],
+  "Mucormycosis": [
+    "Rhizopus species"
+  ],
+  "Sporothrix schenckii": [
+    "Mucormycosis"
+  ],
+  "Fluconazole": [
+    "Sporothrix schenckii"
+  ],
+  "Itraconazole": [
+    "Fluconazole"
+  ],
+  "Voriconazole": [
+    "Itraconazole"
+  ],
+  "Posaconazole": [
+    "Voriconazole"
+  ],
+  "Amphotericin B": [
+    "Posaconazole"
+  ],
+  "Nystatin": [
+    "Amphotericin B"
+  ],
+  "Caspofungin": [
+    "Nystatin"
+  ],
+  "Micafungin": [
+    "Caspofungin"
+  ],
+  "Anidulafungin": [
+    "Micafungin"
+  ],
+  "Griseofulvin": [
+    "Anidulafungin"
+  ],
+  "Terbinafine": [
+    "Griseofulvin"
+  ],
+  "Giardia lamblia": [],
+  "Entamoeba histolytica": [
+    "Giardia lamblia"
+  ],
+  "Cryptosporidium parvum": [
+    "Entamoeba histolytica"
+  ],
+  "Plasmodium falciparum": [
+    "Cryptosporidium parvum"
+  ],
+  "Plasmodium vivax": [
+    "Plasmodium falciparum"
+  ],
+  "Plasmodium malariae": [
+    "Plasmodium vivax"
+  ],
+  "Plasmodium ovale": [
+    "Plasmodium malariae"
+  ],
+  "Toxoplasma gondii": [
+    "Plasmodium ovale"
+  ],
+  "Leishmania donovani": [
+    "Toxoplasma gondii"
+  ],
+  "Leishmania major": [
+    "Leishmania donovani"
+  ],
+  "Trypanosoma brucei": [
+    "Leishmania major"
+  ],
+  "Trypanosoma cruzi": [
+    "Trypanosoma brucei"
+  ],
+  "Chagas Disease": [
+    "Trypanosoma cruzi"
+  ],
+  "Ascaris lumbricoides": [
+    "Chagas Disease"
+  ],
+  "Enterobius vermicularis (Pinworm)": [
+    "Ascaris lumbricoides"
+  ],
+  "Necator americanus (Hookworm)": [
+    "Enterobius vermicularis (Pinworm)"
+  ],
+  "Ancylostoma duodenale": [
+    "Necator americanus (Hookworm)"
+  ],
+  "Strongyloides stercoralis": [
+    "Ancylostoma duodenale"
+  ],
+  "Wuchereria bancrofti": [
+    "Strongyloides stercoralis"
+  ],
+  "Loa loa": [
+    "Wuchereria bancrofti"
+  ],
+  "Onchocerca volvulus": [
+    "Loa loa"
+  ],
+  "Dracunculus medinensis": [
+    "Onchocerca volvulus"
+  ],
+  "Taenia solium": [
+    "Dracunculus medinensis"
+  ],
+  "Taenia saginata": [
+    "Taenia solium"
+  ],
+  "Neurocysticercosis": [
+    "Taenia saginata"
+  ],
+  "Echinococcus granulosus": [
+    "Neurocysticercosis"
+  ],
+  "Hydatid Cyst": [
+    "Echinococcus granulosus"
+  ],
+  "Schistosoma mansoni": [
+    "Hydatid Cyst"
+  ],
+  "Schistosoma haematobium": [
+    "Schistosoma mansoni"
+  ],
+  "Clonorchis sinensis": [
+    "Schistosoma haematobium"
+  ],
+  "Paragonimus westermani": [
+    "Clonorchis sinensis"
+  ],
+  "Sarcoptes scabiei": [
+    "Paragonimus westermani"
+  ],
+  "Pediculus humanus": [
+    "Sarcoptes scabiei"
+  ],
+  "Chloroquine": [
+    "Pediculus humanus"
+  ],
+  "Primaquine": [
+    "Chloroquine"
+  ],
+  "Mefloquine": [
+    "Primaquine"
+  ],
+  "Artemisinin": [
+    "Mefloquine"
+  ],
+  "Metronidazole (Parasites)": [
+    "Artemisinin"
+  ],
+  "Tinidazole": [
+    "Metronidazole (Parasites)"
+  ],
+  "Albendazole": [
+    "Tinidazole"
+  ],
+  "Mebendazole": [
+    "Albendazole"
+  ],
+  "Ivermectin": [
+    "Mebendazole"
+  ],
+  "Praziquantel": [
+    "Ivermectin"
+  ],
+  "Pentamidine": [
+    "Praziquantel"
+  ],
+  "Suramin": [
+    "Pentamidine"
+  ],
+  "Nifurtimox": [
+    "Suramin"
+  ],
+  "Benznidazole": [
+    "Nifurtimox"
+  ],
+  "Left Circumflex Artery": [
+    "Right Coronary Artery"
+  ],
+  "Coronary Dominance": [
+    "Left Circumflex Artery"
+  ],
+  "Fibrous Pericardium": [
+    "Pericardium"
+  ],
+  "Parietal Pericardium": [
+    "Fibrous Pericardium"
+  ],
+  "Mediastinum Divisions": [
+    "Parietal Pericardium"
+  ],
+  "Superior Mediastinum": [
+    "Mediastinum Divisions"
+  ],
+  "Pulmonary Artery": [
+    "Aorta"
+  ],
+  "Vena Cava": [
+    "Pulmonary Artery"
+  ],
+  "Peripheral Arterial Anatomy": [
+    "Ductus Venosus"
+  ],
+  "Stroke Volume": [
+    "Cardiac Output"
+  ],
+  "Heart Rate": [
+    "Stroke Volume"
+  ],
+  "Fick Principle": [
+    "Heart Rate"
+  ],
+  "Oxygen Delivery": [
+    "Fick Principle"
+  ],
+  "Systole": [
+    "Oxygen Delivery"
+  ],
+  "Diastole": [
+    "Systole"
+  ],
+  "Cardiac Cycle": [
+    "Diastole"
+  ],
+  "Pressure-Volume Loop": [
+    "Cardiac Cycle"
+  ],
+  "Contractility": [
+    "Afterload"
+  ],
+  "Pacemaker Action Potential": [
+    "Cardiac Action Potential"
+  ],
+  "SA Node": [
+    "Pacemaker Action Potential"
+  ],
+  "Bundle of His": [
+    "AV Node"
+  ],
+  "Purkinje Fibers": [
+    "Bundle of His"
+  ],
+  "Carotid Sinus": [
+    "Baroreceptor Reflex"
+  ],
+  "Capillary Fluid Exchange": [
+    "Carotid Sinus"
+  ],
+  "Hydrostatic Pressure": [
+    "Oncotic Pressure"
+  ],
+  "JVP Waveforms (a, c, v waves)": [
+    "Hydrostatic Pressure"
+  ],
+  "Coarctation of Aorta": [
+    "Patent Ductus Arteriosus"
+  ],
+  "Tetralogy of Fallot": [
+    "Coarctation of Aorta"
+  ],
+  "Transposition of Great Vessels": [
+    "Tetralogy of Fallot"
+  ],
+  "Truncus Arteriosus (CHD)": [
+    "Transposition of Great Vessels"
+  ],
+  "Tricuspid Atresia": [
+    "Truncus Arteriosus (CHD)"
+  ],
+  "Unstable Angina": [
+    "Stable Angina"
+  ],
+  "MI Complications": [
+    "Myocardial Infarction"
+  ],
+  "Ventricular Septal Defect (Post-MI)": [
+    "Papillary Muscle Rupture"
+  ],
+  "Post-MI Pericarditis": [
+    "Dressler Syndrome"
+  ],
+  "Dilated Cardiomyopathy": [
+    "Post-MI Pericarditis"
+  ],
+  "Restrictive Cardiomyopathy": [
+    "Hypertrophic Cardiomyopathy"
+  ],
+  "Takotsubo Cardiomyopathy": [
+    "Restrictive Cardiomyopathy"
+  ],
+  "Mitral Stenosis": [
+    "Cor Pulmonale"
+  ],
+  "Aortic Stenosis": [
+    "Mitral Regurgitation"
+  ],
+  "Aortic Regurgitation": [
+    "Aortic Stenosis"
+  ],
+  "Tricuspid Stenosis": [
+    "Aortic Regurgitation"
+  ],
+  "Pulmonic Stenosis": [
+    "Tricuspid Regurgitation"
+  ],
+  "Mitral Valve Prolapse": [
+    "Pulmonic Stenosis"
+  ],
+  "Constrictive Pericarditis": [
+    "Cardiac Tamponade"
+  ],
+  "Subacute Bacterial Endocarditis": [
+    "Infective Endocarditis"
+  ],
+  "Acute Endocarditis": [
+    "Subacute Bacterial Endocarditis"
+  ],
+  "Janeway Lesions": [
+    "Acute Endocarditis"
+  ],
+  "Osler Nodes": [
+    "Janeway Lesions"
+  ],
+  "Roth Spots": [
+    "Osler Nodes"
+  ],
+  "Atrial Flutter": [
+    "Atrial Fibrillation"
+  ],
+  "Ventricular Fibrillation": [
+    "Ventricular Tachycardia"
+  ],
+  "First-Degree AV Block": [
+    "Ventricular Fibrillation"
+  ],
+  "Second-Degree AV Block (Mobitz I)": [
+    "First-Degree AV Block"
+  ],
+  "Second-Degree AV Block (Mobitz II)": [
+    "Second-Degree AV Block (Mobitz I)"
+  ],
+  "Third-Degree AV Block": [
+    "Second-Degree AV Block (Mobitz II)"
+  ],
+  "LBBB": [
+    "Torsades de Pointes"
+  ],
+  "RBBB": [
+    "LBBB"
+  ],
+  "Giant Cell Arteritis": [
+    "RBBB"
+  ],
+  "Takayasu Arteritis": [
+    "Giant Cell Arteritis"
+  ],
+  "Polyarteritis Nodosa": [
+    "Takayasu Arteritis"
+  ],
+  "Kawasaki Disease": [
+    "Polyarteritis Nodosa"
+  ],
+  "Granulomatosis with Polyangiitis (Wegener)": [
+    "Kawasaki Disease"
+  ],
+  "Eosinophilic Granulomatosis (Churg-Strauss)": [
+    "Granulomatosis with Polyangiitis (Wegener)"
+  ],
+  "Microscopic Polyangiitis": [
+    "Eosinophilic Granulomatosis (Churg-Strauss)"
+  ],
+  "Behcet Disease": [
+    "Microscopic Polyangiitis"
+  ],
+  "Aortic Aneurysm": [
+    "Behcet Disease"
+  ],
+  "Type A Dissection": [
+    "Aortic Dissection"
+  ],
+  "Type B Dissection": [
+    "Type A Dissection"
+  ],
+  "Peripheral Arterial Disease": [
+    "Type B Dissection"
+  ],
+  "Buerger Disease": [
+    "Peripheral Arterial Disease"
+  ],
+  "Hypertensive Urgency": [
+    "Secondary Hypertension"
+  ],
+  "Cardiac Myxoma": [
+    "Malignant Hypertension"
+  ],
+  "Rhabdomyoma (Cardiac)": [
+    "Cardiac Myxoma"
+  ],
+  "Quinidine": [
+    "Class IA Antiarrhythmics"
+  ],
+  "Procainamide": [
+    "Quinidine"
+  ],
+  "Disopyramide": [
+    "Procainamide"
+  ],
+  "Class IB Antiarrhythmics": [
+    "Disopyramide"
+  ],
+  "Lidocaine": [
+    "Class IB Antiarrhythmics"
+  ],
+  "Mexiletine": [
+    "Lidocaine"
+  ],
+  "Class IC Antiarrhythmics": [
+    "Mexiletine"
+  ],
+  "Flecainide": [
+    "Class IC Antiarrhythmics"
+  ],
+  "Propafenone": [
+    "Flecainide"
+  ],
+  "Class II Antiarrhythmics": [
+    "Propafenone"
+  ],
+  "Beta-Blockers": [
+    "Class II Antiarrhythmics"
+  ],
+  "Metoprolol": [
+    "Beta-Blockers"
+  ],
+  "Atenolol": [
+    "Metoprolol"
+  ],
+  "Carvedilol": [
+    "Atenolol"
+  ],
+  "Propranolol": [
+    "Carvedilol"
+  ],
+  "Class III Antiarrhythmics": [
+    "Propranolol"
+  ],
+  "Amiodarone": [
+    "Class III Antiarrhythmics"
+  ],
+  "Sotalol": [
+    "Amiodarone"
+  ],
+  "Ibutilide": [
+    "Sotalol"
+  ],
+  "Dofetilide": [
+    "Ibutilide"
+  ],
+  "Class IV Antiarrhythmics": [
+    "Dofetilide"
+  ],
+  "Calcium Channel Blockers": [
+    "Class IV Antiarrhythmics"
+  ],
+  "Verapamil": [
+    "Calcium Channel Blockers"
+  ],
+  "Diltiazem": [
+    "Verapamil"
+  ],
+  "Adenosine": [
+    "Diltiazem"
+  ],
+  "Dihydropyridine CCBs": [
+    "Adenosine"
+  ],
+  "Amlodipine": [
+    "Dihydropyridine CCBs"
+  ],
+  "Nifedipine": [
+    "Amlodipine"
+  ],
+  "ACE Inhibitors": [
+    "Nifedipine"
+  ],
+  "Lisinopril": [
+    "ACE Inhibitors"
+  ],
+  "Enalapril": [
+    "Lisinopril"
+  ],
+  "Captopril": [
+    "Enalapril"
+  ],
+  "ARBs": [
+    "Captopril"
+  ],
+  "Losartan": [
+    "ARBs"
+  ],
+  "Valsartan": [
+    "Losartan"
+  ],
+  "Hydralazine": [
+    "Valsartan"
+  ],
+  "Minoxidil": [
+    "Hydralazine"
+  ],
+  "Alpha-1 Blockers": [
+    "Minoxidil"
+  ],
+  "Prazosin": [
+    "Alpha-1 Blockers"
+  ],
+  "Doxazosin": [
+    "Prazosin"
+  ],
+  "Central Alpha-2 Agonists": [
+    "Doxazosin"
+  ],
+  "Clonidine": [
+    "Central Alpha-2 Agonists"
+  ],
+  "Methyldopa": [
+    "Clonidine"
+  ],
+  "Sacubitril-Valsartan": [
+    "Methyldopa"
+  ],
+  "Spironolactone": [
+    "Sacubitril-Valsartan"
+  ],
+  "Eplerenone": [
+    "Spironolactone"
+  ],
+  "Statins": [
+    "Eplerenone"
+  ],
+  "Atorvastatin": [
+    "Statins"
+  ],
+  "Rosuvastatin": [
+    "Atorvastatin"
+  ],
+  "Simvastatin": [
+    "Rosuvastatin"
+  ],
+  "Fibrates": [
+    "Simvastatin"
+  ],
+  "Gemfibrozil": [
+    "Fibrates"
+  ],
+  "Fenofibrate": [
+    "Gemfibrozil"
+  ],
+  "Niacin": [
+    "Fenofibrate"
+  ],
+  "Ezetimibe": [
+    "Niacin"
+  ],
+  "PCSK9 Inhibitors": [
+    "Ezetimibe"
+  ],
+  "Nitrates": [
+    "PCSK9 Inhibitors"
+  ],
+  "Nitroglycerin": [
+    "Nitrates"
+  ],
+  "Isosorbide Mononitrate": [
+    "Nitroglycerin"
+  ],
+  "Digoxin": [
+    "Isosorbide Mononitrate"
+  ],
+  "Digoxin Toxicity": [
+    "Digoxin"
+  ],
+  "Sodium Nitroprusside": [
+    "Digoxin Toxicity"
+  ],
+  "Renal Medulla": [
+    "Renal Cortex"
+  ],
+  "Distal Convoluted Tubule": [
+    "Loop of Henle"
+  ],
+  "Juxtaglomerular Apparatus": [
+    "Collecting Duct"
+  ],
+  "Macula Densa": [
+    "Juxtaglomerular Apparatus"
+  ],
+  "Creatinine Clearance": [
+    "GFR"
+  ],
+  "Inulin Clearance": [
+    "Creatinine Clearance"
+  ],
+  "PAH Clearance": [
+    "Inulin Clearance"
+  ],
+  "Filtration Fraction": [
+    "PAH Clearance"
+  ],
+  "Tubular Reabsorption": [
+    "Filtration Fraction"
+  ],
+  "Tubular Secretion": [
+    "Tubular Reabsorption"
+  ],
+  "Sodium Reabsorption (PCT)": [
+    "Tubular Secretion"
+  ],
+  "Counter-Current Multiplication": [
+    "Amino Acid Reabsorption"
+  ],
+  "Counter-Current Exchange": [
+    "Counter-Current Multiplication"
+  ],
+  "Urine Concentration": [
+    "Counter-Current Exchange"
+  ],
+  "Urine Dilution": [
+    "Urine Concentration"
+  ],
+  "Renin": [
+    "RAAS"
+  ],
+  "Angiotensin II": [
+    "Renin"
+  ],
+  "ANP": [
+    "ADH (Vasopressin)"
+  ],
+  "Acid-Base Balance": [
+    "ANP"
+  ],
+  "Metabolic Alkalosis": [
+    "Metabolic Acidosis"
+  ],
+  "Respiratory Acidosis": [
+    "Metabolic Alkalosis"
+  ],
+  "Respiratory Alkalosis": [
+    "Respiratory Acidosis"
+  ],
+  "Winter Formula": [
+    "Anion Gap"
+  ],
+  "Compensation Mechanisms": [
+    "Winter Formula"
+  ],
+  "Phosphate Regulation": [
+    "Calcium Regulation"
+  ],
+  "Magnesium Regulation": [
+    "Phosphate Regulation"
+  ],
+  "Glomerular Starling Forces": [
+    "Magnesium Regulation"
+  ],
+  "Rapidly Progressive GN": [
+    "IgA Nephropathy"
+  ],
+  "FSGS": [
+    "Minimal Change Disease"
+  ],
+  "Membranous Nephropathy": [
+    "FSGS"
+  ],
+  "Membranoproliferative GN": [
+    "Membranous Nephropathy"
+  ],
+  "Postrenal AKI": [
+    "Intrinsic AKI"
+  ],
+  "Muddy Brown Casts": [
+    "Acute Tubular Necrosis"
+  ],
+  "Uremia": [
+    "Chronic Kidney Disease"
+  ],
+  "Uremic Pericarditis": [
+    "Uremia"
+  ],
+  "Acute Interstitial Nephritis": [
+    "Secondary Hyperparathyroidism"
+  ],
+  "Renal Tubular Acidosis Type IV": [
+    "Renal Tubular Acidosis Type II"
+  ],
+  "ARPKD": [
+    "ADPKD"
+  ],
+  "Simple Renal Cyst": [
+    "ARPKD"
+  ],
+  "Renal Cell Carcinoma": [
+    "Simple Renal Cyst"
+  ],
+  "Clear Cell RCC": [
+    "Renal Cell Carcinoma"
+  ],
+  "Wilms Tumor": [
+    "Clear Cell RCC"
+  ],
+  "Transitional Cell Carcinoma": [
+    "Wilms Tumor"
+  ],
+  "Urinary Tract Infection": [
+    "Transitional Cell Carcinoma"
+  ],
+  "Cystitis": [
+    "Urinary Tract Infection"
+  ],
+  "Pyelonephritis": [
+    "Cystitis"
+  ],
+  "Uric Acid Stones": [
+    "Calcium Oxalate Stones"
+  ],
+  "Struvite Stones": [
+    "Uric Acid Stones"
+  ],
+  "Cystine Stones": [
+    "Struvite Stones"
+  ],
+  "Calcium Phosphate Stones": [
+    "Cystine Stones"
+  ],
+  "Renal Artery Stenosis": [
+    "Calcium Phosphate Stones"
+  ],
+  "Fibromuscular Dysplasia": [
+    "Renal Artery Stenosis"
+  ],
+  "Furosemide": [],
+  "Bumetanide": [
+    "Furosemide"
+  ],
+  "Ethacrynic Acid": [
+    "Bumetanide"
+  ],
+  "Hydrochlorothiazide": [
+    "Ethacrynic Acid"
+  ],
+  "Chlorthalidone": [
+    "Hydrochlorothiazide"
+  ],
+  "Triamterene": [
+    "Eplerenone"
+  ],
+  "Amiloride": [
+    "Triamterene"
+  ],
+  "Acetazolamide": [
+    "Amiloride"
+  ],
+  "Mannitol": [
+    "Acetazolamide"
+  ],
+  "ACE Inhibitors (Renal)": [
+    "Mannitol"
+  ],
+  "ARBs (Renal)": [
+    "ACE Inhibitors (Renal)"
+  ],
+  "Hypothalamic-Pituitary Axis": [],
+  "GnRH": [
+    "Hypothalamic-Pituitary Axis"
+  ],
+  "TRH": [
+    "GnRH"
+  ],
+  "GHRH": [
+    "CRH"
+  ],
+  "Somatostatin": [
+    "GHRH"
+  ],
+  "FSH": [
+    "Dopamine"
+  ],
+  "LH": [
+    "FSH"
+  ],
+  "Prolactin": [
+    "ACTH"
+  ],
+  "GH": [
+    "Prolactin"
+  ],
+  "ADH": [
+    "GH"
+  ],
+  "Oxytocin": [
+    "ADH"
+  ],
+  "Thyroid Hormone Synthesis": [
+    "Oxytocin"
+  ],
+  "Thyroid Binding Globulin": [
+    "T4"
+  ],
+  "Calcitonin": [
+    "Parathyroid Hormone"
+  ],
+  "DHEA": [
+    "Cortisol Synthesis"
+  ],
+  "C-Peptide": [
+    "Glucagon"
+  ],
+  "IGF-1": [
+    "C-Peptide"
+  ],
+  "Growth Hormone Regulation": [
+    "IGF-1"
+  ],
+  "Progesterone": [
+    "Estrogen"
+  ],
+  "Testosterone": [
+    "Progesterone"
+  ],
+  "Melatonin": [
+    "Testosterone"
+  ],
+  "Acromegaly": [
+    "Prolactinoma"
+  ],
+  "Cushing Disease": [
+    "Acromegaly"
+  ],
+  "Empty Sella Syndrome": [
+    "Cushing Disease"
+  ],
+  "Craniopharyngioma": [
+    "Empty Sella Syndrome"
+  ],
+  "Hypopituitarism": [
+    "Craniopharyngioma"
+  ],
+  "Panhypopituitarism": [
+    "Hypopituitarism"
+  ],
+  "Sheehan Syndrome": [
+    "Panhypopituitarism"
+  ],
+  "Diabetes Insipidus (Central)": [
+    "SIADH"
+  ],
+  "Diabetes Insipidus (Nephrogenic)": [
+    "Diabetes Insipidus (Central)"
+  ],
+  "De Quervain Thyroiditis": [
+    "Hashimoto Thyroiditis"
+  ],
+  "Riedel Thyroiditis": [
+    "De Quervain Thyroiditis"
+  ],
+  "Myxedema Coma": [
+    "Thyroid Storm"
+  ],
+  "Papillary Thyroid Cancer": [
+    "Myxedema Coma"
+  ],
+  "Follicular Thyroid Cancer": [
+    "Papillary Thyroid Cancer"
+  ],
+  "Anaplastic Thyroid Cancer": [
+    "Medullary Thyroid Cancer"
+  ],
+  "Tertiary Hyperparathyroidism": [
+    "Secondary Hyperparathyroidism"
+  ],
+  "Hypoparathyroidism": [
+    "Tertiary Hyperparathyroidism"
+  ],
+  "Pseudohypoparathyroidism": [
+    "Hypoparathyroidism"
+  ],
+  "11-Beta-Hydroxylase Deficiency": [
+    "21-Hydroxylase Deficiency"
+  ],
+  "Neuroblastoma": [
+    "Pheochromocytoma"
+  ],
+  "Diabetic Neuropathy": [
+    "Diabetic Retinopathy"
+  ],
+  "Diabetic Foot": [
+    "Diabetic Neuropathy"
+  ],
+  "Hypoglycemia": [
+    "Diabetic Foot"
+  ],
+  "Insulinoma": [
+    "Hypoglycemia"
+  ],
+  "MEN2B": [
+    "MEN2A"
+  ],
+  "VIPoma": [
+    "Carcinoid Syndrome"
+  ],
+  "Glucagonoma": [
+    "VIPoma"
+  ],
+  "Somatostatinoma": [
+    "Glucagonoma"
+  ],
+  "Insulin (Regular)": [],
+  "Insulin Lispro": [
+    "Insulin (Regular)"
+  ],
+  "Insulin Glargine": [
+    "Insulin Lispro"
+  ],
+  "Insulin NPH": [
+    "Insulin Glargine"
+  ],
+  "Metformin": [
+    "Insulin NPH"
+  ],
+  "Sulfonylureas": [
+    "Metformin"
+  ],
+  "Glipizide": [
+    "Sulfonylureas"
+  ],
+  "Glyburide": [
+    "Glipizide"
+  ],
+  "SGLT2 Inhibitors": [
+    "Glyburide"
+  ],
+  "Empagliflozin": [
+    "SGLT2 Inhibitors"
+  ],
+  "Dapagliflozin": [
+    "Empagliflozin"
+  ],
+  "GLP-1 Agonists": [
+    "Dapagliflozin"
+  ],
+  "Liraglutide": [
+    "GLP-1 Agonists"
+  ],
+  "Semaglutide": [
+    "Liraglutide"
+  ],
+  "DPP-4 Inhibitors": [
+    "Semaglutide"
+  ],
+  "Sitagliptin": [
+    "DPP-4 Inhibitors"
+  ],
+  "Thiazolidinediones": [
+    "Sitagliptin"
+  ],
+  "Pioglitazone": [
+    "Thiazolidinediones"
+  ],
+  "Alpha-Glucosidase Inhibitors": [
+    "Pioglitazone"
+  ],
+  "Acarbose": [
+    "Alpha-Glucosidase Inhibitors"
+  ],
+  "Levothyroxine": [
+    "Acarbose"
+  ],
+  "PTU (Propylthiouracil)": [
+    "Levothyroxine"
+  ],
+  "Methimazole": [
+    "PTU (Propylthiouracil)"
+  ],
+  "Potassium Iodide": [
+    "Methimazole"
+  ],
+  "Radioactive Iodine": [
+    "Potassium Iodide"
+  ],
+  "Corticosteroids": [
+    "Radioactive Iodine"
+  ],
+  "Prednisone": [
+    "Corticosteroids"
+  ],
+  "Dexamethasone": [
+    "Prednisone"
+  ],
+  "Fludrocortisone": [
+    "Dexamethasone"
+  ],
+  "Desmopressin (DDAVP)": [
+    "Fludrocortisone"
+  ],
+  "Octreotide": [
+    "Desmopressin (DDAVP)"
+  ],
+  "Lanreotide": [
+    "Octreotide"
+  ],
+  "Cabergoline": [
+    "Lanreotide"
+  ],
+  "Bromocriptine": [
+    "Cabergoline"
+  ],
+  "Frontal Lobe": [],
+  "Parietal Lobe": [
+    "Frontal Lobe"
+  ],
+  "Temporal Lobe": [
+    "Parietal Lobe"
+  ],
+  "Occipital Lobe": [
+    "Temporal Lobe"
+  ],
+  "Broca Area": [
+    "Occipital Lobe"
+  ],
+  "Wernicke Area": [
+    "Broca Area"
+  ],
+  "Angular Gyrus": [
+    "Wernicke Area"
+  ],
+  "Primary Motor Cortex": [
+    "Angular Gyrus"
+  ],
+  "Primary Sensory Cortex": [
+    "Primary Motor Cortex"
+  ],
+  "Cranial Nerves": [
+    "Primary Sensory Cortex"
+  ],
+  "Midbrain Anatomy": [
+    "Cranial Nerves"
+  ],
+  "Pons Anatomy": [
+    "Midbrain Anatomy"
+  ],
+  "Medulla Anatomy": [
+    "Pons Anatomy"
+  ],
+  "Cerebellum": [
+    "Medulla Anatomy"
+  ],
+  "Limbic System": [
+    "Basal Ganglia"
+  ],
+  "Amygdala": [
+    "Hippocampus"
+  ],
+  "Sympathetic Chain": [
+    "Corticospinal Tract"
+  ],
+  "Parasympathetic Pathways": [
+    "Sympathetic Chain"
+  ],
+  "GABA": [
+    "Norepinephrine"
+  ],
+  "Glycine": [
+    "Acetylcholine (CNS)"
+  ],
+  "Substance P": [
+    "Glycine"
+  ],
+  "Endorphins": [
+    "Substance P"
+  ],
+  "Action Potential": [
+    "Neuromuscular Junction"
+  ],
+  "Synaptic Transmission": [
+    "Action Potential"
+  ],
+  "LTP": [
+    "Synaptic Transmission"
+  ],
+  "Sleep Stages": [
+    "LTP"
+  ],
+  "Pain Pathways": [
+    "Sleep Stages"
+  ],
+  "Hemorrhagic Stroke": [
+    "Ischemic Stroke"
+  ],
+  "Lacunar Infarcts": [
+    "Hemorrhagic Stroke"
+  ],
+  "TIA": [
+    "Lacunar Infarcts"
+  ],
+  "ADEM": [
+    "Multiple Sclerosis"
+  ],
+  "Central Pontine Myelinolysis": [
+    "ADEM"
+  ],
+  "ALS": [
+    "Huntington Disease"
+  ],
+  "Frontotemporal Dementia": [
+    "ALS"
+  ],
+  "Prion Disease": [
+    "Frontotemporal Dementia"
+  ],
+  "Seizures": [
+    "Prion Disease"
+  ],
+  "Status Epilepticus": [
+    "Seizures"
+  ],
+  "Viral Encephalitis": [
+    "Bacterial Meningitis"
+  ],
+  "Glioblastoma Multiforme": [
+    "Viral Encephalitis"
+  ],
+  "Astrocytoma": [
+    "Glioblastoma Multiforme"
+  ],
+  "Meningioma": [
+    "Oligodendroglioma"
+  ],
+  "Acoustic Neuroma": [
+    "Craniopharyngioma"
+  ],
+  "Medulloblastoma": [
+    "Acoustic Neuroma"
+  ],
+  "Ependymoma": [
+    "Medulloblastoma"
+  ],
+  "Brain Metastases": [
+    "Ependymoma"
+  ],
+  "Migraine": [
+    "Brain Metastases"
+  ],
+  "Cluster Headache": [
+    "Migraine"
+  ],
+  "Tension Headache": [
+    "Cluster Headache"
+  ],
+  "CIDP": [
+    "Guillain-Barre Syndrome"
+  ],
+  "Carpal Tunnel Syndrome": [
+    "CIDP"
+  ],
+  "Essential Tremor": [
+    "Lambert-Eaton Syndrome"
+  ],
+  "Syringomyelia": [
+    "Herniation Syndromes"
+  ],
+  "Phenytoin": [],
+  "Carbamazepine": [
+    "Phenytoin"
+  ],
+  "Levetiracetam": [
+    "Valproate"
+  ],
+  "Lamotrigine": [
+    "Levetiracetam"
+  ],
+  "Oxcarbazepine": [
+    "Lamotrigine"
+  ],
+  "Ethosuximide": [
+    "Oxcarbazepine"
+  ],
+  "Gabapentin": [
+    "Ethosuximide"
+  ],
+  "Pregabalin": [
+    "Gabapentin"
+  ],
+  "Benzodiazepines": [
+    "Pregabalin"
+  ],
+  "General Anesthetics": [
+    "Benzodiazepines"
+  ],
+  "Local Anesthetics": [
+    "General Anesthetics"
+  ],
+  "Levodopa": [
+    "Local Anesthetics"
+  ],
+  "Carbidopa": [
+    "Levodopa"
+  ],
+  "MAO-B Inhibitors": [
+    "Carbidopa"
+  ],
+  "Dopamine Agonists": [
+    "MAO-B Inhibitors"
+  ],
+  "Benztropine": [
+    "Amantadine"
+  ],
+  "Donepezil": [
+    "Benztropine"
+  ],
+  "Memantine": [
+    "Donepezil"
+  ],
+  "Sumatriptan": [
+    "Memantine"
+  ],
+  "Ergotamine": [
+    "Sumatriptan"
+  ],
+  "Opioids": [
+    "Ergotamine"
+  ],
+  "Naloxone": [
+    "Opioids"
+  ],
+  "Naltrexone": [
+    "Naloxone"
+  ],
+  "Baclofen": [
+    "Naltrexone"
+  ],
+  "Cyclobenzaprine": [
+    "Baclofen"
+  ],
+  "Dantrolene": [
+    "Cyclobenzaprine"
+  ],
+  "Monoamine Hypothesis": [],
+  "Dopamine Hypothesis (Schizophrenia)": [
+    "Monoamine Hypothesis"
+  ],
+  "Mesolimbic Pathway": [
+    "Dopamine Hypothesis (Schizophrenia)"
+  ],
+  "Mesocortical Pathway": [
+    "Mesolimbic Pathway"
+  ],
+  "Tuberoinfundibular Pathway": [
+    "Nigrostriatal Pathway"
+  ],
+  "Serotonin Hypothesis (Depression)": [
+    "Tuberoinfundibular Pathway"
+  ],
+  "Neurobiology of Addiction": [
+    "HPA Axis in Depression"
+  ],
+  "Reward Pathway": [
+    "Neurobiology of Addiction"
+  ],
+  "Nucleus Accumbens": [
+    "Reward Pathway"
+  ],
+  "VTA (Ventral Tegmental Area)": [
+    "Nucleus Accumbens"
+  ],
+  "Autism Spectrum Disorder": [],
+  "ADHD": [
+    "Autism Spectrum Disorder"
+  ],
+  "Schizophrenia": [
+    "ADHD"
+  ],
+  "Schizoaffective Disorder": [
+    "Schizophrenia"
+  ],
+  "Brief Psychotic Disorder": [
+    "Schizoaffective Disorder"
+  ],
+  "Schizophreniform Disorder": [
+    "Brief Psychotic Disorder"
+  ],
+  "Delusional Disorder": [
+    "Schizophreniform Disorder"
+  ],
+  "Positive Symptoms (Schizophrenia)": [
+    "Delusional Disorder"
+  ],
+  "Negative Symptoms (Schizophrenia)": [
+    "Positive Symptoms (Schizophrenia)"
+  ],
+  "Major Depressive Disorder": [
+    "Negative Symptoms (Schizophrenia)"
+  ],
+  "Persistent Depressive Disorder (Dysthymia)": [
+    "Major Depressive Disorder"
+  ],
+  "Bipolar I Disorder": [
+    "Persistent Depressive Disorder (Dysthymia)"
+  ],
+  "Bipolar II Disorder": [
+    "Bipolar I Disorder"
+  ],
+  "Cyclothymia": [
+    "Bipolar II Disorder"
+  ],
+  "Manic Episode": [
+    "Cyclothymia"
+  ],
+  "Hypomanic Episode": [
+    "Manic Episode"
+  ],
+  "GAD": [
+    "Hypomanic Episode"
+  ],
+  "Panic Disorder": [
+    "GAD"
+  ],
+  "Social Anxiety Disorder": [
+    "Panic Disorder"
+  ],
+  "Specific Phobia": [
+    "Social Anxiety Disorder"
+  ],
+  "Agoraphobia": [
+    "Specific Phobia"
+  ],
+  "OCD": [
+    "Agoraphobia"
+  ],
+  "Body Dysmorphic Disorder": [
+    "OCD"
+  ],
+  "Trichotillomania": [
+    "Body Dysmorphic Disorder"
+  ],
+  "Hoarding Disorder": [
+    "Trichotillomania"
+  ],
+  "PTSD": [
+    "Hoarding Disorder"
+  ],
+  "Acute Stress Disorder": [
+    "PTSD"
+  ],
+  "Adjustment Disorder": [
+    "Acute Stress Disorder"
+  ],
+  "Somatic Symptom Disorder": [
+    "Adjustment Disorder"
+  ],
+  "Illness Anxiety Disorder": [
+    "Somatic Symptom Disorder"
+  ],
+  "Conversion Disorder (FND)": [
+    "Illness Anxiety Disorder"
+  ],
+  "Factitious Disorder": [
+    "Conversion Disorder (FND)"
+  ],
+  "Malingering": [
+    "Factitious Disorder"
+  ],
+  "Dissociative Identity Disorder": [
+    "Malingering"
+  ],
+  "Depersonalization Disorder": [
+    "Dissociative Identity Disorder"
+  ],
+  "Dissociative Amnesia": [
+    "Depersonalization Disorder"
+  ],
+  "Cluster A Personality Disorders": [
+    "Dissociative Amnesia"
+  ],
+  "Paranoid PD": [
+    "Cluster A Personality Disorders"
+  ],
+  "Schizoid PD": [
+    "Paranoid PD"
+  ],
+  "Schizotypal PD": [
+    "Schizoid PD"
+  ],
+  "Cluster B Personality Disorders": [
+    "Schizotypal PD"
+  ],
+  "Antisocial PD": [
+    "Cluster B Personality Disorders"
+  ],
+  "Borderline PD": [
+    "Antisocial PD"
+  ],
+  "Histrionic PD": [
+    "Borderline PD"
+  ],
+  "Narcissistic PD": [
+    "Histrionic PD"
+  ],
+  "Cluster C Personality Disorders": [
+    "Narcissistic PD"
+  ],
+  "Avoidant PD": [
+    "Cluster C Personality Disorders"
+  ],
+  "Dependent PD": [
+    "Avoidant PD"
+  ],
+  "Obsessive-Compulsive PD": [
+    "Dependent PD"
+  ],
+  "Anorexia Nervosa": [
+    "Obsessive-Compulsive PD"
+  ],
+  "Bulimia Nervosa": [
+    "Anorexia Nervosa"
+  ],
+  "Binge Eating Disorder": [
+    "Bulimia Nervosa"
+  ],
+  "Insomnia Disorder": [
+    "Binge Eating Disorder"
+  ],
+  "Narcolepsy": [
+    "Insomnia Disorder"
+  ],
+  "Obstructive Sleep Apnea": [
+    "Narcolepsy"
+  ],
+  "Sleepwalking": [
+    "Obstructive Sleep Apnea"
+  ],
+  "Night Terrors": [
+    "Sleepwalking"
+  ],
+  "REM Sleep Behavior Disorder": [
+    "Night Terrors"
+  ],
+  "Male Sexual Dysfunction": [
+    "REM Sleep Behavior Disorder"
+  ],
+  "Female Sexual Dysfunction": [
+    "Male Sexual Dysfunction"
+  ],
+  "Gender Dysphoria": [
+    "Female Sexual Dysfunction"
+  ],
+  "Alcohol Withdrawal": [
+    "Alcohol Use Disorder"
+  ],
+  "Korsakoff Syndrome": [
+    "Wernicke Encephalopathy"
+  ],
+  "Delirium Tremens": [
+    "Korsakoff Syndrome"
+  ],
+  "Opioid Use Disorder": [
+    "Delirium Tremens"
+  ],
+  "Opioid Withdrawal": [
+    "Opioid Use Disorder"
+  ],
+  "Stimulant Use Disorder": [
+    "Opioid Withdrawal"
+  ],
+  "Cocaine Effects": [
+    "Stimulant Use Disorder"
+  ],
+  "Amphetamine Effects": [
+    "Cocaine Effects"
+  ],
+  "Sedative Use Disorder": [
+    "Amphetamine Effects"
+  ],
+  "Benzodiazepine Withdrawal": [
+    "Sedative Use Disorder"
+  ],
+  "Cannabis Use Disorder": [
+    "Benzodiazepine Withdrawal"
+  ],
+  "Hallucinogen Use": [
+    "Cannabis Use Disorder"
+  ],
+  "Delirium": [
+    "Hallucinogen Use"
+  ],
+  "Dementia": [
+    "Delirium"
+  ],
+  "Pseudodementia (Depression)": [
+    "Dementia"
+  ],
+  "Oppositional Defiant Disorder": [
+    "Pseudodementia (Depression)"
+  ],
+  "Conduct Disorder": [
+    "Oppositional Defiant Disorder"
+  ],
+  "Intellectual Disability": [
+    "Conduct Disorder"
+  ],
+  "Separation Anxiety Disorder": [
+    "Intellectual Disability"
+  ],
+  "Tourette Syndrome": [
+    "Separation Anxiety Disorder"
+  ],
+  "Enuresis": [
+    "Tourette Syndrome"
+  ],
+  "SSRIs": [],
+  "Fluoxetine": [
+    "SSRIs"
+  ],
+  "Sertraline": [
+    "Fluoxetine"
+  ],
+  "Escitalopram": [
+    "Sertraline"
+  ],
+  "Paroxetine": [
+    "Escitalopram"
+  ],
+  "SNRIs": [
+    "Paroxetine"
+  ],
+  "Venlafaxine": [
+    "SNRIs"
+  ],
+  "Duloxetine": [
+    "Venlafaxine"
+  ],
+  "Desvenlafaxine": [
+    "Duloxetine"
+  ],
+  "TCAs": [
+    "Desvenlafaxine"
+  ],
+  "Amitriptyline": [
+    "TCAs"
+  ],
+  "Nortriptyline": [
+    "Amitriptyline"
+  ],
+  "Imipramine": [
+    "Nortriptyline"
+  ],
+  "Clomipramine": [
+    "Imipramine"
+  ],
+  "MAOIs": [
+    "Clomipramine"
+  ],
+  "Phenelzine": [
+    "MAOIs"
+  ],
+  "Tranylcypromine": [
+    "Phenelzine"
+  ],
+  "Selegiline (Patch)": [
+    "Tranylcypromine"
+  ],
+  "Tyramine Reaction": [
+    "Selegiline (Patch)"
+  ],
+  "Bupropion": [
+    "Tyramine Reaction"
+  ],
+  "Mirtazapine": [
+    "Bupropion"
+  ],
+  "Trazodone": [
+    "Mirtazapine"
+  ],
+  "Typical Antipsychotics": [
+    "Trazodone"
+  ],
+  "Haloperidol": [
+    "Typical Antipsychotics"
+  ],
+  "Chlorpromazine": [
+    "Haloperidol"
+  ],
+  "Fluphenazine": [
+    "Chlorpromazine"
+  ],
+  "Thioridazine": [
+    "Fluphenazine"
+  ],
+  "Atypical Antipsychotics": [
+    "Thioridazine"
+  ],
+  "Clozapine": [
+    "Atypical Antipsychotics"
+  ],
+  "Risperidone": [
+    "Clozapine"
+  ],
+  "Olanzapine": [
+    "Risperidone"
+  ],
+  "Quetiapine": [
+    "Olanzapine"
+  ],
+  "Aripiprazole": [
+    "Quetiapine"
+  ],
+  "Ziprasidone": [
+    "Aripiprazole"
+  ],
+  "Lurasidone": [
+    "Ziprasidone"
+  ],
+  "EPS": [
+    "Lurasidone"
+  ],
+  "Akathisia": [
+    "EPS"
+  ],
+  "Tardive Dyskinesia": [
+    "Akathisia"
+  ],
+  "Acute Dystonia": [
+    "Tardive Dyskinesia"
+  ],
+  "Parkinsonian Side Effects": [
+    "Acute Dystonia"
+  ],
+  "Neuroleptic Malignant Syndrome": [
+    "Parkinsonian Side Effects"
+  ],
+  "Serotonin Syndrome": [
+    "Neuroleptic Malignant Syndrome"
+  ],
+  "Lithium": [
+    "Serotonin Syndrome"
+  ],
+  "Lithium Toxicity": [
+    "Lithium"
+  ],
+  "Lithium Side Effects": [
+    "Lithium Toxicity"
+  ],
+  "Valproate (Psychiatry)": [
+    "Lithium Side Effects"
+  ],
+  "Lamotrigine (Psychiatry)": [
+    "Valproate (Psychiatry)"
+  ],
+  "Carbamazepine (Psychiatry)": [
+    "Lamotrigine (Psychiatry)"
+  ],
+  "Benzodiazepines (Psychiatry)": [
+    "Carbamazepine (Psychiatry)"
+  ],
+  "Alprazolam": [
+    "Benzodiazepines (Psychiatry)"
+  ],
+  "Clonazepam": [
+    "Alprazolam"
+  ],
+  "Buspirone": [
+    "Clonazepam"
+  ],
+  "Methylphenidate": [
+    "Buspirone"
+  ],
+  "Amphetamine Salts": [
+    "Methylphenidate"
+  ],
+  "Atomoxetine": [
+    "Amphetamine Salts"
+  ],
+  "Naltrexone (SUD)": [
+    "Atomoxetine"
+  ],
+  "Disulfiram": [
+    "Naltrexone (SUD)"
+  ],
+  "Acamprosate": [
+    "Disulfiram"
+  ],
+  "Methadone": [
+    "Acamprosate"
+  ],
+  "Buprenorphine": [
+    "Methadone"
+  ],
+  "Naloxone (SUD)": [
+    "Buprenorphine"
+  ],
+  "Zolpidem": [
+    "Naloxone (SUD)"
+  ],
+  "Zaleplon": [
+    "Zolpidem"
+  ],
+  "Eszopiclone": [
+    "Zaleplon"
+  ],
+  "Hydroxyzine": [
+    "Eszopiclone"
+  ],
+  "Airway Anatomy": [],
+  "Trachea": [
+    "Airway Anatomy"
+  ],
+  "Bronchi": [
+    "Trachea"
+  ],
+  "Bronchioles": [
+    "Bronchi"
+  ],
+  "Type I Pneumocytes": [
+    "Alveoli"
+  ],
+  "Pleural Space": [
+    "Type II Pneumocytes"
+  ],
+  "Visceral Pleura": [
+    "Pleural Space"
+  ],
+  "Parietal Pleura": [
+    "Visceral Pleura"
+  ],
+  "Lung Lobes": [
+    "Parietal Pleura"
+  ],
+  "Right Lung": [
+    "Lung Lobes"
+  ],
+  "Left Lung": [
+    "Right Lung"
+  ],
+  "Tidal Volume": [],
+  "FRC": [
+    "Tidal Volume"
+  ],
+  "TLC": [
+    "FRC"
+  ],
+  "RV": [
+    "TLC"
+  ],
+  "FVC": [
+    "RV"
+  ],
+  "FEV1": [
+    "FVC"
+  ],
+  "Fick Law": [
+    "Airway Resistance"
+  ],
+  "Alveolar Gas Equation": [
+    "Fick Law"
+  ],
+  "V/Q Ratio": [
+    "Pulmonary Vascular Resistance"
+  ],
+  "Shunt": [
+    "V/Q Mismatch"
+  ],
+  "Dead Space": [
+    "Shunt"
+  ],
+  "Oxygen-Hemoglobin Dissociation Curve": [
+    "Dead Space"
+  ],
+  "Bohr Effect": [
+    "Oxygen-Hemoglobin Dissociation Curve"
+  ],
+  "Haldane Effect": [
+    "Bohr Effect"
+  ],
+  "Central Chemoreceptors": [
+    "Hypoxic Pulmonary Vasoconstriction"
+  ],
+  "Peripheral Chemoreceptors": [
+    "Central Chemoreceptors"
+  ],
+  "Hypoxic Drive": [
+    "Peripheral Chemoreceptors"
+  ],
+  "Status Asthmaticus": [
+    "Asthma"
+  ],
+  "Allergic Asthma": [
+    "Status Asthmaticus"
+  ],
+  "Centriacinar Emphysema": [
+    "Emphysema"
+  ],
+  "Panacinar Emphysema": [
+    "Centriacinar Emphysema"
+  ],
+  "Bronchiectasis": [
+    "Panacinar Emphysema"
+  ],
+  "Cystic Fibrosis": [
+    "Bronchiectasis"
+  ],
+  "Eosinophilic Pneumonia": [
+    "Hypersensitivity Pneumonitis"
+  ],
+  "Eisenmenger (Pulm)": [
+    "Pulmonary Hypertension (Primary)"
+  ],
+  "Asbestosis": [
+    "Eisenmenger (Pulm)"
+  ],
+  "Silicosis": [
+    "Asbestosis"
+  ],
+  "Coal Workers Pneumoconiosis": [
+    "Silicosis"
+  ],
+  "Berylliosis": [
+    "Coal Workers Pneumoconiosis"
+  ],
+  "Adenocarcinoma (Lung)": [
+    "Squamous Cell Lung Cancer"
+  ],
+  "Large Cell Carcinoma": [
+    "Small Cell Lung Cancer"
+  ],
+  "SVC Syndrome": [
+    "Horner Syndrome"
+  ],
+  "Community-Acquired Pneumonia": [
+    "SVC Syndrome"
+  ],
+  "Atypical Pneumonia": [
+    "Community-Acquired Pneumonia"
+  ],
+  "Aspiration Pneumonia": [
+    "Atypical Pneumonia"
+  ],
+  "Hospital-Acquired Pneumonia": [
+    "Aspiration Pneumonia"
+  ],
+  "Strep Pneumonia": [
+    "Hospital-Acquired Pneumonia"
+  ],
+  "Mycoplasma Pneumonia": [
+    "Strep Pneumonia"
+  ],
+  "Legionella Pneumonia": [
+    "Mycoplasma Pneumonia"
+  ],
+  "Pleural Effusion": [
+    "PCP Pneumonia"
+  ],
+  "Transudative Effusion": [
+    "Pleural Effusion"
+  ],
+  "Exudative Effusion": [
+    "Transudative Effusion"
+  ],
+  "Light Criteria": [
+    "Exudative Effusion"
+  ],
+  "Empyema": [
+    "Light Criteria"
+  ],
+  "Chylothorax": [
+    "Empyema"
+  ],
+  "Spontaneous Pneumothorax": [
+    "Chylothorax"
+  ],
+  "Tension Pneumothorax": [
+    "Spontaneous Pneumothorax"
+  ],
+  "Hampton Hump": [
+    "Pulmonary Embolism"
+  ],
+  "Westermark Sign": [
+    "Hampton Hump"
+  ],
+  "Type II Respiratory Failure": [
+    "Type I Respiratory Failure"
+  ],
+  "NRDS": [
+    "Type II Respiratory Failure"
+  ],
+  "Surfactant Deficiency": [
+    "NRDS"
+  ],
+  "Short-Acting Beta-2 Agonists": [],
+  "Albuterol": [
+    "Short-Acting Beta-2 Agonists"
+  ],
+  "Levalbuterol": [
+    "Albuterol"
+  ],
+  "Long-Acting Beta-2 Agonists": [
+    "Levalbuterol"
+  ],
+  "Salmeterol": [
+    "Long-Acting Beta-2 Agonists"
+  ],
+  "Formoterol": [
+    "Salmeterol"
+  ],
+  "Inhaled Corticosteroids": [
+    "Formoterol"
+  ],
+  "Fluticasone": [
+    "Inhaled Corticosteroids"
+  ],
+  "Budesonide": [
+    "Fluticasone"
+  ],
+  "Montelukast": [
+    "Budesonide"
+  ],
+  "Zafirlukast": [
+    "Montelukast"
+  ],
+  "Ipratropium": [
+    "Zafirlukast"
+  ],
+  "Tiotropium": [
+    "Ipratropium"
+  ],
+  "Roflumilast": [
+    "Tiotropium"
+  ],
+  "Theophylline": [
+    "Roflumilast"
+  ],
+  "Omalizumab": [
+    "Theophylline"
+  ],
+  "Mepolizumab": [
+    "Omalizumab"
+  ],
+  "Dupilumab (Asthma)": [
+    "Mepolizumab"
+  ],
+  "Sildenafil (Pulm HTN)": [
+    "Dupilumab (Asthma)"
+  ],
+  "Bosentan": [
+    "Sildenafil (Pulm HTN)"
+  ],
+  "Epoprostenol": [
+    "Bosentan"
+  ],
+  "N-Acetylcysteine": [
+    "Epoprostenol"
+  ],
+  "First-Generation Antihistamines": [
+    "N-Acetylcysteine"
+  ],
+  "Diphenhydramine": [
+    "First-Generation Antihistamines"
+  ],
+  "Second-Generation Antihistamines": [
+    "Diphenhydramine"
+  ],
+  "Loratadine": [
+    "Second-Generation Antihistamines"
+  ],
+  "Cetirizine": [
+    "Loratadine"
+  ],
+  "GI Tract Layers": [],
+  "Mucosa": [
+    "GI Tract Layers"
+  ],
+  "Submucosa": [
+    "Mucosa"
+  ],
+  "Muscularis": [
+    "Submucosa"
+  ],
+  "Serosa": [
+    "Muscularis"
+  ],
+  "Enteric Nervous System": [
+    "Serosa"
+  ],
+  "Myenteric Plexus": [
+    "Enteric Nervous System"
+  ],
+  "Submucosal Plexus": [
+    "Myenteric Plexus"
+  ],
+  "Liver Anatomy": [
+    "Submucosal Plexus"
+  ],
+  "Gallbladder": [
+    "Biliary System"
+  ],
+  "Pancreatic Duct of Wirsung": [
+    "Common Bile Duct"
+  ],
+  "Duct of Santorini": [
+    "Pancreatic Duct of Wirsung"
+  ],
+  "Sphincter of Oddi": [
+    "Duct of Santorini"
+  ],
+  "Secretin": [
+    "Gastrin"
+  ],
+  "CCK": [
+    "Secretin"
+  ],
+  "GIP": [
+    "CCK"
+  ],
+  "VIP": [
+    "GIP"
+  ],
+  "Motilin": [
+    "VIP"
+  ],
+  "Chief Cells": [
+    "Parietal Cells"
+  ],
+  "G Cells": [
+    "Chief Cells"
+  ],
+  "ECL Cells": [
+    "G Cells"
+  ],
+  "Pepsinogen": [
+    "ECL Cells"
+  ],
+  "Mucus Secretion": [
+    "Intrinsic Factor"
+  ],
+  "Protein Absorption": [
+    "Fat Absorption"
+  ],
+  "Carbohydrate Absorption": [
+    "Protein Absorption"
+  ],
+  "Bilirubin Metabolism": [
+    "Carbohydrate Absorption"
+  ],
+  "Conjugated Bilirubin": [
+    "Bilirubin Metabolism"
+  ],
+  "Unconjugated Bilirubin": [
+    "Conjugated Bilirubin"
+  ],
+  "Hepatic Detoxification": [
+    "Unconjugated Bilirubin"
+  ],
+  "Phase I/II Liver Metabolism": [
+    "Hepatic Detoxification"
+  ],
+  "Achalasia": [
+    "Barrett Esophagus"
+  ],
+  "Diffuse Esophageal Spasm": [
+    "Achalasia"
+  ],
+  "Mallory-Weiss Tear": [
+    "Diffuse Esophageal Spasm"
+  ],
+  "Boerhaave Syndrome": [
+    "Mallory-Weiss Tear"
+  ],
+  "Esophageal Squamous Cell Carcinoma": [
+    "Boerhaave Syndrome"
+  ],
+  "Plummer-Vinson Syndrome": [
+    "Esophageal Adenocarcinoma"
+  ],
+  "Zenker Diverticulum": [
+    "Plummer-Vinson Syndrome"
+  ],
+  "Duodenal Ulcer": [
+    "Peptic Ulcer Disease"
+  ],
+  "Gastric Ulcer": [
+    "Duodenal Ulcer"
+  ],
+  "H. pylori Gastritis": [
+    "Gastric Ulcer"
+  ],
+  "Gastric Adenocarcinoma": [
+    "NSAID-Induced Ulcer"
+  ],
+  "Gastric MALT Lymphoma": [
+    "Gastric Adenocarcinoma"
+  ],
+  "Celiac Disease": [
+    "Gastric MALT Lymphoma"
+  ],
+  "Tropical Sprue": [
+    "Celiac Disease"
+  ],
+  "Lactase Deficiency": [
+    "Tropical Sprue"
+  ],
+  "Whipple Disease": [
+    "Lactase Deficiency"
+  ],
+  "Appendicitis": [
+    "Toxic Megacolon"
+  ],
+  "FAP": [
+    "Colorectal Cancer"
+  ],
+  "HNPCC": [
+    "FAP"
+  ],
+  "Villous Adenoma": [
+    "HNPCC"
+  ],
+  "Tubular Adenoma": [
+    "Villous Adenoma"
+  ],
+  "Inguinal Hernia": [
+    "Tubular Adenoma"
+  ],
+  "Femoral Hernia": [
+    "Inguinal Hernia"
+  ],
+  "Hiatal Hernia": [
+    "Femoral Hernia"
+  ],
+  "Umbilical Hernia": [
+    "Hiatal Hernia"
+  ],
+  "Small Bowel Obstruction": [
+    "Umbilical Hernia"
+  ],
+  "Large Bowel Obstruction": [
+    "Small Bowel Obstruction"
+  ],
+  "Mesenteric Ischemia": [
+    "Large Bowel Obstruction"
+  ],
+  "Ischemic Colitis": [
+    "Mesenteric Ischemia"
+  ],
+  "Diverticulosis": [
+    "Ischemic Colitis"
+  ],
+  "Diverticulitis": [
+    "Diverticulosis"
+  ],
+  "Irritable Bowel Syndrome": [
+    "Diverticulitis"
+  ],
+  "Viral Hepatitis": [
+    "Irritable Bowel Syndrome"
+  ],
+  "Autoimmune Hepatitis": [
+    "Alcoholic Hepatitis"
+  ],
+  "NAFLD": [
+    "Autoimmune Hepatitis"
+  ],
+  "NASH": [
+    "NAFLD"
+  ],
+  "Wilson Disease": [
+    "Hepatocellular Carcinoma"
+  ],
+  "PSC": [
+    "Primary Biliary Cholangitis"
+  ],
+  "Cholecystitis": [
+    "Cholelithiasis"
+  ],
+  "Ranson Criteria": [
+    "Acute Pancreatitis"
+  ],
+  "Pancreatic Adenocarcinoma": [
+    "Chronic Pancreatitis"
+  ],
+  "Upper GI Bleed": [
+    "Pancreatic Adenocarcinoma"
+  ],
+  "Lower GI Bleed": [
+    "Upper GI Bleed"
+  ],
+  "Curling Ulcer": [
+    "Lower GI Bleed"
+  ],
+  "Cushing Ulcer": [
+    "Curling Ulcer"
+  ],
+  "Antacids": [],
+  "Calcium Carbonate": [
+    "Antacids"
+  ],
+  "Magnesium Hydroxide": [
+    "Calcium Carbonate"
+  ],
+  "H2 Blockers": [
+    "Magnesium Hydroxide"
+  ],
+  "Ranitidine": [
+    "H2 Blockers"
+  ],
+  "Famotidine": [
+    "Ranitidine"
+  ],
+  "Cimetidine": [
+    "Famotidine"
+  ],
+  "PPIs": [
+    "Cimetidine"
+  ],
+  "Omeprazole": [
+    "PPIs"
+  ],
+  "Pantoprazole": [
+    "Omeprazole"
+  ],
+  "Lansoprazole": [
+    "Pantoprazole"
+  ],
+  "H. pylori Triple Therapy": [
+    "Lansoprazole"
+  ],
+  "H. pylori Quadruple Therapy": [
+    "H. pylori Triple Therapy"
+  ],
+  "Metoclopramide": [
+    "H. pylori Quadruple Therapy"
+  ],
+  "Domperidone": [
+    "Erythromycin"
+  ],
+  "Bisacodyl": [
+    "Domperidone"
+  ],
+  "Polyethylene Glycol": [
+    "Bisacodyl"
+  ],
+  "Lactulose": [
+    "Polyethylene Glycol"
+  ],
+  "Loperamide": [
+    "Lactulose"
+  ],
+  "Diphenoxylate": [
+    "Loperamide"
+  ],
+  "Ondansetron": [
+    "Diphenoxylate"
+  ],
+  "Prochlorperazine": [
+    "Ondansetron"
+  ],
+  "Scopolamine": [
+    "Prochlorperazine"
+  ],
+  "Dronabinol": [
+    "Scopolamine"
+  ],
+  "Mesalamine": [
+    "Dronabinol"
+  ],
+  "Sulfasalazine": [
+    "Mesalamine"
+  ],
+  "Azathioprine": [
+    "Sulfasalazine"
+  ],
+  "6-Mercaptopurine": [
+    "Azathioprine"
+  ],
+  "Anti-TNF (GI)": [
+    "6-Mercaptopurine"
+  ],
+  "Infliximab": [
+    "Anti-TNF (GI)"
+  ],
+  "Adalimumab": [
+    "Infliximab"
+  ],
+  "Vedolizumab": [
+    "Adalimumab"
+  ],
+  "Ustekinumab": [
+    "Vedolizumab"
+  ],
+  "Ursodeoxycholic Acid": [
+    "Ustekinumab"
+  ],
+  "Hematopoiesis": [],
+  "Erythropoiesis": [
+    "Hematopoiesis"
+  ],
+  "Thrombopoiesis": [
+    "Leukopoiesis"
+  ],
+  "G-CSF": [
+    "Erythropoietin"
+  ],
+  "GM-CSF": [
+    "G-CSF"
+  ],
+  "Thrombopoietin": [
+    "GM-CSF"
+  ],
+  "Glycolysis (RBC)": [
+    "RBC Metabolism"
+  ],
+  "Pyruvate Kinase": [
+    "G6PD"
+  ],
+  "Heme Synthesis": [
+    "Hemoglobin Structure"
+  ],
+  "Hemoglobin A": [
+    "Heme Synthesis"
+  ],
+  "Hemoglobin A2": [
+    "Hemoglobin A"
+  ],
+  "Hemoglobin F": [
+    "Hemoglobin A2"
+  ],
+  "Common Coagulation Pathway": [
+    "Intrinsic Coagulation Pathway"
+  ],
+  "Factor X": [
+    "Factor IX"
+  ],
+  "Thrombin": [
+    "Factor X"
+  ],
+  "Fibrinogen": [
+    "Thrombin"
+  ],
+  "Fibrin": [
+    "Fibrinogen"
+  ],
+  "ADP Pathway": [
+    "Platelet Activation"
+  ],
+  "Thromboxane A2": [
+    "ADP Pathway"
+  ],
+  "GPIIb/IIIa": [
+    "Thromboxane A2"
+  ],
+  "tPA": [
+    "Fibrinolysis"
+  ],
+  "Plasminogen": [
+    "tPA"
+  ],
+  "Plasmin": [
+    "Plasminogen"
+  ],
+  "Antithrombin III": [
+    "Plasmin"
+  ],
+  "Protein C": [
+    "Antithrombin III"
+  ],
+  "Protein S": [
+    "Protein C"
+  ],
+  "ABO Blood Groups": [
+    "Protein S"
+  ],
+  "Rh Factor": [
+    "ABO Blood Groups"
+  ],
+  "Blood Typing": [
+    "Rh Factor"
+  ],
+  "Iron Deficiency Anemia": [],
+  "Thalassemia": [
+    "Iron Deficiency Anemia"
+  ],
+  "Sideroblastic Anemia": [
+    "Thalassemia"
+  ],
+  "Lead Poisoning": [
+    "Sideroblastic Anemia"
+  ],
+  "Alpha Thalassemia": [
+    "Lead Poisoning"
+  ],
+  "Beta Thalassemia": [
+    "Alpha Thalassemia"
+  ],
+  "B12 Deficiency Anemia": [
+    "Beta Thalassemia"
+  ],
+  "Folate Deficiency Anemia": [
+    "B12 Deficiency Anemia"
+  ],
+  "Macrocytic Anemia": [
+    "Pernicious Anemia"
+  ],
+  "PNH": [
+    "G6PD Deficiency"
+  ],
+  "Sickle Cell Trait": [
+    "Sickle Cell Disease"
+  ],
+  "Aplastic Anemia": [
+    "Microangiopathic Hemolytic Anemia"
+  ],
+  "Diamond-Blackfan Anemia": [
+    "Aplastic Anemia"
+  ],
+  "Anemia of Chronic Disease": [
+    "Diamond-Blackfan Anemia"
+  ],
+  "vWD": [
+    "Hemophilia B"
+  ],
+  "HIT": [
+    "ITP"
+  ],
+  "Prothrombin G20210A": [
+    "Factor V Leiden"
+  ],
+  "Protein C Deficiency": [
+    "Prothrombin G20210A"
+  ],
+  "Protein S Deficiency": [
+    "Protein C Deficiency"
+  ],
+  "ALL": [
+    "DIC"
+  ],
+  "CLL": [
+    "AML"
+  ],
+  "t(11;14) Mantle Cell": [
+    "t(8;14) Burkitt"
+  ],
+  "Polycythemia Vera": [
+    "t(11;14) Mantle Cell"
+  ],
+  "Essential Thrombocythemia": [
+    "Polycythemia Vera"
+  ],
+  "Primary Myelofibrosis": [
+    "Essential Thrombocythemia"
+  ],
+  "JAK2 Mutation": [
+    "Primary Myelofibrosis"
+  ],
+  "Non-Hodgkin Lymphoma": [
+    "Reed-Sternberg Cells"
+  ],
+  "Diffuse Large B-Cell Lymphoma": [
+    "Non-Hodgkin Lymphoma"
+  ],
+  "Follicular Lymphoma": [
+    "Diffuse Large B-Cell Lymphoma"
+  ],
+  "Mantle Cell Lymphoma": [
+    "Burkitt Lymphoma"
+  ],
+  "Marginal Zone Lymphoma": [
+    "Mantle Cell Lymphoma"
+  ],
+  "MGUS": [
+    "Multiple Myeloma"
+  ],
+  "Waldenstrom Macroglobulinemia": [
+    "MGUS"
+  ],
+  "AL Amyloidosis": [
+    "Amyloidosis"
+  ],
+  "MDS": [
+    "AL Amyloidosis"
+  ],
+  "Ringed Sideroblasts": [
+    "MDS"
+  ],
+  "Transfusion Reactions": [
+    "Ringed Sideroblasts"
+  ],
+  "Febrile Non-Hemolytic Reaction": [
+    "Transfusion Reactions"
+  ],
+  "Acute Hemolytic Reaction": [
+    "Febrile Non-Hemolytic Reaction"
+  ],
+  "Delayed Hemolytic Reaction": [
+    "Acute Hemolytic Reaction"
+  ],
+  "TRALI": [
+    "Delayed Hemolytic Reaction"
+  ],
+  "Transfusion-Associated Circulatory Overload": [
+    "TRALI"
+  ],
+  "Heparin": [],
+  "LMWH": [
+    "Heparin"
+  ],
+  "Enoxaparin": [
+    "LMWH"
+  ],
+  "Fondaparinux": [
+    "Enoxaparin"
+  ],
+  "Warfarin": [
+    "Fondaparinux"
+  ],
+  "Vitamin K Reversal": [
+    "Warfarin"
+  ],
+  "DOACs": [
+    "Vitamin K Reversal"
+  ],
+  "Rivaroxaban": [
+    "DOACs"
+  ],
+  "Apixaban": [
+    "Rivaroxaban"
+  ],
+  "Dabigatran": [
+    "Apixaban"
+  ],
+  "Edoxaban": [
+    "Dabigatran"
+  ],
+  "Idarucizumab": [
+    "Edoxaban"
+  ],
+  "Andexanet Alfa": [
+    "Idarucizumab"
+  ],
+  "Aspirin": [
+    "Andexanet Alfa"
+  ],
+  "Clopidogrel": [
+    "Aspirin"
+  ],
+  "Ticagrelor": [
+    "Clopidogrel"
+  ],
+  "Prasugrel": [
+    "Ticagrelor"
+  ],
+  "Abciximab": [
+    "Prasugrel"
+  ],
+  "Eptifibatide": [
+    "Abciximab"
+  ],
+  "Tirofiban": [
+    "Eptifibatide"
+  ],
+  "Streptokinase": [
+    "tPA"
+  ],
+  "Tenecteplase": [
+    "Streptokinase"
+  ],
+  "EPO": [
+    "Tenecteplase"
+  ],
+  "Darbepoetin": [
+    "EPO"
+  ],
+  "Hydroxyurea": [
+    "GM-CSF"
+  ],
+  "Imatinib": [
+    "Hydroxyurea"
+  ],
+  "Dasatinib": [
+    "Imatinib"
+  ],
+  "Nilotinib": [
+    "Dasatinib"
+  ],
+  "Rituximab": [
+    "Nilotinib"
+  ],
+  "Brentuximab": [
+    "Rituximab"
+  ],
+  "Obinutuzumab": [
+    "Brentuximab"
+  ],
+  "ATRA": [
+    "Obinutuzumab"
+  ],
+  "Arsenic Trioxide": [
+    "ATRA"
+  ],
+  "Cytarabine": [
+    "Arsenic Trioxide"
+  ],
+  "Daunorubicin": [
+    "Cytarabine"
+  ],
+  "Alkylating Agents": [
+    "Daunorubicin"
+  ],
+  "Cyclophosphamide": [
+    "Alkylating Agents"
+  ],
+  "Melphalan": [
+    "Cyclophosphamide"
+  ],
+  "Antimetabolites": [
+    "Melphalan"
+  ],
+  "Methotrexate": [
+    "Antimetabolites"
+  ],
+  "5-Fluorouracil": [
+    "Methotrexate"
+  ],
+  "Taxanes": [
+    "5-Fluorouracil"
+  ],
+  "Paclitaxel": [
+    "Taxanes"
+  ],
+  "Docetaxel": [
+    "Paclitaxel"
+  ],
+  "Vinca Alkaloids": [
+    "Docetaxel"
+  ],
+  "Vincristine": [
+    "Vinca Alkaloids"
+  ],
+  "Vinblastine": [
+    "Vincristine"
+  ],
+  "Bleomycin": [
+    "Vinblastine"
+  ],
+  "Doxorubicin": [
+    "Bleomycin"
+  ],
+  "Etoposide": [
+    "Doxorubicin"
+  ],
+  "Musculocutaneous Nerve": [
+    "Brachial Plexus"
+  ],
+  "Median Nerve": [
+    "Musculocutaneous Nerve"
+  ],
+  "Ulnar Nerve": [
+    "Median Nerve"
+  ],
+  "Radial Nerve": [
+    "Ulnar Nerve"
+  ],
+  "Axillary Nerve": [
+    "Radial Nerve"
+  ],
+  "Saturday Night Palsy": [
+    "Axillary Nerve"
+  ],
+  "Wrist Drop": [
+    "Saturday Night Palsy"
+  ],
+  "Claw Hand": [
+    "Wrist Drop"
+  ],
+  "Ape Hand": [
+    "Claw Hand"
+  ],
+  "Pope's Blessing Hand": [
+    "Ape Hand"
+  ],
+  "Femoral Nerve": [
+    "Pope's Blessing Hand"
+  ],
+  "Obturator Nerve": [
+    "Femoral Nerve"
+  ],
+  "Sciatic Nerve": [
+    "Obturator Nerve"
+  ],
+  "Common Peroneal Nerve": [
+    "Sciatic Nerve"
+  ],
+  "Tibial Nerve": [
+    "Common Peroneal Nerve"
+  ],
+  "Foot Drop": [
+    "Tibial Nerve"
+  ],
+  "ACL": [
+    "Foot Drop"
+  ],
+  "PCL": [
+    "ACL"
+  ],
+  "MCL": [
+    "PCL"
+  ],
+  "LCL": [
+    "MCL"
+  ],
+  "Medial Meniscus": [
+    "LCL"
+  ],
+  "Lateral Meniscus": [
+    "Medial Meniscus"
+  ],
+  "Rotator Cuff Muscles": [
+    "Lateral Meniscus"
+  ],
+  "Supraspinatus": [
+    "Rotator Cuff Muscles"
+  ],
+  "Infraspinatus": [
+    "Supraspinatus"
+  ],
+  "Teres Minor": [
+    "Infraspinatus"
+  ],
+  "Subscapularis": [
+    "Teres Minor"
+  ],
+  "Vertebral Column": [
+    "Subscapularis"
+  ],
+  "Intervertebral Disc": [
+    "Vertebral Column"
+  ],
+  "Hip Anatomy": [
+    "Intervertebral Disc"
+  ],
+  "Greater Trochanter": [
+    "Hip Anatomy"
+  ],
+  "Sliding Filament Theory": [],
+  "Sarcomere": [
+    "Sliding Filament Theory"
+  ],
+  "Actin": [
+    "Sarcomere"
+  ],
+  "Myosin": [
+    "Actin"
+  ],
+  "Tropomyosin": [
+    "Myosin"
+  ],
+  "Troponin Complex": [
+    "Tropomyosin"
+  ],
+  "Motor Unit": [
+    "Troponin Complex"
+  ],
+  "Osteocytes": [
+    "Osteoclasts"
+  ],
+  "Calcium Homeostasis": [
+    "RANK/RANKL/OPG Pathway"
+  ],
+  "Vitamin D Actions": [
+    "PTH Actions"
+  ],
+  "Calcitonin Actions": [
+    "Vitamin D Actions"
+  ],
+  "DEXA Scan": [
+    "Osteoporosis"
+  ],
+  "T-Score": [
+    "DEXA Scan"
+  ],
+  "Osteomalacia": [
+    "T-Score"
+  ],
+  "Rickets": [
+    "Osteomalacia"
+  ],
+  "Osteonecrosis (AVN)": [
+    "Alkaline Phosphatase (Paget)"
+  ],
+  "Legg-Calve-Perthes": [
+    "Osteonecrosis (AVN)"
+  ],
+  "Ewing Sarcoma": [
+    "Osteosarcoma"
+  ],
+  "Chondrosarcoma": [
+    "Ewing Sarcoma"
+  ],
+  "Giant Cell Tumor": [
+    "Chondrosarcoma"
+  ],
+  "Osteoid Osteoma": [
+    "Giant Cell Tumor"
+  ],
+  "Osteochondroma": [
+    "Osteoid Osteoma"
+  ],
+  "Bone Metastases": [
+    "Osteochondroma"
+  ],
+  "RF": [
+    "Rheumatoid Arthritis"
+  ],
+  "Anti-CCP": [
+    "RF"
+  ],
+  "Osteoarthritis": [
+    "Anti-CCP"
+  ],
+  "Heberden Nodes": [
+    "Osteoarthritis"
+  ],
+  "Bouchard Nodes": [
+    "Heberden Nodes"
+  ],
+  "Psoriatic Arthritis": [
+    "HLA-B27"
+  ],
+  "Reactive Arthritis": [
+    "Psoriatic Arthritis"
+  ],
+  "IBD-Associated Arthritis": [
+    "Reactive Arthritis"
+  ],
+  "Pseudogout": [
+    "Uric Acid Crystals"
+  ],
+  "CPPD Crystals": [
+    "Pseudogout"
+  ],
+  "Malar Rash": [
+    "SLE"
+  ],
+  "Sjogren Syndrome": [
+    "Antiphospholipid Syndrome"
+  ],
+  "Anti-Ro": [
+    "Sjogren Syndrome"
+  ],
+  "Anti-La": [
+    "Anti-Ro"
+  ],
+  "Anticentromere": [
+    "Anti-Scl-70"
+  ],
+  "CREST Syndrome": [
+    "Anticentromere"
+  ],
+  "Fibromyalgia": [
+    "Anti-Jo-1"
+  ],
+  "Septic Arthritis": [
+    "Fibromyalgia"
+  ],
+  "Osteomyelitis": [
+    "Septic Arthritis"
+  ],
+  "Duchenne Muscular Dystrophy": [
+    "Osteomyelitis"
+  ],
+  "Becker Muscular Dystrophy": [
+    "Duchenne Muscular Dystrophy"
+  ],
+  "Lipoma": [
+    "Myotonic Dystrophy"
+  ],
+  "Liposarcoma": [
+    "Lipoma"
+  ],
+  "Rhabdomyosarcoma": [
+    "Liposarcoma"
+  ],
+  "NSAIDs": [],
+  "Ibuprofen": [
+    "NSAIDs"
+  ],
+  "Naproxen": [
+    "Ibuprofen"
+  ],
+  "Indomethacin": [
+    "Naproxen"
+  ],
+  "COX-2 Inhibitors": [
+    "Indomethacin"
+  ],
+  "Celecoxib": [
+    "COX-2 Inhibitors"
+  ],
+  "Colchicine": [
+    "Celecoxib"
+  ],
+  "Allopurinol": [
+    "Colchicine"
+  ],
+  "Febuxostat": [
+    "Allopurinol"
+  ],
+  "Probenecid": [
+    "Febuxostat"
+  ],
+  "Pegloticase": [
+    "Probenecid"
+  ],
+  "Bisphosphonates": [
+    "Pegloticase"
+  ],
+  "Alendronate": [
+    "Bisphosphonates"
+  ],
+  "Zoledronic Acid": [
+    "Alendronate"
+  ],
+  "Denosumab": [
+    "Zoledronic Acid"
+  ],
+  "Teriparatide": [
+    "Denosumab"
+  ],
+  "Raloxifene": [
+    "Teriparatide"
+  ],
+  "Methotrexate (DMARD)": [
+    "Raloxifene"
+  ],
+  "Hydroxychloroquine": [
+    "Methotrexate (DMARD)"
+  ],
+  "Leflunomide": [
+    "Sulfasalazine"
+  ],
+  "Anti-TNF Agents": [
+    "Leflunomide"
+  ],
+  "Etanercept": [
+    "Adalimumab"
+  ],
+  "Abatacept": [
+    "Etanercept"
+  ],
+  "Tocilizumab": [
+    "Rituximab"
+  ],
+  "JAK Inhibitors": [
+    "Tocilizumab"
+  ],
+  "Tofacitinib": [
+    "JAK Inhibitors"
+  ],
+  "Male Reproductive Anatomy": [],
+  "Testes": [
+    "Male Reproductive Anatomy"
+  ],
+  "Epididymis": [
+    "Testes"
+  ],
+  "Vas Deferens": [
+    "Epididymis"
+  ],
+  "Seminal Vesicles": [
+    "Vas Deferens"
+  ],
+  "Prostate Gland": [
+    "Seminal Vesicles"
+  ],
+  "Female Reproductive Anatomy": [
+    "Prostate Gland"
+  ],
+  "Ovaries": [
+    "Female Reproductive Anatomy"
+  ],
+  "Fallopian Tubes": [
+    "Ovaries"
+  ],
+  "Uterus Layers": [
+    "Fallopian Tubes"
+  ],
+  "Cervix": [
+    "Uterus Layers"
+  ],
+  "Vagina": [
+    "Cervix"
+  ],
+  "Pelvic Floor Muscles": [
+    "Vagina"
+  ],
+  "Sertoli Cells": [
+    "Spermatogenesis"
+  ],
+  "Leydig Cells": [
+    "Sertoli Cells"
+  ],
+  "Testosterone Production": [
+    "Leydig Cells"
+  ],
+  "Folliculogenesis": [
+    "Testosterone Production"
+  ],
+  "Oogenesis Stages": [
+    "Folliculogenesis"
+  ],
+  "Menstrual Cycle Phases": [
+    "Oogenesis Stages"
+  ],
+  "Follicular Phase": [
+    "Menstrual Cycle Phases"
+  ],
+  "Ovulation": [
+    "Follicular Phase"
+  ],
+  "Luteal Phase": [
+    "Ovulation"
+  ],
+  "LH Surge": [
+    "Luteal Phase"
+  ],
+  "Estrogen Effects": [
+    "LH Surge"
+  ],
+  "Progesterone Effects": [
+    "Estrogen Effects"
+  ],
+  "hCG": [
+    "Progesterone Effects"
+  ],
+  "Pregnancy Hormones": [
+    "hCG"
+  ],
+  "Placental Development": [
+    "Pregnancy Hormones"
+  ],
+  "Syncytiotrophoblast": [
+    "Placental Development"
+  ],
+  "Fetal Circulation Changes": [
+    "Syncytiotrophoblast"
+  ],
+  "Neonatal Circulation": [
+    "Fetal Circulation Changes"
+  ],
+  "Lactation": [
+    "Neonatal Circulation"
+  ],
+  "Cryptorchidism": [],
+  "Testicular Torsion": [
+    "Cryptorchidism"
+  ],
+  "Epididymitis": [
+    "Testicular Torsion"
+  ],
+  "Orchitis": [
+    "Epididymitis"
+  ],
+  "Seminoma": [
+    "Orchitis"
+  ],
+  "Nonseminomatous Germ Cell Tumor": [
+    "Seminoma"
+  ],
+  "Teratoma": [
+    "Nonseminomatous Germ Cell Tumor"
+  ],
+  "Yolk Sac Tumor": [
+    "Teratoma"
+  ],
+  "BPH": [
+    "Yolk Sac Tumor"
+  ],
+  "Prostate Cancer": [
+    "BPH"
+  ],
+  "Erectile Dysfunction": [
+    "Prostate Cancer"
+  ],
+  "Hypospadias": [
+    "Erectile Dysfunction"
+  ],
+  "Epispadias": [
+    "Hypospadias"
+  ],
+  "Primary Amenorrhea": [],
+  "Secondary Amenorrhea": [
+    "Primary Amenorrhea"
+  ],
+  "Dysmenorrhea": [
+    "Secondary Amenorrhea"
+  ],
+  "Menorrhagia": [
+    "Dysmenorrhea"
+  ],
+  "Metrorrhagia": [
+    "Menorrhagia"
+  ],
+  "PCOS": [
+    "Metrorrhagia"
+  ],
+  "LH:FSH Ratio": [
+    "PCOS"
+  ],
+  "Endometriosis": [
+    "LH:FSH Ratio"
+  ],
+  "Adenomyosis": [
+    "Endometriosis"
+  ],
+  "Uterine Fibroids": [
+    "Adenomyosis"
+  ],
+  "Uterine Leiomyosarcoma": [
+    "Uterine Fibroids"
+  ],
+  "Endometrial Carcinoma": [
+    "Uterine Leiomyosarcoma"
+  ],
+  "Endometrial Hyperplasia": [
+    "Endometrial Carcinoma"
+  ],
+  "Cervical Cancer": [
+    "Endometrial Hyperplasia"
+  ],
+  "CIN": [
+    "Cervical Cancer"
+  ],
+  "HPV 16/18": [
+    "CIN"
+  ],
+  "Pap Smear": [
+    "HPV 16/18"
+  ],
+  "Colposcopy": [
+    "Pap Smear"
+  ],
+  "Epithelial Ovarian Cancer": [
+    "Colposcopy"
+  ],
+  "Germ Cell Tumors": [
+    "Epithelial Ovarian Cancer"
+  ],
+  "Dysgerminoma": [
+    "Germ Cell Tumors"
+  ],
+  "Sex Cord-Stromal Tumors": [
+    "Dysgerminoma"
+  ],
+  "Granulosa Cell Tumor": [
+    "Sex Cord-Stromal Tumors"
+  ],
+  "Sertoli-Leydig Cell Tumor": [
+    "Granulosa Cell Tumor"
+  ],
+  "Meig Syndrome": [
+    "Sertoli-Leydig Cell Tumor"
+  ],
+  "Vulvar Carcinoma": [
+    "Meig Syndrome"
+  ],
+  "Vulvar Lichen Sclerosus": [
+    "Vulvar Carcinoma"
+  ],
+  "PID": [
+    "Vulvar Lichen Sclerosus"
+  ],
+  "Salpingitis": [
+    "PID"
+  ],
+  "Fitz-Hugh-Curtis Syndrome": [
+    "Salpingitis"
+  ],
+  "Pelvic Organ Prolapse": [
+    "Fitz-Hugh-Curtis Syndrome"
+  ],
+  "Lichen Planus": [
+    "Pelvic Organ Prolapse"
+  ],
+  "Normal Labor": [],
+  "Stages of Labor": [
+    "Normal Labor"
+  ],
+  "Ectopic Pregnancy": [
+    "Stages of Labor"
+  ],
+  "Spontaneous Abortion": [
+    "Ectopic Pregnancy"
+  ],
+  "Hydatidiform Mole": [
+    "Spontaneous Abortion"
+  ],
+  "Choriocarcinoma": [
+    "Hydatidiform Mole"
+  ],
+  "Placenta Previa": [
+    "Choriocarcinoma"
+  ],
+  "Placental Abruption": [
+    "Placenta Previa"
+  ],
+  "Vasa Previa": [
+    "Placental Abruption"
+  ],
+  "Preeclampsia": [
+    "Vasa Previa"
+  ],
+  "Eclampsia": [
+    "Preeclampsia"
+  ],
+  "HELLP Syndrome": [
+    "Eclampsia"
+  ],
+  "Gestational Diabetes": [
+    "HELLP Syndrome"
+  ],
+  "Preterm Labor": [
+    "Gestational Diabetes"
+  ],
+  "PPROM": [
+    "Preterm Labor"
+  ],
+  "IUGR": [
+    "PPROM"
+  ],
+  "Oligohydramnios": [
+    "IUGR"
+  ],
+  "Polyhydramnios": [
+    "Oligohydramnios"
+  ],
+  "Postpartum Hemorrhage": [
+    "Polyhydramnios"
+  ],
+  "Postpartum Endometritis": [
+    "Postpartum Hemorrhage"
+  ],
+  "Postpartum VTE": [
+    "Postpartum Endometritis"
+  ],
+  "Rh Incompatibility": [
+    "Postpartum VTE"
+  ],
+  "Rh Immunoglobulin": [
+    "Rh Incompatibility"
+  ],
+  "Hydrops Fetalis": [
+    "Rh Immunoglobulin"
+  ],
+  "Group B Strep in Pregnancy": [
+    "Hydrops Fetalis"
+  ],
+  "TORCH Infections": [
+    "Group B Strep in Pregnancy"
+  ],
+  "Fetal Alcohol Syndrome": [
+    "TORCH Infections"
+  ],
+  "Neonatal Respiratory Distress Syndrome": [
+    "Fetal Alcohol Syndrome"
+  ],
+  "Meconium Aspiration": [
+    "Neonatal Respiratory Distress Syndrome"
+  ],
+  "Transient Tachypnea of Newborn": [
+    "Meconium Aspiration"
+  ],
+  "Combined Oral Contraceptives": [],
+  "Progesterone-Only Pills": [
+    "Combined Oral Contraceptives"
+  ],
+  "Levonorgestrel": [
+    "Progesterone-Only Pills"
+  ],
+  "Ulipristal": [
+    "Levonorgestrel"
+  ],
+  "Clomiphene": [
+    "Ulipristal"
+  ],
+  "Letrozole": [
+    "Clomiphene"
+  ],
+  "Gonadotropins": [
+    "Letrozole"
+  ],
+  "GnRH Agonists": [
+    "Gonadotropins"
+  ],
+  "Misoprostol": [
+    "Oxytocin"
+  ],
+  "Magnesium Sulfate": [
+    "Misoprostol"
+  ],
+  "Tocolytics": [
+    "Magnesium Sulfate"
+  ],
+  "Terbutaline": [
+    "Nifedipine"
+  ],
+  "Betamethasone": [
+    "Terbutaline"
+  ],
+  "HRT": [
+    "Betamethasone"
+  ],
+  "Tamoxifen": [
+    "HRT"
+  ],
+  "Epidermis Layers": [],
+  "Stratum Basale": [
+    "Epidermis Layers"
+  ],
+  "Stratum Spinosum": [
+    "Stratum Basale"
+  ],
+  "Stratum Granulosum": [
+    "Stratum Spinosum"
+  ],
+  "Stratum Lucidum": [
+    "Stratum Granulosum"
+  ],
+  "Stratum Corneum": [
+    "Stratum Lucidum"
+  ],
+  "Dermis": [
+    "Stratum Corneum"
+  ],
+  "Hypodermis": [
+    "Dermis"
+  ],
+  "Hair Follicle": [
+    "Hypodermis"
+  ],
+  "Sebaceous Gland": [
+    "Hair Follicle"
+  ],
+  "Eccrine Sweat Gland": [
+    "Sebaceous Gland"
+  ],
+  "Apocrine Sweat Gland": [
+    "Eccrine Sweat Gland"
+  ],
+  "Keratinocytes": [
+    "Apocrine Sweat Gland"
+  ],
+  "Melanocytes": [
+    "Keratinocytes"
+  ],
+  "Langerhans Cells": [
+    "Melanocytes"
+  ],
+  "Merkel Cells": [
+    "Langerhans Cells"
+  ],
+  "Atopic Dermatitis": [],
+  "Psoriasis": [
+    "Contact Dermatitis"
+  ],
+  "Psoriasis Plaques": [
+    "Psoriasis"
+  ],
+  "Auspitz Sign": [
+    "Psoriasis Plaques"
+  ],
+  "Wickham Striae": [
+    "Lichen Planus"
+  ],
+  "Acne Vulgaris": [
+    "Wickham Striae"
+  ],
+  "Rosacea": [
+    "Acne Vulgaris"
+  ],
+  "Pemphigus Vulgaris": [
+    "Rosacea"
+  ],
+  "Acantholysis": [
+    "Pemphigus Vulgaris"
+  ],
+  "Tzanck Smear": [
+    "Acantholysis"
+  ],
+  "Bullous Pemphigoid": [
+    "Tzanck Smear"
+  ],
+  "Dermatitis Herpetiformis": [
+    "Bullous Pemphigoid"
+  ],
+  "Impetigo": [
+    "Dermatitis Herpetiformis"
+  ],
+  "Cellulitis": [
+    "Impetigo"
+  ],
+  "Erysipelas": [
+    "Cellulitis"
+  ],
+  "Folliculitis": [
+    "Erysipelas"
+  ],
+  "Tinea": [
+    "Folliculitis"
+  ],
+  "Pityriasis Rosea": [
+    "Tinea"
+  ],
+  "Molluscum Contagiosum": [
+    "Pityriasis Rosea"
+  ],
+  "Verruca Vulgaris": [
+    "Molluscum Contagiosum"
+  ],
+  "Herpes Zoster": [
+    "Verruca Vulgaris"
+  ],
+  "Varicella": [
+    "Herpes Zoster"
+  ],
+  "Vitiligo": [
+    "Varicella"
+  ],
+  "Melasma": [
+    "Vitiligo"
+  ],
+  "Port-Wine Stain": [
+    "Albinism"
+  ],
+  "Hemangioma": [
+    "Port-Wine Stain"
+  ],
+  "Seborrheic Keratosis": [
+    "Hemangioma"
+  ],
+  "Dermatofibroma": [
+    "Seborrheic Keratosis"
+  ],
+  "Cherry Angioma": [
+    "Lipoma"
+  ],
+  "Actinic Keratosis": [
+    "Cherry Angioma"
+  ],
+  "Basal Cell Carcinoma": [
+    "Actinic Keratosis"
+  ],
+  "Squamous Cell Carcinoma": [
+    "Basal Cell Carcinoma"
+  ],
+  "Melanoma": [
+    "Squamous Cell Carcinoma"
+  ],
+  "ABCDE Criteria": [
+    "Melanoma"
+  ],
+  "Breslow Thickness": [
+    "ABCDE Criteria"
+  ],
+  "Mycosis Fungoides": [
+    "Breslow Thickness"
+  ],
+  "Sezary Syndrome": [
+    "Mycosis Fungoides"
+  ],
+  "Kaposi Sarcoma": [
+    "Sezary Syndrome"
+  ],
+  "Merkel Cell Carcinoma": [
+    "Kaposi Sarcoma"
+  ],
+  "Stevens-Johnson Syndrome": [
+    "Merkel Cell Carcinoma"
+  ],
+  "TEN": [
+    "Stevens-Johnson Syndrome"
+  ],
+  "Erythema Multiforme": [
+    "TEN"
+  ],
+  "Erythema Nodosum": [
+    "Erythema Multiforme"
+  ],
+  "Erythema Marginatum": [
+    "Erythema Nodosum"
+  ],
+  "Erythema Chronicum Migrans": [
+    "Erythema Marginatum"
+  ],
+  "Pyoderma Gangrenosum": [
+    "Erythema Chronicum Migrans"
+  ],
+  "Neurofibromatosis Type 1": [
+    "Pyoderma Gangrenosum"
+  ],
+  "Neurofibromatosis Type 2": [
+    "Neurofibromatosis Type 1"
+  ],
+  "Tuberous Sclerosis": [
+    "Neurofibromatosis Type 2"
+  ],
+  "Sturge-Weber Syndrome": [
+    "Tuberous Sclerosis"
+  ],
+  "Topical Corticosteroids": [],
+  "Topical Retinoids": [
+    "Topical Corticosteroids"
+  ],
+  "Tretinoin": [
+    "Topical Retinoids"
+  ],
+  "Adapalene": [
+    "Tretinoin"
+  ],
+  "Isotretinoin Side Effects": [
+    "Isotretinoin"
+  ],
+  "Topical Antifungals": [
+    "Isotretinoin Side Effects"
+  ],
+  "Clotrimazole": [
+    "Topical Antifungals"
+  ],
+  "Ketoconazole": [
+    "Clotrimazole"
+  ],
+  "Tacrolimus": [
+    "Terbinafine"
+  ],
+  "Pimecrolimus": [
+    "Tacrolimus"
+  ],
+  "Dupilumab": [
+    "Pimecrolimus"
+  ],
+  "Secukinumab": [
+    "Dupilumab"
+  ],
+  "Ixekizumab": [
+    "Secukinumab"
+  ],
+  "Cornea": [],
+  "Lens": [
+    "Cornea"
+  ],
+  "Retina": [
+    "Lens"
+  ],
+  "Optic Nerve": [
+    "Retina"
+  ],
+  "Anterior Chamber": [
+    "Optic Nerve"
+  ],
+  "Posterior Chamber": [
+    "Anterior Chamber"
+  ],
+  "Vitreous Humor": [
+    "Posterior Chamber"
+  ],
+  "Aqueous Humor": [
+    "Vitreous Humor"
+  ],
+  "Macula": [
+    "Aqueous Humor"
+  ],
+  "Fovea": [
+    "Macula"
+  ],
+  "Optic Disc": [
+    "Fovea"
+  ],
+  "Visual Pathway": [
+    "Optic Disc"
+  ],
+  "Optic Chiasm": [
+    "Visual Pathway"
+  ],
+  "Lateral Geniculate Nucleus": [
+    "Optic Chiasm"
+  ],
+  "Visual Cortex": [
+    "Lateral Geniculate Nucleus"
+  ],
+  "Bitemporal Hemianopia": [
+    "Visual Cortex"
+  ],
+  "Homonymous Hemianopia": [
+    "Bitemporal Hemianopia"
+  ],
+  "Quadrantanopia": [
+    "Homonymous Hemianopia"
+  ],
+  "Open-Angle Glaucoma": [],
+  "Angle-Closure Glaucoma": [
+    "Open-Angle Glaucoma"
+  ],
+  "Cataracts": [
+    "Angle-Closure Glaucoma"
+  ],
+  "Nuclear Sclerosis": [
+    "Cataracts"
+  ],
+  "AMD (Dry)": [
+    "Nuclear Sclerosis"
+  ],
+  "AMD (Wet)": [
+    "AMD (Dry)"
+  ],
+  "Drusen": [
+    "AMD (Wet)"
+  ],
+  "Hypertensive Retinopathy": [
+    "Diabetic Retinopathy"
+  ],
+  "AV Nicking": [
+    "Hypertensive Retinopathy"
+  ],
+  "Retinal Vein Occlusion": [
+    "Retinal Detachment"
+  ],
+  "Retinal Artery Occlusion": [
+    "Retinal Vein Occlusion"
+  ],
+  "Cherry Red Spot": [
+    "Retinal Artery Occlusion"
+  ],
+  "Optic Neuritis": [
+    "Papilledema"
+  ],
+  "Uveitis": [
+    "Optic Neuritis"
+  ],
+  "Anterior Uveitis": [
+    "Uveitis"
+  ],
+  "Posterior Uveitis": [
+    "Anterior Uveitis"
+  ],
+  "Conjunctivitis (Bacterial)": [
+    "Posterior Uveitis"
+  ],
+  "Conjunctivitis (Viral)": [
+    "Conjunctivitis (Bacterial)"
+  ],
+  "Trachoma": [
+    "Conjunctivitis (Viral)"
+  ],
+  "Ocular Manifestations of Systemic Disease": [
+    "Trachoma"
+  ],
+  "Cochlea": [
+    "Inner Ear"
+  ],
+  "Eustachian Tube": [
+    "Vestibular System"
+  ],
+  "Frontal Sinus": [
+    "Maxillary Sinus"
+  ],
+  "Ethmoid Sinus": [
+    "Frontal Sinus"
+  ],
+  "Otosclerosis": [
+    "Sensorineural Hearing Loss"
+  ],
+  "Presbycusis": [
+    "Otosclerosis"
+  ],
+  "Otitis Media": [
+    "Noise-Induced Hearing Loss"
+  ],
+  "Meniere Disease": [
+    "Cholesteatoma"
+  ],
+  "Acute Sinusitis": [
+    "Peripheral vs Central Vertigo"
+  ],
+  "Chronic Sinusitis": [
+    "Acute Sinusitis"
+  ],
+  "Rhinitis": [
+    "Chronic Sinusitis"
+  ],
+  "Vocal Cord Nodules": [
+    "EBV Association"
+  ],
+  "Vocal Cord Polyps": [
+    "Vocal Cord Nodules"
+  ],
+  "Laryngeal Cancer": [
+    "Vocal Cord Polyps"
+  ],
+  "Oral Cavity Cancer": [
+    "Laryngeal Cancer"
+  ],
+  "Oropharyngeal Cancer": [
+    "Oral Cavity Cancer"
+  ],
+  "Head and Neck Cancer": [
+    "Oropharyngeal Cancer"
+  ],
+  "Pleomorphic Adenoma": [
+    "Parotid Gland Tumors"
+  ]
+}
