@@ -21,11 +21,11 @@ from database import get_tags_proven
 # Pré-requisitos (Knowledge Graph)
 # ---------------------------------------------------------------------------
 def _carregar_prerequisites():
-    path = os.path.join(os.path.dirname(__file__), "prerequisites.json")
+    path = os.path.join(os.path.dirname(__file__), "prerequisite.json")
     try:
         with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
-    except FileNotFoundError:
+    except (FileNotFoundError, json.JSONDecodeError):
         return {}
 
 PREREQUISITES = _carregar_prerequisites()

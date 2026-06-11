@@ -10,7 +10,7 @@ def carregar_taxonomia():
     try:
         with open("taxonomy.json", "r", encoding="utf-8") as f:
             return json.load(f)
-    except FileNotFoundError:
+    except (FileNotFoundError, json.JSONDecodeError):
         return {}
 
 TAXONOMIA_COMPLETA = carregar_taxonomia()
