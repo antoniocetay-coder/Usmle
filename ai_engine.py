@@ -23,7 +23,7 @@ def gerar_prompt_lote(sistema, difficulty, cognitive_order, tags_alvo, num_quest
 
     confounder_instruction = ""
     if tags_alvo:
-        from db.confusions import get_top_confounders
+        from database import get_top_confounders
         confounders = []
         for tag in tags_alvo:
             confounders.extend(get_top_confounders(tag))
