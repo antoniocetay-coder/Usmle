@@ -9,9 +9,28 @@ def calculate_degree_centrality(graph):
     return nx.degree_centrality(graph)
 
 
-# ── 2. PageRank ────────────────────────────────────────────────────────
-def calculate_pagerank(graph):
-    return nx.pagerank(graph)
+# ── 2. PageRank (pure Python, no scipy) ────────────────────────────────
+def calculate_pagerank(graph, alpha=0.85, max_iter=100, tol=1e-6):
+    n = graph.number_of_nodes()
+    if n == 0:
+        return {}
+    nodes = list(graph.nodes)
+    idx = {n: i for i, n in enumerate(nodes)}
+    pr = [1.0 / n] * n
+    out_degree = [len(list(graph.successors(nodes[i]))) for i in range(n)]
+    for _ in range(max_iter):
+        new_pr = [(1.0 - alpha) / n] * n
+        for i in range(n):
+            if out_degree[i] == 0:
+                continue
+            for succ in graph.successors(nodes[i]):
+                j = idx[succ]
+                new_pr[j] += alpha * pr[i] / out_degree[i]
+        diff = sum(abs(new_pr[i] - pr[i]) for i in range(n))
+        pr = new_pr
+        if diff < tol:
+            break
+    return {nodes[i]: pr[i] for i in range(n)}
 
 
 # ── 3. Betweenness Centrality ─────────────────────────────────────────
