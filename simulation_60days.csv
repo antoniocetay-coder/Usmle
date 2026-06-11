@@ -1,0 +1,61 @@
+day,hub,concept,mastery_before,mastery_after
+1,Autoimmunity Mechanisms,Graves Disease,0.85,1.0
+2,Autoimmunity Mechanisms,Hashimoto Thyroiditis,0.847,1.0
+3,Calcium Regulation,Primary Hyperparathyroidism,0.844,1.0
+4,TGF-beta in Fibrosis,IPF,0.841,1.0
+5,Autoimmunity Mechanisms,Primary Biliary Cholangitis,0.838,1.0
+6,Calcium Regulation,Secondary Hyperparathyroidism,0.835,1.0
+7,Autoimmunity Mechanisms,Antiphospholipid Syndrome,0.832,1.0
+8,TGF-beta in Fibrosis,Cirrhosis,0.829,1.0
+9,Autoimmunity Mechanisms,ITP,0.826,1.0
+10,Calcium Regulation,Multiple Myeloma,0.823,1.0
+11,TGF-beta in Fibrosis,Systemic Sclerosis,0.82,1.0
+12,Calcium Regulation,Osteoporosis,0.817,1.0
+13,Autoimmunity Mechanisms,SLE,0.814,1.0
+14,TGF-beta in Fibrosis,Spontaneous Bacterial Peritonitis,0.811,1.0
+15,Autoimmunity Mechanisms,Rheumatoid Arthritis,0.808,1.0
+16,Calcium Regulation,MEN1,0.805,1.0
+17,TGF-beta in Fibrosis,Hepatocellular Carcinoma,0.802,1.0
+18,Autoimmunity Mechanisms,,0.0,0.0
+19,Autoimmunity Mechanisms,,0.0,0.0
+20,Autoimmunity Mechanisms,,0.0,0.0
+21,Autoimmunity Mechanisms,,0.0,0.0
+22,Autoimmunity Mechanisms,,0.0,0.0
+23,Autoimmunity Mechanisms,,0.0,0.0
+24,Autoimmunity Mechanisms,,0.0,0.0
+25,Autoimmunity Mechanisms,,0.0,0.0
+26,Autoimmunity Mechanisms,,0.0,0.0
+27,Autoimmunity Mechanisms,,0.0,0.0
+28,Autoimmunity Mechanisms,,0.0,0.0
+29,Autoimmunity Mechanisms,,0.0,0.0
+30,Autoimmunity Mechanisms,,0.0,0.0
+31,Autoimmunity Mechanisms,,0.0,0.0
+32,Autoimmunity Mechanisms,,0.0,0.0
+33,Autoimmunity Mechanisms,,0.0,0.0
+34,Autoimmunity Mechanisms,,0.0,0.0
+35,Autoimmunity Mechanisms,,0.0,0.0
+36,Autoimmunity Mechanisms,,0.0,0.0
+37,Autoimmunity Mechanisms,,0.0,0.0
+38,Autoimmunity Mechanisms,,0.0,0.0
+39,Autoimmunity Mechanisms,,0.0,0.0
+40,Autoimmunity Mechanisms,,0.0,0.0
+41,Autoimmunity Mechanisms,,0.0,0.0
+42,Autoimmunity Mechanisms,,0.0,0.0
+43,Autoimmunity Mechanisms,,0.0,0.0
+44,Autoimmunity Mechanisms,,0.0,0.0
+45,Autoimmunity Mechanisms,,0.0,0.0
+46,Autoimmunity Mechanisms,,0.0,0.0
+47,Autoimmunity Mechanisms,,0.0,0.0
+48,Autoimmunity Mechanisms,,0.0,0.0
+49,Autoimmunity Mechanisms,,0.0,0.0
+50,Autoimmunity Mechanisms,,0.0,0.0
+51,Autoimmunity Mechanisms,Dermatomyositis,0.7,0.9
+52,Calcium Regulation,Chronic Kidney Disease,0.697,0.897
+53,Autoimmunity Mechanisms,Polymyositis,0.694,0.894
+54,TGF-beta in Fibrosis,Hepatorenal Syndrome,0.691,0.891
+55,Autoimmunity Mechanisms,Multiple Sclerosis,0.688,0.888
+56,Calcium Regulation,MEN2A,0.685,0.885
+57,TGF-beta in Fibrosis,Hepatic Encephalopathy,0.682,0.882
+58,Autoimmunity Mechanisms,Thyroid Storm,0.679,0.879
+59,Calcium Regulation,Renal Osteodystrophy,0.676,0.876
+60,Autoimmunity Mechanisms,,0.0,0.0

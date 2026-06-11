@@ -136,10 +136,7 @@ def render_dashboard(api_key, dificuldade, show_proof_section=True):
                         with st.spinner(f"Gerando {qtd_gerar} questões..."):
                             sucessos = brain.execute(path.id, qtd_gerar, api_key)
                             if sucessos > 0:
-                                if sucessos < qtd_gerar:
-                                    st.warning(f"⚠️ Geramos {sucessos} de {qtd_gerar} questões (algumas descartadas na validação).")
-                                else:
-                                    st.success(f"{sucessos} questões geradas!")
+                                st.success(f"{sucessos} questões geradas!")
                                 from session_state import increment_db_version
                                 increment_db_version()
                                 st.rerun()

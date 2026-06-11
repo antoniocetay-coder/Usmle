@@ -1,0 +1,369 @@
+concept,degree,pagerank,betweenness,descendants,depth
+STEMI,0.013624,0.006052,0.0,0,0
+Coronary Circulation,0.008174,0.001579,0.0,3,1
+Left Anterior Descending Artery,0.002725,0.001579,0.0,1,1
+Right Coronary Artery,0.002725,0.001579,0.0,1,1
+Cardiac Action Potential,0.00545,0.001579,0.0,2,1
+Coagulative Necrosis,0.00545,0.001579,0.0,2,1
+NSTEMI,0.008174,0.004039,0.0,0,0
+Stable Angina,0.002725,0.001579,0.0,1,1
+Frank-Starling Law,0.00545,0.001579,0.0,2,1
+Acute Coronary Syndrome,0.010899,0.003927,0.0,0,0
+Virchow Triad,0.016349,0.001579,0.0,6,1
+Thrombus Formation,0.002725,0.001579,0.0,1,1
+Myocardial Infarction,0.010899,0.001579,0.0,4,1
+Ventricular Free Wall Rupture,0.008174,0.003927,0.0,0,0
+Cardiac Layers,0.002725,0.001579,0.0,1,1
+Pericardium,0.00545,0.001579,0.0,2,1
+Papillary Muscle Rupture,0.00545,0.003257,0.0,0,0
+Mitral Regurgitation,0.002725,0.001579,0.0,1,1
+Dressler Syndrome,0.008174,0.002809,0.0,0,0
+Type III Hypersensitivity,0.016349,0.001579,0.0,7,2
+Pericarditis,0.00545,0.001579,0.0,2,1
+Cardiac Tamponade,0.010899,0.005605,0.0,0,0
+Beck Triad,0.002725,0.001579,0.0,1,1
+Pulsus Paradoxus,0.002725,0.001579,0.0,1,1
+Cor Pulmonale,0.008174,0.004733,0.0,0,0
+Pulmonary Hypertension (Primary),0.013624,0.004263,3e-05,2,1
+Right Heart Failure,0.00545,0.001579,0.0,3,2
+Pulmonary Vascular Resistance,0.00545,0.001579,0.0,3,2
+Systolic Heart Failure,0.010899,0.004934,0.0,0,0
+Cardiac Output,0.00545,0.001579,0.0,2,1
+Afterload,0.002725,0.001579,0.0,1,1
+Preload,0.00545,0.001579,0.0,2,1
+Diastolic Heart Failure,0.008174,0.004263,0.0,0,0
+Hypertrophic Cardiomyopathy,0.002725,0.001579,0.0,1,1
+Eisenmenger Syndrome,0.010899,0.007417,0.0,0,0
+Ventricular Septal Defect,0.002725,0.001579,0.0,1,1
+Atrial Septal Defect,0.002725,0.001579,0.0,1,1
+Patent Ductus Arteriosus,0.002725,0.001579,0.0,1,1
+Aortic Dissection,0.010899,0.005873,0.0,0,0
+Aorta,0.002725,0.001579,0.0,1,1
+Primary Hypertension,0.013624,0.001579,0.0,5,1
+Marfan Syndrome,0.002725,0.001579,0.0,1,1
+Fibrillin,0.002725,0.001579,0.0,1,1
+Infective Endocarditis,0.010899,0.005828,0.0,0,0
+Staphylococcus aureus,0.002725,0.001579,0.0,1,1
+Viridans Streptococci,0.002725,0.001579,0.0,1,1
+Duke Criteria,0.002725,0.001579,0.0,1,1
+Rheumatic Heart Disease,0.010899,0.004487,0.0,0,0
+Streptococcus pyogenes (Group A),0.00545,0.001579,0.0,2,1
+Type II Hypersensitivity,0.016349,0.001579,0.0,7,2
+Molecular Mimicry,0.00545,0.001579,0.0,2,1
+Jones Criteria,0.002725,0.001579,0.0,1,1
+Torsades de Pointes,0.008174,0.005605,0.0,0,0
+Long QT Syndrome,0.002725,0.001579,0.0,1,1
+Ventricular Tachycardia,0.002725,0.001579,0.0,1,1
+Class IA Antiarrhythmics,0.002725,0.001579,0.0,1,1
+WPW Syndrome,0.008174,0.004263,0.0,0,0
+AV Node,0.002725,0.001579,0.0,1,1
+Atrial Fibrillation,0.00545,0.001579,0.0,2,1
+Hypertensive Emergency,0.008174,0.004531,0.0,0,0
+Malignant Hypertension,0.002725,0.001579,0.0,1,1
+Baroreceptor Reflex,0.002725,0.001579,0.0,1,1
+Nephrotic Syndrome,0.016349,0.005381,4.5e-05,2,1
+Glomerular Filtration Barrier,0.008174,0.001579,0.0,6,2
+Podocytes,0.00545,0.001579,0.0,3,2
+Oncotic Pressure,0.002725,0.001579,0.0,3,2
+Starling Forces,0.002725,0.001579,0.0,3,2
+Nephritic Syndrome,0.013624,0.002697,3e-05,2,1
+Complement System,0.008174,0.001579,0.0,5,2
+Post-Streptococcal GN,0.008174,0.00362,0.0,0,0
+IgA Nephropathy,0.008174,0.004515,0.0,0,0
+IgA,0.002725,0.001579,0.0,1,1
+Goodpasture Syndrome,0.008174,0.004487,0.0,0,0
+Anti-GBM Disease,0.002725,0.001579,0.0,1,1
+Basement Membrane,0.002725,0.001579,0.0,1,1
+Minimal Change Disease,0.008174,0.00588,0.0,0,0
+T Regulatory Cells,0.002725,0.001579,0.0,1,1
+Acute Tubular Necrosis,0.010899,0.005381,0.0,0,0
+Proximal Convoluted Tubule,0.008174,0.001579,0.0,3,2
+Loop of Henle,0.002725,0.001579,0.0,1,1
+Intrinsic AKI,0.00545,0.001579,0.0,2,1
+Hypovolemic Shock,0.002725,0.001579,0.0,1,1
+Chronic Kidney Disease,0.013624,0.006894,2.2e-05,1,1
+GFR,0.002725,0.001579,0.0,2,2
+Renal Clearance,0.002725,0.001579,0.0,2,2
+Secondary Hyperparathyroidism,0.013624,0.003033,3.7e-05,2,2
+Erythropoietin,0.002725,0.001579,0.0,2,2
+Renal Tubular Acidosis Type I,0.008174,0.004039,0.0,0,0
+Collecting Duct,0.002725,0.001579,0.0,1,1
+Metabolic Acidosis,0.008174,0.001579,0.0,3,1
+Anion Gap,0.00545,0.001579,0.0,2,1
+Renal Tubular Acidosis Type II,0.008174,0.006479,0.0,0,0
+Fanconi Syndrome,0.010899,0.00471,1.5e-05,1,1
+Glucose Reabsorption,0.002725,0.001579,0.0,2,2
+Amino Acid Reabsorption,0.002725,0.001579,0.0,2,2
+Renal Osteodystrophy,0.008174,0.009177,0.0,0,0
+Vitamin D Metabolism,0.008174,0.001579,0.0,6,3
+ADPKD,0.008174,0.00471,0.0,0,0
+Kidney Gross Structure,0.002725,0.001579,0.0,1,1
+Renal Cortex,0.002725,0.001579,0.0,1,1
+Autosomal Dominant Inheritance,0.008174,0.001579,0.0,3,1
+Hepatorenal Syndrome,0.010899,0.007272,0.0,0,0
+Portal Hypertension,0.016349,0.005502,7.8e-05,2,1
+Prerenal AKI,0.002725,0.001579,0.0,1,1
+RAAS,0.00545,0.001579,0.0,2,1
+Aldosterone,0.002725,0.001579,0.0,1,1
+Diabetic Ketoacidosis,0.013624,0.005828,0.0,0,0
+Type 1 Diabetes Mellitus,0.008174,0.001579,0.0,3,1
+Glucagon,0.002725,0.001579,0.0,1,1
+Insulin,0.002725,0.001579,0.0,1,1
+Hyperosmolar Hyperglycemic State,0.008174,0.00471,0.0,0,0
+Type 2 Diabetes Mellitus,0.008174,0.001579,0.0,3,1
+ADH (Vasopressin),0.002725,0.001579,0.0,1,1
+Sodium Regulation,0.002725,0.001579,0.0,1,1
+Diabetic Nephropathy,0.010899,0.005209,0.0,0,0
+Diabetic Retinopathy,0.008174,0.003816,0.0,0,0
+Retinal Detachment,0.002725,0.001579,0.0,1,1
+Cushing Syndrome,0.013624,0.005158,3e-05,1,1
+Cortisol Synthesis,0.008174,0.001579,0.0,4,2
+ACTH,0.008174,0.001579,0.0,4,2
+CRH,0.002725,0.001579,0.0,2,2
+HPA Axis in Depression,0.002725,0.001579,0.0,2,2
+Addison Disease,0.010899,0.003189,0.0,0,0
+Aldosterone Synthesis,0.008174,0.001579,0.0,3,1
+Conn Syndrome,0.010899,0.004308,0.0,0,0
+Potassium Regulation,0.002725,0.001579,0.0,1,1
+Congenital Adrenal Hyperplasia,0.010899,0.004263,0.0,0,0
+21-Hydroxylase Deficiency,0.002725,0.001579,0.0,1,1
+Pheochromocytoma,0.013624,0.006276,3e-05,1,1
+Catecholamines,0.00545,0.001579,0.0,3,2
+Epinephrine,0.002725,0.001579,0.0,2,2
+Norepinephrine,0.002725,0.001579,0.0,2,2
+Secondary Hypertension,0.002725,0.001579,0.0,2,2
+Graves Disease,0.016349,0.00349,2.2e-05,1,1
+TSH,0.00545,0.001579,0.0,3,2
+T3,0.008174,0.001579,0.0,3,2
+T4,0.008174,0.001579,0.0,3,2
+Autoimmunity Mechanisms,0.029973,0.001579,0.0,12,2
+Hashimoto Thyroiditis,0.013624,0.003389,0.0,0,0
+Type IV Hypersensitivity,0.029973,0.001579,0.0,11,1
+Thyroid Storm,0.010899,0.006112,0.0,0,0
+Primary Hyperparathyroidism,0.016349,0.004375,6e-05,2,1
+Parathyroid Hormone,0.00545,0.001579,0.0,6,3
+Calcium Regulation,0.010899,0.001579,0.0,8,3
+Calcium Oxalate Stones,0.002725,0.001579,0.0,3,2
+Zollinger-Ellison Syndrome,0.010899,0.008929,4.5e-05,1,1
+Gastrin,0.002725,0.001579,0.0,2,2
+Gastric Acid Secretion,0.00545,0.001579,0.0,3,3
+Peptic Ulcer Disease,0.013624,0.006276,4.5e-05,2,2
+MEN1,0.008174,0.012367,0.0,0,0
+Prolactinoma,0.002725,0.001579,0.0,1,1
+MEN2A,0.008174,0.010118,0.0,0,0
+Medullary Thyroid Cancer,0.002725,0.001579,0.0,1,1
+Carcinoid Syndrome,0.008174,0.005605,0.0,0,0
+Carcinoid Tumor,0.002725,0.001579,0.0,1,1
+Serotonin,0.002725,0.001579,0.0,1,1
+Tricuspid Regurgitation,0.002725,0.001579,0.0,1,1
+COPD,0.010899,0.010942,0.0,0,0
+Obstructive Pattern,0.002725,0.001579,0.0,1,1
+FEV1/FVC Ratio,0.002725,0.001579,0.0,1,1
+Emphysema,0.013624,0.006276,3e-05,1,1
+Chronic Bronchitis,0.002725,0.001579,0.0,1,1
+Alveoli,0.002725,0.001579,0.0,2,2
+Type II Pneumocytes,0.00545,0.001579,0.0,3,2
+Lung Compliance,0.002725,0.001579,0.0,2,2
+Alpha-1 Antitrypsin Deficiency,0.002725,0.001579,0.0,2,2
+Asthma,0.016349,0.00896,0.0,0,0
+Airway Resistance,0.002725,0.001579,0.0,1,1
+Type I Hypersensitivity,0.002725,0.001579,0.0,1,1
+IgE,0.002725,0.001579,0.0,1,1
+Leukotrienes,0.002725,0.001579,0.0,1,1
+IL-4,0.002725,0.001579,0.0,1,1
+IL-5,0.00545,0.001579,0.0,2,1
+Pulmonary Embolism,0.010899,0.005158,0.0,0,0
+Deep Vein Thrombosis,0.002725,0.001579,0.0,1,1
+Factor V Leiden,0.002725,0.001579,0.0,1,1
+V/Q Mismatch,0.00545,0.001579,0.0,2,1
+ARDS,0.010899,0.006276,0.0,0,0
+Type I Respiratory Failure,0.002725,0.001579,0.0,1,1
+DAD,0.002725,0.001579,0.0,1,1
+Surfactant,0.002725,0.001579,0.0,1,1
+IPF,0.010899,0.003592,0.0,0,0
+Restrictive Pattern,0.008174,0.001579,0.0,3,1
+TGF-beta in Fibrosis,0.008174,0.001579,0.0,8,3
+Fibrosis,0.008174,0.001579,0.0,8,3
+Sarcoidosis,0.010899,0.004161,0.0,0,0
+Granulomatous Inflammation,0.00545,0.001579,0.0,2,1
+Epithelioid Cells,0.002725,0.001579,0.0,1,1
+Hypersensitivity Pneumonitis,0.008174,0.002372,0.0,0,0
+Hypoxic Pulmonary Vasoconstriction,0.002725,0.001579,0.0,3,2
+Small Cell Lung Cancer,0.010899,0.009319,0.0,0,0
+Paraneoplastic Syndromes,0.00545,0.001579,0.0,2,1
+SIADH,0.002725,0.001579,0.0,1,1
+Lambert-Eaton Syndrome,0.002725,0.001579,0.0,1,1
+Pancoast Tumor,0.008174,0.005605,0.0,0,0
+Horner Syndrome,0.002725,0.001579,0.0,1,1
+Brachial Plexus,0.002725,0.001579,0.0,1,1
+Squamous Cell Lung Cancer,0.002725,0.001579,0.0,1,1
+Cirrhosis,0.024523,0.005828,0.000168,5,2
+Hepatic Lobule,0.002725,0.001579,0.0,6,3
+Portal Circulation,0.00545,0.001579,0.0,6,3
+Alcoholic Hepatitis,0.002725,0.001579,0.0,6,3
+Esophageal Varices,0.002725,0.001579,0.0,3,2
+Ascites,0.00545,0.001579,0.0,4,2
+Hepatic Encephalopathy,0.008174,0.006499,0.0,0,0
+Urea Cycle,0.002725,0.001579,0.0,1,1
+Spontaneous Bacterial Peritonitis,0.010899,0.006173,0.0,0,0
+Escherichia coli,0.002725,0.001579,0.0,1,1
+Klebsiella pneumoniae,0.002725,0.001579,0.0,1,1
+Hepatocellular Carcinoma,0.010899,0.006844,0.0,0,0
+Hepatitis B,0.002725,0.001579,0.0,1,1
+Hepatitis C,0.002725,0.001579,0.0,1,1
+Hemochromatosis,0.002725,0.001579,0.0,1,1
+Acute Pancreatitis,0.016349,0.007618,3e-05,1,1
+Pancreatic Enzymes,0.00545,0.001579,0.0,2,2
+Lipase,0.002725,0.001579,0.0,2,2
+Amylase,0.002725,0.001579,0.0,2,2
+Trypsinogen,0.002725,0.001579,0.0,2,2
+Cholelithiasis,0.002725,0.001579,0.0,2,2
+Chronic Pancreatitis,0.008174,0.01007,0.0,0,0
+Fat Absorption,0.002725,0.001579,0.0,1,1
+Helicobacter pylori,0.002725,0.001579,0.0,3,3
+Prostaglandins,0.002725,0.001579,0.0,3,3
+NSAID-Induced Ulcer,0.002725,0.001579,0.0,3,3
+Barrett Esophagus,0.008174,0.005605,0.0,0,0
+GERD,0.002725,0.001579,0.0,1,1
+Metaplasia,0.002725,0.001579,0.0,1,1
+Esophageal Adenocarcinoma,0.002725,0.001579,0.0,1,1
+Crohn Disease,0.010899,0.005056,0.0,0,0
+Transmural Inflammation,0.002725,0.001579,0.0,1,1
+Skip Lesions (Crohn),0.002725,0.001579,0.0,1,1
+Ulcerative Colitis,0.010899,0.006947,0.0,0,0
+Chronic Inflammation,0.002725,0.001579,0.0,1,1
+Pseudopolyps,0.002725,0.001579,0.0,1,1
+Toxic Megacolon,0.002725,0.001579,0.0,1,1
+Colorectal Cancer,0.002725,0.001579,0.0,1,1
+Primary Biliary Cholangitis,0.010899,0.004507,0.0,0,0
+Bile Salts,0.002725,0.001579,0.0,1,1
+Bile Acid Enterohepatic Circulation,0.002725,0.001579,0.0,1,1
+Cholangitis,0.010899,0.006947,0.0,0,0
+Choledocholithiasis,0.002725,0.001579,0.0,1,1
+Biliary System,0.002725,0.001579,0.0,1,1
+Common Bile Duct,0.002725,0.001579,0.0,1,1
+Reynolds Pentad,0.002725,0.001579,0.0,1,1
+DIC,0.010899,0.006052,0.0,0,0
+Extrinsic Coagulation Pathway,0.002725,0.001579,0.0,1,1
+Intrinsic Coagulation Pathway,0.008174,0.001579,0.0,3,1
+Fibrinolysis,0.002725,0.001579,0.0,1,1
+Septic Shock,0.002725,0.001579,0.0,1,1
+TTP,0.008174,0.004263,0.0,0,0
+Platelet Activation,0.00545,0.001579,0.0,2,1
+vWF,0.002725,0.001579,0.0,1,1
+Microangiopathic Hemolytic Anemia,0.00545,0.001579,0.0,2,1
+HUS,0.008174,0.004263,0.0,0,0
+EHEC (O157:H7),0.002725,0.001579,0.0,1,1
+Antiphospholipid Syndrome,0.010899,0.006448,0.0,0,0
+SLE,0.016349,0.005056,2.2e-05,1,1
+Sickle Cell Disease,0.010899,0.006276,0.0,0,0
+Hemoglobin S,0.002725,0.001579,0.0,1,1
+Hemoglobin Structure,0.002725,0.001579,0.0,1,1
+Autosomal Recessive Inheritance,0.002725,0.001579,0.0,1,1
+G6PD Deficiency,0.010899,0.005381,0.0,0,0
+HMP Shunt,0.002725,0.001579,0.0,1,1
+G6PD,0.002725,0.001579,0.0,1,1
+X-Linked Recessive,0.008174,0.001579,0.0,3,1
+AIHA,0.00545,0.001579,0.0,2,1
+Hereditary Spherocytosis,0.008174,0.004039,0.0,0,0
+RBC Metabolism,0.002725,0.001579,0.0,1,1
+Pernicious Anemia,0.010899,0.005828,0.0,0,0
+Intrinsic Factor,0.002725,0.001579,0.0,1,1
+Vitamin B12 (Cobalamin),0.002725,0.001579,0.0,1,1
+Parietal Cells,0.002725,0.001579,0.0,1,1
+Hemophilia A,0.008174,0.003816,0.0,0,0
+Factor VIII,0.002725,0.001579,0.0,1,1
+Hemophilia B,0.008174,0.003816,0.0,0,0
+Factor IX,0.002725,0.001579,0.0,1,1
+CML,0.008174,0.004934,0.0,0,0
+t(9;22) BCR-ABL,0.002725,0.001579,0.0,1,1
+Ras Oncogene,0.002725,0.001579,0.0,1,1
+Leukopoiesis,0.00545,0.001579,0.0,2,1
+AML,0.008174,0.004934,0.0,0,0
+t(15;17) PML-RARA,0.002725,0.001579,0.0,1,1
+Oncogenes,0.002725,0.001579,0.0,1,1
+Multiple Myeloma,0.010899,0.005269,0.0,0,0
+IL-6,0.00545,0.001579,0.0,2,1
+Amyloidosis,0.002725,0.001579,0.0,1,1
+B Cell Activation,0.002725,0.001579,0.0,1,1
+Hodgkin Lymphoma,0.010899,0.004934,0.0,0,0
+Reed-Sternberg Cells,0.002725,0.001579,0.0,1,1
+EBV (HHV-4),0.00545,0.001579,0.0,2,1
+B Cell Development,0.00545,0.001579,0.0,2,1
+Burkitt Lymphoma,0.010899,0.005605,0.0,0,0
+t(8;14) Burkitt,0.002725,0.001579,0.0,1,1
+Myc Oncogene,0.002725,0.001579,0.0,1,1
+ITP,0.008174,0.002596,0.0,0,0
+Anti-dsDNA,0.002725,0.001579,0.0,2,2
+Anti-Smith,0.002725,0.001579,0.0,2,2
+Rheumatoid Arthritis,0.013624,0.004507,0.0,0,0
+IL-1,0.002725,0.001579,0.0,1,1
+TNF-alpha,0.00545,0.001579,0.0,2,1
+Ankylosing Spondylitis,0.008174,0.003714,0.0,0,0
+HLA-B27,0.002725,0.001579,0.0,1,1
+Gout,0.010899,0.006947,0.0,0,0
+Uric Acid Crystals,0.002725,0.001579,0.0,1,1
+Purine Synthesis,0.002725,0.001579,0.0,1,1
+HGPRT Deficiency,0.002725,0.001579,0.0,1,1
+Lesch-Nyhan Syndrome,0.002725,0.001579,0.0,1,1
+Systemic Sclerosis,0.010899,0.003938,0.0,0,0
+Anti-Scl-70,0.002725,0.001579,0.0,1,1
+Dermatomyositis,0.010899,0.003165,0.0,0,0
+Anti-Jo-1,0.00545,0.001579,0.0,2,1
+Polymyositis,0.008174,0.002494,0.0,0,0
+Osteoporosis,0.013624,0.006388,0.0,0,0
+Bone Remodeling,0.008174,0.001579,0.0,3,1
+RANK/RANKL/OPG Pathway,0.002725,0.001579,0.0,1,1
+PTH Actions,0.002725,0.001579,0.0,1,1
+Estrogen,0.002725,0.001579,0.0,1,1
+Paget Disease of Bone,0.010899,0.006052,0.0,0,0
+Osteoclasts,0.002725,0.001579,0.0,1,1
+Osteoblasts,0.002725,0.001579,0.0,1,1
+Alkaline Phosphatase (Paget),0.002725,0.001579,0.0,1,1
+Osteosarcoma,0.010899,0.006052,0.0,0,0
+Rb Protein,0.002725,0.001579,0.0,1,1
+p53,0.002725,0.001579,0.0,1,1
+Tumor Suppressors,0.002725,0.001579,0.0,1,1
+Ischemic Stroke,0.013624,0.004039,0.0,0,0
+Circle of Willis,0.00545,0.001579,0.0,2,1
+Dorsal Column,0.008174,0.001579,0.0,3,1
+Spinothalamic Tract,0.008174,0.001579,0.0,3,1
+Subarachnoid Hemorrhage,0.008174,0.00386,0.0,0,0
+Berry Aneurysm,0.002725,0.001579,0.0,1,1
+Subdural Hematoma,0.008174,0.002921,0.0,0,0
+Meninges,0.008174,0.001579,0.0,3,1
+Alcohol Use Disorder,0.00545,0.001579,0.0,2,1
+Epidural Hematoma,0.00545,0.002697,0.0,0,0
+Herniation Syndromes,0.00545,0.001579,0.0,2,1
+Multiple Sclerosis,0.010899,0.003836,0.0,0,0
+Blood-Brain Barrier,0.00545,0.001579,0.0,2,1
+Oligodendroglioma,0.002725,0.001579,0.0,1,1
+Alzheimer Disease,0.008174,0.004934,0.0,0,0
+Hippocampus,0.002725,0.001579,0.0,1,1
+Acetylcholine (CNS),0.00545,0.001579,0.0,2,1
+Amyloid,0.002725,0.001579,0.0,1,1
+Parkinson Disease,0.008174,0.004934,0.0,0,0
+Basal Ganglia,0.00545,0.001579,0.0,2,1
+Dopamine,0.002725,0.001579,0.0,1,1
+Nigrostriatal Pathway,0.002725,0.001579,0.0,1,1
+Huntington Disease,0.010899,0.005381,0.0,0,0
+Glutamate,0.002725,0.001579,0.0,1,1
+Anticipation,0.002725,0.001579,0.0,1,1
+Myasthenia Gravis,0.010899,0.005158,0.0,0,0
+Neuromuscular Junction,0.002725,0.001579,0.0,1,1
+Nicotinic Receptors,0.002725,0.001579,0.0,1,1
+Guillain-Barre Syndrome,0.00545,0.002372,0.0,0,0
+Bacterial Meningitis,0.010899,0.005381,0.0,0,0
+Streptococcus pneumoniae,0.002725,0.001579,0.0,1,1
+Neisseria meningitidis,0.002725,0.001579,0.0,1,1
+Increased ICP,0.010899,0.006276,0.0,0,0
+CSF Circulation,0.002725,0.001579,0.0,1,1
+Hydrocephalus,0.002725,0.001579,0.0,1,1
+Papilledema,0.002725,0.001579,0.0,1,1
+Wernicke Encephalopathy,0.008174,0.004934,0.0,0,0
+Vitamin B1 (Thiamine),0.002725,0.001579,0.0,1,1
+TCA Cycle,0.002725,0.001579,0.0,1,1
+Tabes Dorsalis,0.008174,0.003816,0.0,0,0
+Treponema pallidum,0.002725,0.001579,0.0,1,1
+Brown-Sequard Syndrome,0.008174,0.003816,0.0,0,0
+Corticospinal Tract,0.002725,0.001579,0.0,1,1

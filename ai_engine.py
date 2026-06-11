@@ -113,7 +113,7 @@ TARGET CONCEPTS: {tags_text}
 COGNITIVE DEPTH REQUIRED: {cognitive_order}
 
 CRITICAL RULES:
-1. You MUST write EXACTLY {num_questoes} questions distributed across the TARGET CONCEPTS listed above. If there are fewer concepts than questions, you MUST write multiple questions for the same concept (use different clinical presentations to ensure variety).
+1. You MUST write exactly ONE question for each of the TARGET CONCEPTS listed above to ensure no repetition within this batch.
 2. You MUST strictly adhere to the COGNITIVE DEPTH REQUIRED:
    - If "1st Order": Ask "What is the most likely diagnosis?".
    - If "2nd Order": Give away the diagnosis subtly in the vignette. Ask about the underlying mechanism, pathophysiology, or best next step.
