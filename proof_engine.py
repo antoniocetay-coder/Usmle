@@ -1,7 +1,7 @@
 import json
 import streamlit as st
 import random
-from google import genai
+from ai_client import chat_json
 from config import MODEL_QBANK
 from ai_engine import TAXONOMIA_COMPLETA, limpar_json
 from mastery import DIFFICULTY_RANK
@@ -104,23 +104,14 @@ RETURN FORMAT (valid JSON only):
 
 
 def gerar_prova(tag_alvo, api_key, num_questoes=20):
-    client = genai.Client(api_key=api_key)
-
     prereqs, related = _get_prereqs_and_related(tag_alvo)
     confusions = _get_confusions(tag_alvo)
 
     prompt = gerar_prompt_prova(tag_alvo, 0.0, prereqs, related, confusions)
 
     try:
-        response = client.models.generate_content(
-            model=MODEL_QBANK,
-            contents=prompt,
-            config={
-                "temperature": 0.4,
-                "response_mime_type": "application/json"
-            }
-        )
-        texto = limpar_json(response.text)
+        texto_bruto = chat_json(prompt, MODEL_QBANK, api_key, temperature=0.4, reasoning=True)
+        texto = limpar_json(texto_bruto)
         if not texto:
             return []
 
