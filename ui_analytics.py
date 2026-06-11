@@ -136,10 +136,10 @@ def render_analytics():
         st.markdown("---")
         with st.expander("🧩 Mapa de Confusão Cognitiva (Aluno vs Global)", expanded=False):
             try:
-                from knowledge_graph import KnowledgeGraph
+                from recommender import get_core_kg_centrality
                 from confusion_engine import ConfusionGraph, StudentConfusionGraph
 
-                kg = KnowledgeGraph()
+                kg, _ = get_core_kg_centrality()
                 cg = ConfusionGraph(kg)
                 cg.load_from_db()
                 cg.load_from_legacy_confusion_pairs()

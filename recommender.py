@@ -1,3 +1,4 @@
+import streamlit as st
 from knowledge_graph import KnowledgeGraph
 from centrality import CentralityAnalyzer
 from student_graph import StudentGraph
@@ -7,9 +8,16 @@ from analytics import get_tag_stats
 from confusion_engine import ConfusionGraph, StudentConfusionGraph, ConfusionTracker
 
 
-def _build_pipeline():
+@st.cache_resource
+def get_core_kg_centrality():
     kg = KnowledgeGraph()
     centrality = CentralityAnalyzer(kg)
+    return kg, centrality
+
+
+@st.cache_resource
+def _build_pipeline_cached(db_version):
+    kg, centrality = get_core_kg_centrality()
     sg = StudentGraph(kg, centrality)
 
     tag_stats = get_tag_stats()
@@ -31,8 +39,14 @@ def _build_pipeline():
     return kg, centrality, sg, cg, de, tag_stats, confusion_tracker
 
 
-def recommend(modo="default"):
-    kg, centrality, sg, cg, de, tag_stats, ct = _build_pipeline()
+def recommend(db_version=None):
+    if db_version is None:
+        try:
+            db_version = st.session_state.get("db_version", 0)
+        except Exception:
+            db_version = 0
+
+    kg, centrality, sg, cg, de, tag_stats, ct = _build_pipeline_cached(db_version)
 
     mission = de.generate_study_mission()
     eligible = cg.eligible_concepts()

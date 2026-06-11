@@ -20,12 +20,17 @@ def calculate_pagerank(graph, alpha=0.85, max_iter=100, tol=1e-6):
     out_degree = [len(list(graph.successors(nodes[i]))) for i in range(n)]
     for _ in range(max_iter):
         new_pr = [(1.0 - alpha) / n] * n
+        dangling_sum = 0.0
         for i in range(n):
             if out_degree[i] == 0:
-                continue
-            for succ in graph.successors(nodes[i]):
-                j = idx[succ]
-                new_pr[j] += alpha * pr[i] / out_degree[i]
+                dangling_sum += pr[i]
+            else:
+                for succ in graph.successors(nodes[i]):
+                    j = idx[succ]
+                    new_pr[j] += alpha * pr[i] / out_degree[i]
+        if dangling_sum > 0:
+            for j in range(n):
+                new_pr[j] += alpha * dangling_sum / n
         diff = sum(abs(new_pr[i] - pr[i]) for i in range(n))
         pr = new_pr
         if diff < tol:

@@ -7,6 +7,10 @@ from database import *
 from mastery import update_bkt, DIFFICULTY_RANK, COGNITIVE_RANK, RANK_TO_DIFFICULTY, RANK_TO_COGNITIVE
 
 
+def increment_db_version():
+    st.session_state["db_version"] = st.session_state.get("db_version", 0) + 1
+
+
 def startup():
     init_db()
 
@@ -41,6 +45,7 @@ DEFAULTS = {
     "prova_answers": [],
     "prova_idx": 0,
     "prova_concluida": False,
+    "db_version": 0,
 }
 
 
@@ -134,6 +139,7 @@ def salvar_resultado_pendente(q_id, sistema, is_correct, tags, time_taken, confi
         conn.execute("UPDATE erros_por_sistema SET total = total + 1 WHERE sistema = ?", (sistema,))
 
     conn.commit()
+    increment_db_version()
 
 
 def iniciar_prova(tag, proof_id, questoes):
@@ -188,6 +194,7 @@ def _update_bkt_from_proof(tag, is_correct, dificuldade, cognitive_order):
     """, (tag, corrects, new_prob, RANK_TO_DIFFICULTY[new_diff_rank], RANK_TO_COGNITIVE[new_cog_rank],
           corrects, totals, new_prob, RANK_TO_DIFFICULTY[new_diff_rank], RANK_TO_COGNITIVE[new_cog_rank]))
     conn.commit()
+    increment_db_version()
 
 
 def responder_questao_prova(questao_idx, letra_escolhida, is_correct, dificuldade, cognitive_order):
@@ -241,6 +248,7 @@ def concluir_prova():
             UPDATE tag_stats SET mastery_prob = ? WHERE tag = ?
         """, (boosted, tag))
         conn.commit()
+        increment_db_version()
 
     return passed, acertos, total
 

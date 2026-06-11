@@ -8,6 +8,7 @@ from student_graph import StudentGraph
 from analytics import get_tag_stats
 from database import search_eos, get_eo_count_by_system
 from table_helper import dataframe
+from recommender import get_core_kg_centrality
 
 
 @st.cache_data
@@ -30,8 +31,7 @@ def _build_concept_map(taxonomy):
 
 
 def _load_pipeline():
-    kg = KnowledgeGraph()
-    centrality = CentralityAnalyzer(kg)
+    kg, centrality = get_core_kg_centrality()
     sg = StudentGraph(kg, centrality)
     sg.load_from_db(get_tag_stats())
     return kg, centrality, sg
