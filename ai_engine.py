@@ -95,7 +95,7 @@ def gerar_lote_questoes(sistema, difficulty, cognitive_order, api_key, tags_alvo
     prompt = gerar_prompt_lote(sistema, difficulty, cognitive_order, tags_alvo, num_questoes)
 
     try:
-        texto_bruto = chat_json(prompt, MODEL_QBANK, api_key, temperature=0.4, reasoning=True)
+        texto_bruto = chat_json(prompt, MODEL_QBANK, api_key, temperature=0.4, reasoning=False)
         texto = limpar_json(texto_bruto)
 
         if not texto:

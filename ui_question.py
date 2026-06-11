@@ -4,14 +4,16 @@ import time
 from flashcard_engine import orquestrar_flashcards, gerar_mais_flashcards, gerar_flashcard_sob_demanda
 from database import get_flashcards_by_tags, registrar_confusao, salvar_flashcard_db
 from session_state import salvar_resultado_pendente, proximo_item_fila
-from confusion_engine import ConfusionGraph, ConfusionTracker
+from confusion_engine import ConfusionGraph, StudentConfusionGraph, ConfusionTracker
 
 
 def _get_confusion_tracker():
     if "confusion_tracker" not in st.session_state:
         cg = ConfusionGraph()
         cg.load_from_db()
-        st.session_state["confusion_tracker"] = ConfusionTracker(cg)
+        sg = StudentConfusionGraph()
+        sg.load_from_db()
+        st.session_state["confusion_tracker"] = ConfusionTracker(cg, sg)
     return st.session_state["confusion_tracker"]
 
 

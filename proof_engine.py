@@ -110,7 +110,7 @@ def gerar_prova(tag_alvo, api_key, num_questoes=20):
     prompt = gerar_prompt_prova(tag_alvo, 0.0, prereqs, related, confusions)
 
     try:
-        texto_bruto = chat_json(prompt, MODEL_QBANK, api_key, temperature=0.4, reasoning=True)
+        texto_bruto = chat_json(prompt, MODEL_QBANK, api_key, temperature=0.4, reasoning=False)
         texto = limpar_json(texto_bruto)
         if not texto:
             return []
