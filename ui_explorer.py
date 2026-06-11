@@ -7,6 +7,7 @@ from centrality import CentralityAnalyzer
 from student_graph import StudentGraph
 from analytics import get_tag_stats
 from database import search_eos, get_eo_count_by_system
+from table_helper import dataframe
 
 
 @st.cache_data
@@ -166,7 +167,7 @@ def render_explorer():
                 "% Seen": pct,
             })
 
-        st.dataframe(rows, use_container_width=True, hide_index=True)
+        dataframe(rows, use_container_width=True, hide_index=True)
 
     # ── System Quick Stats ─────────────────────────────────────────────
     st.subheader("System Overview")

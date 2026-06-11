@@ -1,6 +1,7 @@
 import streamlit as st
 import plotly.graph_objects as go
 from database import get_system_stats, get_metacognition_stats, get_time_stats, get_fsrs_forecast, get_global_confusions, get_conn, get_validation_status, get_tags_proven
+from table_helper import dataframe
 from mastery import classify_tag_bkt, real_knowledge, get_next_level, is_eligible_for_proof, P_L0
 from session_state import now_utc
 from datetime import datetime
@@ -120,7 +121,7 @@ def render_analytics():
         with col_conf:
             st.subheader("🪤 Top Armadilhas (Red Herrings)")
             if confusions:
-                st.dataframe(
+                dataframe(
                     [{
                         "O que era (Verdadeiro)": r["tag_correct"],
                         "O que você achou (Falso)": r["tag_confused"],
@@ -156,7 +157,7 @@ def render_analytics():
 
                 if dash["top_unresolved"]:
                     st.subheader("🔴 Principais Confusões por Resolver")
-                    st.dataframe([{
+                    dataframe([{
                         "Conceito A": c["concept_a"],
                         "Conceito B": c["concept_b"],
                         "Peso": f"{c['weight']:.0%}",
@@ -168,7 +169,7 @@ def render_analytics():
                 global_top = cg.global_top_confusions(n=20)
                 if global_top:
                     st.subheader("🌐 Top Confusões Globais (População)")
-                    st.dataframe([{
+                    dataframe([{
                         "Conceito A": e["concept_a"],
                         "Conceito B": e["concept_b"],
                         "Peso": f"{e['weight']:.0%}",
@@ -235,4 +236,4 @@ def render_analytics():
 
             if rows:
                 rows.sort(key=lambda x: x["Real Knowledge"])
-                st.dataframe(rows, use_container_width=True, hide_index=True)
+                dataframe(rows, use_container_width=True, hide_index=True)
