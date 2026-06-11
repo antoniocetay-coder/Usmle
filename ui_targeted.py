@@ -34,13 +34,19 @@ def render_targeted_practice(api_key, dificuldade):
         if not api_key:
             st.error("API Key necessária.")
         else:
-            with st.spinner(f"Gerando {qtd} questões sobre {tag_alvo}..."):
-                questoes = gerar_lote_questoes(sys_brute, dificuldade, cog, api_key, [tag_alvo], qtd)
-                if not questoes:
-                    st.error("Nenhuma questão gerada. Tente novamente.")
-                    return
+            progress_text = st.empty()
+            fila = []
+            geradas = 0
+            tentativas = 0
+            MAX_TENTATIVAS = qtd * 2
 
-                fila = []
+            while geradas < qtd and tentativas < MAX_TENTATIVAS:
+                precisamos = qtd - geradas
+                n_chunk = min(5, precisamos)
+                progress_text.info(f"Gerando bloco {tentativas + 1}... ({geradas}/{qtd} prontas)")
+
+                questoes = gerar_lote_questoes(sys_brute, dificuldade, cog, api_key, [tag_alvo], n_chunk)
+
                 for q in questoes:
                     q_id = salvar_questao(sys_brute, dificuldade, q, False, q.get("content_tags", [tag_alvo]),
                                           status="pending", cognitive_order=cog)
@@ -56,8 +62,20 @@ def render_targeted_practice(api_key, dificuldade):
                         "source": "targeted",
                     })
 
-                init_session_state()
-                st.session_state["fila_estudo"] = fila
-                st.session_state["modo_estudo"] = "Targeted"
-                st.session_state["targeted_tag"] = tag_alvo
-                st.rerun()
+                geradas += len(questoes)
+                tentativas += 1
+
+            progress_text.empty()
+
+            if not fila:
+                st.error("Nenhuma questão gerada. Tente novamente.")
+                return
+
+            if geradas < qtd:
+                st.warning(f"⚠️ Geramos {geradas} de {qtd} questões (algumas foram descartadas na validação).")
+
+            init_session_state()
+            st.session_state["fila_estudo"] = fila
+            st.session_state["modo_estudo"] = "Targeted"
+            st.session_state["targeted_tag"] = tag_alvo
+            st.rerun()

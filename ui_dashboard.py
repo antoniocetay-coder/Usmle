@@ -114,23 +114,8 @@ def render_dashboard(api_key, dificuldade, show_proof_section=True):
 
     qtd_gerar = st.slider("Quantas questões?", min_value=1, max_value=10, value=3)
 
-    rec = recommend()
-    summary = rec["summary"]
-    mission = rec["mission"]
-
-    with st.container(border=True):
-        hub = mission.get("focus_hub", "—")
-        conc = mission.get("study_concept")
-        reason = mission.get("reason", {})
-        col_hub, col_meta = st.columns([3, 1])
-        col_hub.markdown(f"**Today's Mission** — *{hub}*")
-        if conc:
-            col_hub.caption(f"Study concept: **{conc}** (mastery {reason.get('mastery', 0):.0%}, uncertainty {reason.get('uncertainty', 1):.1f})")
-        col_meta.metric("Mastered", summary["mastered"])
-        col_meta.metric("Weak", summary["weak"])
-
     brain = _get_brain()
-    paths = _build_paths_from_rec(rec)
+    paths = brain.get_paths()
 
     c1, c2, c3 = st.columns(3)
     gerando_agora = False
@@ -140,12 +125,7 @@ def render_dashboard(api_key, dificuldade, show_proof_section=True):
             with st.container(border=True):
                 st.markdown(f"**{path.emoji} {path.titulo}**")
                 st.caption(path.descricao)
-
-                for t in path.tags:
-                    diff_str = f" → {t['next_difficulty']}/{t['next_cognitive'].split('(')[0].strip()}"
-                    st.write(f"- **{t['tag']}** (RK: {t['rk']:.0%})")
-                    st.caption(f"  {t['sistema']}{diff_str}")
-
+                st.write("")
                 st.write("")
 
                 if st.button(f"{path.emoji} {path.titulo}", use_container_width=True, key=f"path_{path.id}"):
@@ -156,7 +136,12 @@ def render_dashboard(api_key, dificuldade, show_proof_section=True):
                         with st.spinner(f"Gerando {qtd_gerar} questões..."):
                             sucessos = brain.execute(path.id, qtd_gerar, api_key)
                             if sucessos > 0:
-                                st.success(f"{sucessos} questões geradas!")
+                                if sucessos < qtd_gerar:
+                                    st.warning(f"⚠️ Geramos {sucessos} de {qtd_gerar} questões (algumas descartadas na validação).")
+                                else:
+                                    st.success(f"{sucessos} questões geradas!")
+                                from session_state import increment_db_version
+                                increment_db_version()
                                 st.rerun()
                             else:
                                 st.error("Nenhuma questão gerada.")
@@ -181,6 +166,38 @@ def render_dashboard(api_key, dificuldade, show_proof_section=True):
             st.session_state["modo_estudo"] = "Interleaved"
             st.session_state["fila_estudo"] = montar_fila_estudo("Interleaved")
             st.rerun()
+
+    st.markdown("---")
+
+    mostrar_mapa = st.checkbox("🧩 Visualizar Mapa Cognitivo & Detalhes da IA (Avançado)", value=False)
+    if mostrar_mapa:
+        with st.spinner("Analisando seu mapa cognitivo..."):
+            rec = recommend()
+            summary = rec["summary"]
+            mission = rec["mission"]
+
+            with st.container(border=True):
+                hub = mission.get("focus_hub", "—")
+                conc = mission.get("study_concept")
+                reason = mission.get("reason", {})
+                col_hub, col_meta = st.columns([3, 1])
+                col_hub.markdown(f"**Today's Mission** — *{hub}*")
+                if conc:
+                    col_hub.caption(f"Study concept: **{conc}** (mastery {reason.get('mastery', 0):.0%}, uncertainty {reason.get('uncertainty', 1):.1f})")
+                col_meta.metric("Mastered", summary["mastered"])
+                col_meta.metric("Weak", summary["weak"])
+
+            st.write("##### 🎯 Sugestões Detalhadas do Recomentador:")
+            paths_detail = _build_paths_from_rec(rec)
+            cd1, cd2, cd3 = st.columns(3)
+            for col_det, p_det in zip([cd1, cd2, cd3], paths_detail):
+                with col_det:
+                    with st.container(border=True):
+                        st.markdown(f"**{p_det.emoji} {p_det.titulo}**")
+                        for t in p_det.tags:
+                            diff_str = f" → {t['next_difficulty']}/{t['next_cognitive'].split('(')[0].strip()}"
+                            st.write(f"- **{t['tag']}** (RK: {t['rk']:.0%})")
+                            st.caption(f"  {t['sistema']}{diff_str}")
 
     if show_proof_section:
         _render_proof_section(api_key)

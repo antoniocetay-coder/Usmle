@@ -28,9 +28,8 @@ def criar_backup():
     if os.path.exists(backup_path):
         return
 
-    shutil.copy2(
-        DB_PATH,
-        backup_path
-    )
-
-    print(f"Backup criado: {backup_path}")
+    try:
+        shutil.copy2(DB_PATH, backup_path)
+        print(f"Backup criado: {backup_path}")
+    except Exception as e:
+        print(f"Backup ignorado ({e})")

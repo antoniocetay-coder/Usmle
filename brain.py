@@ -21,11 +21,11 @@ from database import get_tags_proven
 # Pré-requisitos (Knowledge Graph)
 # ---------------------------------------------------------------------------
 def _carregar_prerequisites():
-    path = os.path.join(os.path.dirname(__file__), "prerequisites.json")
+    path = os.path.join(os.path.dirname(__file__), "prerequisite.json")
     try:
         with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
-    except FileNotFoundError:
+    except (FileNotFoundError, json.JSONDecodeError):
         return {}
 
 PREREQUISITES = _carregar_prerequisites()
@@ -308,29 +308,38 @@ class StudentBrain:
         paths = self.get_paths()
         path = next((p for p in paths if p.id == path_id), paths[0])
 
-        tags_alvo = [t["tag"] for t in path.tags[:qtd]]
-        if not tags_alvo:
+        todas_tags = list(set(t["tag"] for t in path.tags))
+        if not todas_tags:
             return 0
 
-        sistema = self._resolve_sistema(tags_alvo)
+        sistema = self._resolve_sistema(todas_tags)
 
         from ai_engine import gerar_lote_questoes
 
         MAX_POR_CALL = 5
         sucessos = 0
+        geradas = 0
+        tentativas = 0
+        MAX_TENTATIVAS = qtd * 2
 
-        for start in range(0, len(tags_alvo), MAX_POR_CALL):
-            chunk = tags_alvo[start:start + MAX_POR_CALL]
+        while geradas < qtd and tentativas < MAX_TENTATIVAS:
+            precisamos = qtd - geradas
+            n_chunk = min(MAX_POR_CALL, precisamos)
+
             questoes = gerar_lote_questoes(
                 sistema, path.dificuldade, path.ordem_cognitiva,
-                api_key, chunk, len(chunk)
+                api_key, todas_tags, n_chunk
             )
+
             for q in questoes:
                 salvar_questao(sistema, path.dificuldade, q, acertou=False,
                                tags=q["content_tags"], status="pending",
                                cognitive_order=path.ordem_cognitiva)
                 registrar_cooldown_tags(q["content_tags"])
                 sucessos += 1
+
+            geradas += len(questoes)
+            tentativas += 1
 
         return sucessos
 

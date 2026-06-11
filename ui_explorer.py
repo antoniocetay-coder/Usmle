@@ -1,14 +1,14 @@
 import streamlit as st
 import json
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
+import plotly.graph_objects as go
 import networkx as nx
 from knowledge_graph import KnowledgeGraph
 from centrality import CentralityAnalyzer
 from student_graph import StudentGraph
 from analytics import get_tag_stats
 from database import search_eos, get_eo_count_by_system
+from table_helper import dataframe
+from recommender import get_core_kg_centrality
 
 
 @st.cache_data
@@ -31,8 +31,7 @@ def _build_concept_map(taxonomy):
 
 
 def _load_pipeline():
-    kg = KnowledgeGraph()
-    centrality = CentralityAnalyzer(kg)
+    kg, centrality = get_core_kg_centrality()
     sg = StudentGraph(kg, centrality)
     sg.load_from_db(get_tag_stats())
     return kg, centrality, sg
@@ -60,35 +59,68 @@ def _render_graph(kg, sg, centrality, nodes, title):
 
     pos = nx.spring_layout(subgraph, k=2.5, iterations=50, seed=42)
 
-    colors = []
-    sizes = []
+    edge_traces = []
+    for u, v in subgraph.edges:
+        x0, y0 = pos[u]
+        x1, y1 = pos[v]
+        edge_traces.append(go.Scatter(
+            x=[x0, x1, None], y=[y0, y1, None],
+            mode='lines',
+            line=dict(color='rgba(100,100,100,0.2)', width=1),
+            hoverinfo='none',
+            showlegend=False,
+        ))
+
+    node_x = []
+    node_y = []
+    node_text = []
+    node_colors = []
+    node_sizes = []
     for node in subgraph.nodes:
+        x, y = pos[node]
+        node_x.append(x)
+        node_y.append(y)
+        node_text.append(node)
         state = sg.get_state(node)
         m = state.mastery if state else 0
         has_data = bool(state and (state.attempts > 0 or state.mastery > 0))
-        colors.append(_mastery_color(m, has_data))
+        node_colors.append(_mastery_color(m, has_data))
         deg = centrality.degree(node)
-        sizes.append(max(50, min(400, 100 + deg * 500)))
+        node_sizes.append(max(10, min(30, 8 + deg * 30)))
 
-    fig, ax = plt.subplots(figsize=(14, 10))
-    nx.draw_networkx_edges(subgraph, pos, alpha=0.15, arrows=True,
-                           arrowstyle="-|>", arrowsize=10, ax=ax)
-    nx.draw_networkx_nodes(subgraph, pos, node_color=colors,
-                           node_size=sizes, alpha=0.85, ax=ax)
-    nx.draw_networkx_labels(subgraph, pos, font_size=7, ax=ax)
-
-    from matplotlib.patches import Patch
-    legend_elements = [
-        Patch(facecolor="#2ecc71", label="Mastered (≥ 80%)"),
-        Patch(facecolor="#f1c40f", label="Learning (40–80%)"),
-        Patch(facecolor="#e74c3c", label="Weak (< 40%)"),
-        Patch(facecolor="#cccccc", label="Unseen"),
+    legend_colors = [
+        ("#2ecc71", "Mastered (≥ 80%)"),
+        ("#f1c40f", "Learning (40–80%)"),
+        ("#e74c3c", "Weak (< 40%)"),
+        ("#cccccc", "Unseen"),
     ]
-    ax.legend(handles=legend_elements, loc="upper right", fontsize=9)
-    ax.set_title(f"{title}  ({len(nodes)} nodes)", fontsize=14)
-    ax.axis("off")
-    fig.tight_layout()
-    st.pyplot(fig)
+    for color, label in legend_colors:
+        edge_traces.append(go.Scatter(
+            x=[None], y=[None], mode='markers',
+            marker=dict(size=10, color=color),
+            legendgroup=label, name=label, showlegend=True,
+        ))
+
+    fig = go.Figure(
+        data=edge_traces + [go.Scatter(
+            x=node_x, y=node_y, mode='markers+text',
+            text=node_text, textposition="middle center",
+            textfont=dict(size=9, color="#222"),
+            marker=dict(size=node_sizes, color=node_colors, line=dict(width=0.5, color='#666')),
+            hoverinfo='text', showlegend=False,
+        )],
+        layout=go.Layout(
+            title=f"{title}  ({len(nodes)} nodes)",
+            showlegend=True,
+            hovermode='closest',
+            xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+            yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+            height=700,
+            margin=dict(l=20, r=20, t=40, b=20),
+            plot_bgcolor='white',
+        ),
+    )
+    st.plotly_chart(fig, use_container_width=True)
 
 
 def render_explorer():
@@ -135,7 +167,7 @@ def render_explorer():
                 "% Seen": pct,
             })
 
-        st.dataframe(rows, use_container_width=True, hide_index=True)
+        dataframe(rows, use_container_width=True, hide_index=True)
 
     # ── System Quick Stats ─────────────────────────────────────────────
     st.subheader("System Overview")
