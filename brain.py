@@ -140,7 +140,7 @@ class StudentBrain:
 
         tags = []
         for tag in criticas:
-            if len(tags) >= 3:
+            if len(tags) >= 5:
                 break
             tags.append(self._make_tag_suggestion(tag))
 
@@ -183,7 +183,7 @@ class StudentBrain:
 
         tags = []
         for tag in candidatas:
-            if len(tags) >= 3:
+            if len(tags) >= 5:
                 break
             tags.append(self._make_tag_suggestion(tag))
 
@@ -255,7 +255,7 @@ class StudentBrain:
             if sis not in seen_sistemas or len(tags) < 2:
                 seen_sistemas.add(sis)
                 tags.append(self._make_tag_suggestion(tag))
-            if len(tags) >= 3:
+            if len(tags) >= 5:
                 break
 
         if len(tags) < 2:

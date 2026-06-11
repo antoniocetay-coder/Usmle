@@ -51,17 +51,17 @@ def _build_paths_from_rec(rec):
     return [
         StudyPath(id="review", titulo="Revisar Lacunas",
                   descricao="Fortaleça fundamentos com mastery < 40%",
-                  emoji="🔴", tags=make_tags(review_pool[:3]),
+                  emoji="🔴", tags=make_tags(review_pool[:5]),
                   dificuldade="Medium",
                   ordem_cognitiva="1st Order (Direct Recall / Diagnosis)"),
         StudyPath(id="advance", titulo="Avançar Mastery",
                   descricao="Eleve o nível de conceitos em desenvolvimento",
-                  emoji="🟡", tags=make_tags(advance_pool[:3]),
+                  emoji="🟡", tags=make_tags(advance_pool[:5]),
                   dificuldade="Hard",
                   ordem_cognitiva="2nd Order (Pathophysiology / Next Step)"),
         StudyPath(id="expand", titulo="Expandir Áreas",
                   descricao="Explore tópicos novos ou pouco vistos",
-                  emoji="🟢", tags=make_tags(expand_pool[:3]),
+                  emoji="🟢", tags=make_tags(expand_pool[:5]),
                   dificuldade="Easy",
                   ordem_cognitiva="1st Order (Direct Recall / Diagnosis)"),
     ]
@@ -112,7 +112,7 @@ def render_dashboard(api_key, dificuldade, show_proof_section=True):
     st.markdown("---")
     st.subheader("O que fazer agora?")
 
-    qtd_gerar = st.slider("Quantas questões?", min_value=1, max_value=10, value=3)
+    qtd_gerar = st.slider("Quantas questões?", min_value=1, max_value=10, value=5)
 
     brain = _get_brain()
     paths = brain.get_paths()
