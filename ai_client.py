@@ -33,13 +33,43 @@ def _post(messages, model, api_key, temperature=0.4, reasoning=False):
     return data["choices"][0]["message"]
 
 
+def _extract_content(msg):
+    """Extrai o conteúdo da resposta, lidando com reasoning models.
+
+    Modelos com reasoning podem retornar o conteúdo final em 'content'
+    ou em 'reasoning_details'. Alguns colocam tudo em 'reasoning_details'
+    e deixam 'content' vazio.
+    """
+    content = msg.get("content") or ""
+
+    if content.strip():
+        return content
+
+    # Fallback: reasoning_details pode conter o JSON final
+    details = msg.get("reasoning_details") or ""
+    if isinstance(details, list):
+        # Alguns modelos retornam como lista de blocos
+        parts = []
+        for block in details:
+            if isinstance(block, dict):
+                parts.append(block.get("text", ""))
+            else:
+                parts.append(str(block))
+        details = "\n".join(parts)
+
+    if details.strip():
+        return details
+
+    return ""
+
+
 def chat_text(prompt, model, api_key, temperature=0.4, reasoning=False):
     """Retorna o conteúdo textual da resposta."""
     msg = _post(
         [{"role": "user", "content": prompt}],
         model, api_key, temperature, reasoning,
     )
-    return msg.get("content") or ""
+    return _extract_content(msg)
 
 
 def chat_json(prompt, model, api_key, temperature=0.4, reasoning=False):

@@ -99,7 +99,9 @@ def gerar_lote_questoes(sistema, difficulty, cognitive_order, api_key, tags_alvo
         texto = limpar_json(texto_bruto)
 
         if not texto:
-            print("Erro: A IA devolveu um texto vazio.")
+            preview = (texto_bruto or "(vazio)")[:200]
+            print(f"[DEBUG] Resposta vazia. Bruto: {preview}")
+            st.toast(f"⚠️ Resposta vazia. Verifique o console.")
             return []
 
         dados = json.loads(texto)
@@ -115,11 +117,15 @@ def gerar_lote_questoes(sistema, difficulty, cognitive_order, api_key, tags_alvo
                 st.toast(f"🗑️ Questão descartada: {msg}")
                 print(f"Descartada: {msg}")
 
+        if not questoes_validas and questoes_geradas:
+            print(f"[DEBUG] {len(questoes_geradas)} questões geradas, 0 válidas")
+
         return questoes_validas
 
     except json.JSONDecodeError as e:
-        print(f"Erro de Parse JSON: {str(e)}\nTexto retornado:\n{texto}")
-        st.toast("⚠️ A IA se confundiu no formato JSON. Tentando novamente...")
+        preview = (texto_bruto or "(vazio)")[:300]
+        print(f"Erro de Parse JSON: {str(e)}\nTexto bruto:\n{preview}")
+        st.toast(f"⚠️ JSON inválido. Verifique o console.")
         return []
     except requests.HTTPError as e:
         print(f"Erro HTTP OpenRouter: {e.response.status_code} {e.response.text}")
