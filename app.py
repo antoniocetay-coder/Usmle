@@ -14,17 +14,15 @@ from ui_explorer import render_explorer
 from database import get_tags_eligiveis_prova
 from analytics import get_tag_stats
 
-
 startup()
 criar_backup()
-
 init_session_state()
 
-api_key, dificuldade = render_sidebar()
+# 1. Recebe APENAS a api_key, pois a dificuldade foi removida da sidebar
+api_key = render_sidebar()
 
 st.title("USMLE ECO-SYSTEM V2")
 
-# Se uma prova estiver ativa, renderiza ela em tela cheia
 if st.session_state.get("prova_ativa", False):
     render_study_session(api_key)
 else:
@@ -34,7 +32,8 @@ else:
 
     with tab1:
         if st.session_state["modo_estudo"] is None:
-            render_dashboard(api_key, dificuldade, show_proof_section=False)
+            # 2. Passamos "Medium" como dificuldade padrão, já que não tem mais na sidebar
+            render_dashboard(api_key, dificuldade="Medium", show_proof_section=False)
         else:
             render_study_session(api_key)
 
@@ -44,7 +43,8 @@ else:
         render_proof_setup(api_key, tags_eligiveis)
 
     with tab3:
-        render_targeted_practice(api_key, dificuldade)
+        # 3. Passamos "Medium" como dificuldade padrão aqui também
+        render_targeted_practice(api_key, dificuldade="Medium")
 
     with tab4:
         render_analytics()

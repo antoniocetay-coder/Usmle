@@ -1,12 +1,20 @@
+# config.py
 DB_PATH = "usmle_data.db"
-
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 
-# Questões clínicas NBME — raciocínio profundo
-MODEL_QBANK = "xiaomi/mimo-v2.5-pro"
+MODEL_QBANK     = "openrouter/free"
+MODEL_FLASHCARD = "openrouter/free"
 
-# Flashcards e explicações do tutor — alto volume, baixa latência
-MODEL_FLASHCARD = "xiaomi/mimo-v2.5"
+MODELOS_DISPONIVEIS = {
+    "🆓 OpenRouter Free (sem créditos)": {
+        "qbank": "openrouter/free",
+        "flashcard": "openrouter/free",
+    },
+    "🧠 MiMo v2.5 (requer créditos)": {
+        "qbank": "xiaomi/mimo-v2.5-pro",
+        "flashcard": "xiaomi/mimo-v2.5",
+    },
+}
 
 SISTEMAS_DISPONIVEIS = [
     "General_Principles",

@@ -1,18 +1,36 @@
 from taxonomy import TAGS_GLOBAIS_PERMITIDAS
 
 
-def limpar_json(texto):
-    texto = texto.strip().lstrip("\ufeff")
-    if "```" in texto:
-        linhas = texto.splitlines()
-        linhas = [l for l in linhas if not l.strip().startswith("```")]
-        texto = "\n".join(linhas)
+import re
 
-    inicio = texto.find("{")
-    fim = texto.rfind("}")
-    if inicio != -1 and fim != -1:
-        texto = texto[inicio : fim + 1]
-    return texto
+def limpar_json(texto: str) -> str:
+    if not texto:
+        return ""
+
+    # Remove blocos <think>...</think> (DeepSeek R1, QwQ, etc.)
+    texto = re.sub(r"<think>.*?</think>", "", texto, flags=re.DOTALL)
+
+    # Remove blocos ```json ... ``` ou ``` ... ```
+    texto = re.sub(r"```(?:json)?\s*", "", texto)
+    texto = re.sub(r"```", "", texto)
+
+    texto = texto.strip()
+
+    # Extrai o primeiro objeto JSON válido { ... }
+    start = texto.find("{")
+    if start == -1:
+        return ""
+
+    depth = 0
+    for i, ch in enumerate(texto[start:], start):
+        if ch == "{":
+            depth += 1
+        elif ch == "}":
+            depth -= 1
+            if depth == 0:
+                return texto[start:i+1]
+
+    return ""
 
 
 SCHEMA_OBRIGATORIO = {
